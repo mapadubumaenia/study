@@ -26,5 +26,10 @@
     <fullyQualifiedTypeName name="chap06.section03.example04.Car"/>
     <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="chap06.section04.Calculator"/>
+    <fullyQualifiedTypeName name="chap06.section04.quiz01.Car"/>
+    <fullyQualifiedTypeName name="chap06.section04.example02.CarApplication"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="chap06.section04.example03.Person"/>
+    <fullyQualifiedTypeName name="chap06.section04.example04.Earth"/>
 </qualifiedTypeNameHistroy>
