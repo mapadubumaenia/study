@@ -1,0 +1,6 @@
+package chap07.Finalquiz01;
+
+public class MemberApplication {
+         String name;
+         String id;
+}

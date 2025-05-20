@@ -1,0 +1,8 @@
+package chap08.section01.example03;
+//실행클래스
+public class ComputerApplication {
+public static void main(String[] args) {
+	Computer computer=new Computer();
+	System.out.println(computer.circle(10));
+}
+}
