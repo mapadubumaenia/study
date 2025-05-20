@@ -1,0 +1,18 @@
+package chap03.section03;
+
+import java.util.Scanner;
+
+public class S04_FinalQuiz {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String a=sc.nextLine();
+	String b="Hello World";
+	if (a.equals(b)) {
+		System.out.println("yes");
+	}
+	else {
+		System.out.println("no");
+	}
+
+}
+}

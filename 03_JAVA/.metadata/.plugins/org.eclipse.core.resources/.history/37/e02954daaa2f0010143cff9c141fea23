@@ -1,0 +1,16 @@
+package chap01.section03;
+
+public class S6_Printf {
+public static void main(String[] args) {
+	System.out.printf("%d",10);
+	System.out.println();//줄바꿈을 포함하고 있음
+    //%d 의 d는 정수를 의미함,	
+	//사용법:System.out.printf("%d",정수);
+	
+	System.out.printf("%s","hi");
+	System.out.println();
+	//%s 의 s는 글자를 의미함
+	
+	System.out.println("hi");
+}
+}

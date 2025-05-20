@@ -1,0 +1,27 @@
+/*TODO: html 성격: 1)이미지, 글자 등 배치 =>가로공간이 없으면 밑으로 내려감    */
+.example{
+    width: 250px;
+    border: 1px solid lightgray;
+    background-color: lightskyblue;
+    border-radius: 10px;
+    padding: 1rem;
+}
+.example li{
+    display: inline-block;
+    margin-left: 1rem;
+}
+.example > li > img {
+    max-width: 100%;
+    height: auto;
+}
+.quiz{
+    width: 250px;
+    border: 1px solid green;
+    background-color: skyblue;
+    border-radius: 10px;
+    padding: 10px;
+}
+.quiz li{
+    display: inline-block;
+    margin-left: 1rem;
+}

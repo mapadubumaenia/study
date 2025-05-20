@@ -1,0 +1,23 @@
+.example {
+    width: 150px;
+    border: 1px solid lightgray;
+    border-radius: 10px;
+    padding: 1rem;
+    background-color: lightskyblue;
+}
+/* TODO: 후손선택자: 부모 자식태그{속성:값} */
+    .example  li {
+    display: inline-block;
+    margin-left: 1rem;
+}
+.quiz{
+    width: 200px;
+    border: 1px solid gray;
+    border-radius: 10px;
+    padding: 10px;
+    background-color: wheat;
+}
+.quiz > li{
+    display: inline-block;
+    margin-left: 1rem;
+}

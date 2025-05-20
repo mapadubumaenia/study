@@ -1,0 +1,14 @@
+package chap06.section02.quiz01;
+
+public class Taxi {
+       String Taxi;
+
+	public Taxi(String taxi) {
+		super();
+		Taxi = taxi;
+	}
+       
+       
+       
+       
+}

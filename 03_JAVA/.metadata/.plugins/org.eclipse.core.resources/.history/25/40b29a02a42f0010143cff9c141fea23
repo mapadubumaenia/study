@@ -1,0 +1,9 @@
+package chap01.section03;
+
+public class S4_Conversion {
+public static void main(String[] args) {
+	String a="10";
+	int b=Integer.parseInt(a);
+	System.out.println(b);
+}
+}

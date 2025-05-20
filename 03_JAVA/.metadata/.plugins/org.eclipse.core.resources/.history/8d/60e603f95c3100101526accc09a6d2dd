@@ -1,0 +1,8 @@
+package chap13.section01;
+
+public class S5_StringCharAtApplication {
+public static void main(String[] args) {
+	String a="960516-1117416";
+	System.out.println(a.charAt(6));//남녀 구분할수있다!
+}
+}

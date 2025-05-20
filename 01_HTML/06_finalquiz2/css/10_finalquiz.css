@@ -1,0 +1,13 @@
+.subject{
+    color: darkblue
+}
+th{
+    background-color: rgb(35, 131, 241);
+    color: white;
+}
+table{
+    font-size: 0.8rem;
+}
+.content{
+    font-size: 0.6rem;
+}

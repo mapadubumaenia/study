@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="header">
+      <h1>머리말</h1>
+      <div id="nav">
+        <h1>메뉴</h1>
+      </div>
+    </div>
+    <!-- jquery 넣기 -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        //부모 바로밑 자식태그만 선택하는 함수
+        //(사용법) $("부모선택자").children("자식선택자").함수("속성","값")
+      $(function () {
+        $("#header").children("h1").css("background-color", "skyblue");
+      });
+    </script>
+  </body>
+</html>

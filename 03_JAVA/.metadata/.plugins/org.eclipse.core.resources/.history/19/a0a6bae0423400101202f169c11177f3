@@ -1,0 +1,16 @@
+package chap13.section01;
+
+public class S9_SubString {
+public static void main(String[] args) {
+	String ssn="960516-1117416";
+	String str=ssn.substring(0,6);
+	System.out.println(str);
+	
+	
+	
+	String shin="shin cheonseop";
+	String prenom=shin.substring(5,15);
+	System.out.println(prenom);
+//글자에서 일부분을 잘라내서 보여주는 함수	
+}
+}

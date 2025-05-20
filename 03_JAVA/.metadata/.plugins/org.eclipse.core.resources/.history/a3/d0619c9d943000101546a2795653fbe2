@@ -1,0 +1,10 @@
+package chap03.section02;
+
+public class S7_Continue {
+	public static void main(String[] args) {
+        String name = "홍길동";
+        for (char c : name.toCharArray()) {
+            System.out.println(c);
+        }
+    }
+}

@@ -1,0 +1,10 @@
+package chap01.section03;
+
+public class S2_Casting {
+public static void main(String[] args) {
+// TODO: 정수 변환
+	long a=1;
+	int b=(int)a;
+	System.out.println(b);
+}
+}

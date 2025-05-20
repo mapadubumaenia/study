@@ -1,0 +1,16 @@
+package chap05.section02;
+
+
+//결론부터 말하자면 얇은 복사는 사용하지 마세요!
+
+public class S2_ShallowCopy {
+public static void main(String[] args) {
+	int []o= {1,2};
+	System.out.println(o[0]);
+	
+	int[] n=o;
+	n[0]=10;
+	System.out.println(n[0]);
+	System.out.println(o[0]);
+}
+}

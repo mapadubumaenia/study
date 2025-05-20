@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- border 는 외곽선을 뜻함 -->
+    <table border="1">
+      <thead>
+        <!-- tr은 행(가로)태그를 말함 -->
+        <tr>
+          <!-- th는 열(세로)태그, 제목(굵은글씨)  -->
+          <!-- scope 는 테일블 속성이다, 넣었다고 달라지는건 없지만 웹 접근성과 관련있다 -->
+          <!-- ex) 스크린 리더같은 음성서비스등을 지원한다 -->
+          <th scope="col"></th>
+          <th scope="col">월</th>
+          <th scope="col">화</th>
+          <th scope="col">수</th>
+          <th scope="col">목</th>
+          <th scope="col">금</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <!-- td는 열태그 내용(일반글씨) -->
+          <th scope="row">1교시</th>
+          <td>영어</td>
+          <td>국어</td>
+          <td>과학</td>
+          <td>미술</td>
+          <td>기술</td>
+        </tr>
+        <tr>
+          <th scope="row">3교시</th>
+          <td>HTML</td>
+          <td>CSS</td>
+          <td>JS</td>
+          <td>JAVA</td>
+          <td>SPRING</td>
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

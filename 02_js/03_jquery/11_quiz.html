@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+        .title{background-color: green; color: white;}
+        .title2{background-color: blue; color: white;}
+    </style>
+  </head>
+  <body>
+    <h1 id="tit" class="title">HTML</h1>
+    <button id="quiz">title3 디자인</button>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function () {
+            $("#quiz").click(function () {
+                $("#tit").removeClass().addClass("title2");
+            });
+        });
+    </script>
+  </body>
+</html>

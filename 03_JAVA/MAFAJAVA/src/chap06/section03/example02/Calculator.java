@@ -1,0 +1,31 @@
+package chap06.section03.example02;
+
+//PowerOn(), plus()
+
+public class Calculator {
+	// 1)void 함수(){}
+		void powerOn() {
+			System.out.println("전원켜기");
+			}
+	
+
+//3) 자료형 함수(매개변수){}
+	int plus(int x, int y) {
+		return x+y;
+			}
+			
+				
+// 함수 응용:1)전원켜기 화면표시 2)덧셈도 화면표시
+	void myPrint(int x, int y) {
+		powerOn();    //전원 켜기 (바로사용) 클래스 안만듬
+		System.out.println(plus(x,y));
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

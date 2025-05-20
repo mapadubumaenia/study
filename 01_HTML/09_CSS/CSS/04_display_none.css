@@ -1,0 +1,27 @@
+.example {
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 5px;
+    }
+    .example2 {
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 5px;
+    /*TODO: 사라지게 만듬*/
+    display: none;
+    }
+.quiz{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 5px;
+}
+.quiz2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 5px;
+    display: none;
+}

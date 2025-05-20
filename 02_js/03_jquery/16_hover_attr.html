@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <img src="../image/16_click_attr_dog_cat.jpg" width="300" id="animal" />
+    <br />
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script> 
+    //attr:선택자의 html속성의 값을 다른값으로 바꿈
+    // $("선택자").attr("html 속성", "값");
+      $(function () {
+        $("#animal").hover(
+          function () {
+            $("#animal").attr("src", "../image/16_click_attr_cat.jpg");
+          },
+          function () {
+            $("#animal").attr("src", "../image/16_click_attr_dog_cat.jpg");
+          }
+        );
+      });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,13 @@
+#header{
+    width: 600px;
+    background-color: skyblue;
+}
+
+#content{
+    width: 600px;
+    background-color: lightblue;
+}
+#footer{
+    width: 600px;
+    background-color: lightyellow;
+}

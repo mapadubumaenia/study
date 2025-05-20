@@ -1,0 +1,25 @@
+.heading{
+    background-color: lightcoral; font-size: 1.5rem;
+}
+p{
+    background-color: green;
+}
+
+@media screen and (min-width:768px){
+    .heading{
+        background-color: lightgreen; font-size: 3rem;
+    }
+    p{
+        background-color: yellow;
+    }
+}
+
+@media screen and (min-width:1024px){
+    .heading{
+        background-color: skyblue; font-size: 5rem;
+    }
+    p{
+        background-color: lightskyblue;
+    }
+}
+    

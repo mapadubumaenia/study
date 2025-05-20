@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+    <fullyQualifiedTypeName name="java.lang.Integer"/>
+    <fullyQualifiedTypeName name="java.lang.Double"/>
+    <fullyQualifiedTypeName name="sun.security.util.Cache.EqualByteArray"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
+    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
+    <fullyQualifiedTypeName name="java.lang.Math"/>
+    <fullyQualifiedTypeName name="chap06.section01.example01.Car"/>
+    <fullyQualifiedTypeName name="chap06.section01.example01.Taxi"/>
+    <fullyQualifiedTypeName name="chap06.section01.example01.Field"/>
+    <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="chap06.section02.Car"/>
+    <fullyQualifiedTypeName name="chap06.section02.quiz01.Taxi"/>
+    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.Equals"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
+    <fullyQualifiedTypeName name="jdk.internal.org.jline.terminal.TerminalBuilder.SystemOutput"/>
+    <fullyQualifiedTypeName name="chap06.section02.quiz02.American"/>
+    <fullyQualifiedTypeName name="chap06.section02.example02.Korean"/>
+    <fullyQualifiedTypeName name="chap06.section03.example01.Calculator"/>
+    <fullyQualifiedTypeName name="chap06.section03.quiz01.Computer"/>
+    <fullyQualifiedTypeName name="chap06.section03.example02.Calculator"/>
+    <fullyQualifiedTypeName name="chap06.section03.quiz02.Computer"/>
+    <fullyQualifiedTypeName name="chap06.section03.example03.Car"/>
+    <fullyQualifiedTypeName name="chap06.section03.quiz03.Taxi"/>
+    <fullyQualifiedTypeName name="chap06.section03.example04.Car"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+</qualifiedTypeNameHistroy>

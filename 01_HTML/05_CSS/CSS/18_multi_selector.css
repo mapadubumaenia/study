@@ -1,0 +1,7 @@
+/*TODO:멀티 선택자 사용법: 선택자,선택자2,...{속성:값;}*/
+.fruits, .apple{
+    color: red;
+}
+th{
+    color: aqua;
+}

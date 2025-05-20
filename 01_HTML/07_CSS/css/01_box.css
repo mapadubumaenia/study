@@ -1,0 +1,17 @@
+/* todo: css박스속성(*) */
+
+
+.example{
+    /*16px = 1rem */
+    width: 10rem;
+    height: 10rem;
+    background-color: red;
+
+    border: 5px solid orange;
+    /*border = 외곽선 속성: 선두깨 선종류 선색깔 */
+    /*solid = 실선 */
+    padding: 5px;
+    /*padding = 안쪽여백(상/하/좌/우우) */
+    margin: 5px;
+    /*margin = 바깥쪽 여백(상/하/좌/우) */
+}

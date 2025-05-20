@@ -1,0 +1,9 @@
+package chap06.section03.example01;
+//실행클래스
+public class CalculatorApplication {
+public static void main(String[] args) {
+// 클래스 만들기 사용법: 클래스 변수=new 생성자함수();
+	Calculator calculator=new Calculator();
+	
+}
+}

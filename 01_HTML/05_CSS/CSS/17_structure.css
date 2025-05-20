@@ -1,0 +1,8 @@
+/* TODO: 구조 선택자 사용법:선택자:nth-child(수식){속성:값}*/
+/* TODO: 2n(짝수), 2n+1(홀수)*/
+li:nth-child(2n){
+    background-color: #edf0e7;
+}
+li:nth-child(2n+1){
+    background-color: #bee479;
+}

@@ -1,0 +1,15 @@
+/*TODO: 모바일 우선 디자인(10평 -> 20평 이사) */
+/*TODO: 모바일 디자인 */
+.heading{background-color: lightcoral; font-size: 1.5rem;}
+
+/*TODO: 태블릿(ipad mini) */
+/*TODO: 화면이 최소 크기가 768보다 커지면 디자인이 적용됨 */
+@media screen and (min-width:768px){
+.heading{background-color: lightgreen; font-size: 3rem;}    
+}
+
+/*TODO: PC() */
+/*TODO: 화면이 최소 크기가 1024보다 커지면 디자인이 적용됨 */
+@media screen and (min-width:1024px){
+    .heading{background-color: lightblue; font-size: 5rem;}    
+    }

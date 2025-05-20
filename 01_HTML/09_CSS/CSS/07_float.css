@@ -1,0 +1,36 @@
+.example {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    margin: 10px;
+    float: right;
+    /* TODO: 우측배치 */
+    }
+.example2 {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 10px;
+    float: left;
+    /* TODO: 좌측배치 */
+}
+
+ /* TODO: clear */
+
+ .quiz{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+    margin: 10px;
+    float: right;
+ }
+.quiz2{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 10px;
+    float: left;
+ }
+ .dummy {
+    clear: both;
+    }

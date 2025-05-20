@@ -1,0 +1,13 @@
+package chap06.section01.Quiz01;
+
+import chap06.section01.example01.Taxi;
+
+public class Taxiapplication {
+	public static void main(String[] args) {
+		Taxi taxi=new Taxi();
+		
+		System.out.println(taxi.company);
+		System.out.println(taxi.speed);
+		
+	}
+}

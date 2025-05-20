@@ -1,0 +1,14 @@
+.container{
+    width: 90vw;
+    height: 90vh;
+    display: flex;
+    justify-content: end;
+    align-items: end;
+
+}
+.quiz{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    margin: 10px;
+}

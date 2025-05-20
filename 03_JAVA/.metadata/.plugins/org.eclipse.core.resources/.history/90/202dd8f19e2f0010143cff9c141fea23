@@ -1,0 +1,14 @@
+package chap01.section03;
+
+public class S2_Casting {
+public static void main(String[] args) {
+// TODO:강제 정수 변환
+	long a=1;
+	int b=(int)a;
+	System.out.println(b);
+// TODO:강제 실수 변환
+	double c=1.5;
+	float d=(float)c;
+	System.out.println(d);
+}
+}

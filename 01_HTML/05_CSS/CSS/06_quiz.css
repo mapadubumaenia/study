@@ -1,0 +1,40 @@
+.hello{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+.hello2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.bye{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+.bye2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.hello3{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+.hello4{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+}
+.bye3{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+}
+.bye4{
+    width: 100px;
+    height: 100px;
+    background-color: green;
+}

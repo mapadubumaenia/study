@@ -1,0 +1,17 @@
+/* TODO: 멀티 선택자 사용법: 선택자1, 선택자2,...*/
+table,tr,th,td{
+    border: 1px solid black;
+
+    /* TODO: 테이블 선 붙이기 (테이블은 자주 씀)*/
+    border-collapse: collapse;
+
+    /* TODO: 테이블에 여유공간 주기 */
+    padding: 10px;
+}
+th{
+    background-color: #1e90ff;
+    color: white;
+}
+td{
+    font-size: 0.7rem;
+}

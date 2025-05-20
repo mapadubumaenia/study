@@ -1,0 +1,11 @@
+package chap06.section03.quiz01;
+
+public class ComputerApplication {
+public static void main(String[] args) {
+	Computer computer = new Computer();
+	computer.powerOn();
+	
+	
+	System.out.println(computer.minus(6, 5));
+}
+}

@@ -1,0 +1,16 @@
+package chap06.section02.quiz02;
+
+
+public class AmericanApplication {
+
+  public static void main(String[] args) {
+	 American american = new American("James","123");
+	 American american2 = new American("Bread","456");
+	 
+	 
+	 System.out.println(american.name);
+	 System.out.println(american.num);
+}
+  
+  
+}

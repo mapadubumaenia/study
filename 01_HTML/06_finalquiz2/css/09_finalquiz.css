@@ -1,0 +1,18 @@
+
+p{
+    font-size: 0.8rem;
+}
+.bold{
+    color: lightseagreen;
+    font-weight: bold;
+}
+li{
+    list-style-type: none;
+    color: gray;
+    font-size: 0.7rem;
+}
+.time{
+    font-weight: bold;
+    color: green;
+    font-size: 2rem;
+}

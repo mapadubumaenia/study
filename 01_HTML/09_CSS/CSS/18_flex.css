@@ -1,0 +1,23 @@
+/*TODO:flex(css신기능) :박스(좌/우/센터 배치)  */
+/*TODO:구형 웹브라우저 안됨(단점)  */
+
+.container {
+    width: 99vw;
+    height: 90vh;
+    display: flex;
+    /*TODO: flex-direction:columnn = 박스 세로배치치 */
+    justify-content: center;
+    /*TODO: 가로-중앙 정렬(center) */
+    /*TODO: 가로-왼쪽쪽 정렬(start) */
+    /*TODO: 가로-오른쪽 정렬(end) */
+    align-items: center;
+    /*TODO: 세로-중앙 정렬 */
+    /*TODO: 세로-위 정렬(start) */
+    /*TODO: 세로-아래 정렬(end) */
+    }
+    .example {
+        width: 100px;
+        height: 100px;
+        background-color: blue;
+        margin: 10px;
+        }

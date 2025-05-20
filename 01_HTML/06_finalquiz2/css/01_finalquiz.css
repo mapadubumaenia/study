@@ -1,0 +1,10 @@
+li{
+    list-style-type: none;
+}
+.bold{
+    font-weight: bold;
+}
+.location{
+    color: green;
+    text-decoration: underline;
+}

@@ -1,0 +1,16 @@
+.example{
+    width: 99vw;
+    height: 30vh;
+    background-image: url(../../image/7_7_1_example.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.quiz{
+    width: 99vw;
+    height: 30vh;
+    background-image: url(../../image/7_7_2_quiz.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}

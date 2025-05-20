@@ -1,0 +1,10 @@
+package chap06.section01.example01;
+//클래스 3요소: 1)필드(멤버변수):변수,클래스의 안의 변수
+public class Field {
+//필드
+//정수:4가지
+	byte byteVal;
+	short shortVal;
+	int intVal;
+	long iongVal;
+}

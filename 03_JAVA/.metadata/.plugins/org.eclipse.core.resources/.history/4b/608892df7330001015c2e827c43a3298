@@ -1,0 +1,11 @@
+package chap03.section02;
+
+public class S2_For2 {
+public static void main(String[] args) {
+	int sum=0;
+	for (int i = 0; i < 10; i++) {
+		sum=sum+1;
+	}
+	System.out.println(sum);
+}
+}

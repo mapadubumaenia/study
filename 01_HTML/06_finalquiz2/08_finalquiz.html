@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/08_finalquiz.css" />
+  </head>
+  <body>
+    <button id="button">찜하기</button> <button id="button2">기획</button>
+    <h3>2024 예술의전당 토월정통연극</h3>
+    <ul id="list">
+      <li><span class="bold">기간</span> : 2024-10-18(금) ~ 2024-11-17(일)</li>
+      <li>
+        <span class="bold">시간</span> :
+        <span class="line"
+          >화,수,금 오후 7 시 30 분/ 토,일 오후 3 시 (월,목 공연없음)</span
+        >
+      </li>
+      <li><span class="bold">장소</span> : CJ 토월극장</li>
+      <li><span class="bold">관람시간(분)</span> : 185</li>
+      <li>
+        <span class="bold">가격</span> : R 석 100,000 원 / S 석 70,000 원 / A 석
+        40,000 원 / OP 석 100,000 원
+      </li>
+      <li><span class="bold">주최</span> : 예술의전당</li>
+      <li><span class="bold">문의</span> : 1668-1352</li>
+    </ul>
+        <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+        <script>
+          $(function () {
+            $("#button").click(function () {
+              $("#list").toggle();
+            });
+            
+          })
+        </script>
+  </body>
+</html>

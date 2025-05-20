@@ -1,0 +1,25 @@
+package chap06.section03.quiz02;
+
+public class Computer {
+     void powerOn() {
+    	 System.out.println("전원켜기");
+     }
+     
+     int plus(int x, int y) {
+    	 return x+y;
+     }
+     
+   void myprint(int x, int y) {
+	   powerOn();
+	   System.out.println(plus(x,y));
+   }
+     
+     
+     
+
+     
+     
+     
+     
+     
+}

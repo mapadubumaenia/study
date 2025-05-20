@@ -1,0 +1,8 @@
+#page{width: 99vw; margin: 0 auto; }
+nav{width: 50%; margin: 0 auto;  }
+.brand{ padding: 1.5rem; float: left; padding-left: 5rem; background-color: lightblue;}
+.menu{ float: right;  padding: 1.5rem;  background-color: gray;}
+.menu li{display: inline; margin-left: 3rem;  }
+.content{clear: both; float: left; background-color: wheat;}
+.content li{display: inline; margin-left: 3rem; background-color: wheat;}
+.serch{float: right; clear: both; background-color: wheat;}

@@ -1,0 +1,8 @@
+package chap06.section04.quiz01;
+
+public class CarApplication {
+public static void main(String[] args) {
+	System.out.println(Car.minus(10,5));
+	int resulte=Car.minus(10, 5);
+}
+}

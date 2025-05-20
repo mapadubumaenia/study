@@ -1,0 +1,55 @@
+#page{width: 99vw; margin: 0 auto;}
+
+.main-banner{width: 100%; height: 30vh;
+    background-image: url(https://picsum.photos/600/400);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;}
+/*TODO: 본문 디자인: 가로 100%, 중앙정렬(상/하 마진) */
+.container{width: 100%; margin: 2rem auto;}
+/*TODO: 추천상품 디자인 3개,content-area 가로 100%디자인 */
+.content-box{
+    width: 100%;
+    padding: 5px;
+    float: left;
+}
+.content-box img{
+    max-width: 100%;
+    height: auto;
+}
+.clear{clear: both;} /*TODO:모두에게 float클리어 적용*/
+.product-area h2{font-size: 1.5rem; padding: 1.5rem;}
+
+.product-list li{width: 50%; float: left; border: 1px solid lightgreen; outline: 1px solid lightgreen; }
+.product-list li a{height: 2.75rem; display: flex;justify-self: center;
+align-items: center; }
+
+.product{
+    width: 100%;
+    padding: 5px;
+    float: left;
+}
+.product img{
+    max-width: 100%;
+    height: auto;
+}
+
+@media screen and (min-width: 768px){
+    /*TODO:태블릿은 여유있으니 가로비율 줄임*/
+   .container{width:90%;}
+   .content-box{width: 33%}
+   .product-list li {border: none; width: auto;
+        padding: 1rem 0.6rem 1rem 0.6rem;}
+   .product{width: 25%;}
+
+}
+
+@media screen and(min-width:1024px){
+   /*TODO:컴퓨터는 더 여유있으니 더욱 줄임*/
+   .container{width: 60%;}
+   .content-box{width: 33%}
+   .product-list li {border: none; width: auto;
+        padding: 1rem 0.6rem 1rem 0.6rem;}
+   .product{width: 25%;}
+}
+

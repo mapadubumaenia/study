@@ -1,0 +1,18 @@
+.example{
+    width: 16rem;
+    border: 2px solid red;
+}
+/* TODO: 후손 선택자(자식 선택자):부모선택자 자식선택자{속성:값} */
+.example > img{
+    /* TODO:화면이 커지면 이미지원본이상 커지지 않게 하는 속성 */
+    max-width: 100%;
+    height: auto;
+}
+.quiz{
+    width: 20vw;
+    border: 2px solid orange;
+}
+.quiz img{
+    max-width: 100%;
+    height: auto;
+}

@@ -1,0 +1,11 @@
+package chap01.section04;
+
+import java.util.Scanner;
+
+public class S2_Scanner2 {
+public static void main(String[] args) {
+	Scanner a=new Scanner(System.in);
+	int b= a.nextInt();//정수 1개
+	System.out.println(b);
+}
+}

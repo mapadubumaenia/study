@@ -1,0 +1,20 @@
+.apple{
+    border-left: 5px solid green;
+    padding: 10px;
+    width: 30vw;
+}
+.apple-text{
+    border-top: 5px solid skyblue;
+    padding: 5px;
+    width: 30vw;
+}
+.grape{
+    border-left: 3px solid blueviolet;
+    padding: 10px;
+    width: 30vw;
+}
+.grape-text{
+    border-bottom: 3px solid green;
+    padding: 5px;
+    width: 30vw;
+}

@@ -1,0 +1,11 @@
+package chap01.section04;
+
+import java.util.Scanner;
+
+public class S1_Quiz {
+public static void main(String[] args) {
+	Scanner hello=new Scanner(System.in);
+	String b=hello.next();
+	System.out.println(b);
+}
+}

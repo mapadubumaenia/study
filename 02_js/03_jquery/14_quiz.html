@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="userid">아이디</h1>
+    <button id="quiz">퀴즈</button>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        //사용법: $("선택자").text  --> 태그 사이의 글자를 가져오는 함수
+        $(function () {
+            $("#quiz").click(function () {
+                let a= $(userid).text();
+                alert(a);
+            })
+        })
+    </script>
+  </body>
+</html>

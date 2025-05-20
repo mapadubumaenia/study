@@ -1,0 +1,31 @@
+.example{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 5px;
+    display: inline-block
+    /* TODO: display: inline-block (짬뽕) 성격개조 */
+    /* TODO: 1)width/height 적용, 2)자동줄바꿈 x */
+    /* TODO: 세로 박스배치를 가로로 바꿀때 많이 사용용*/
+}
+.example2{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 5px;
+    display: inline-block
+}
+.quiz{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: 5px;
+    display: inline-block
+}
+.quiz2{
+    width: 100px;
+    height: 100px;
+    background-color: lightcyan;
+    margin: 5px;
+    display: inline-block
+}

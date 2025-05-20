@@ -1,0 +1,33 @@
+/*todo: div태그 특징: 1)자동줄바꿈이 되는 태그
+                      2)가로 세로 크기가 적용됨*/
+/*todo: span태그 특징: 1)줄바꿈 안되는 태그
+                      2)가로 세로 크기가 적용 안됨  */                       
+/*todo: id선택자 사용법: #(id별명) 으로 css속성값입력 */
+/*todo: 선택자의 특징: class의 경우 여러개의 레이아웃을 스타일링 */      
+/*todo:                id의 경우 특정 구역 1개만 딱 조작가능 */      
+
+.hello{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+}
+.hello2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+}
+.bye{
+    width: 300px;
+    height: 300px;
+    background-color: yellow;
+}
+.bye2{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}
+#hi{
+    width: 100px;
+    height: 100px;
+    background-color: red;
+}

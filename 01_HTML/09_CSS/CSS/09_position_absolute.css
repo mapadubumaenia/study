@@ -1,0 +1,41 @@
+.example {
+    width: 100px;
+    height: 100px;
+    background-color: red;
+    /* TODO: 절대좌표(그래프) */
+    position: absolute;
+    /* TODO: x좌표, 양수이면 오른쪽이동 */
+    left: 0px;
+    /* TODO: y좌표, 양수이면 아래로로이동 */
+    top: 0;
+    z-index: 2;}
+.example2 {
+        width: 100px;
+        height: 100px;
+        
+        background-color: blue;
+        position: absolute;
+        left: 50px;
+        top: 50px;
+        z-index: 1;
+    }
+.quiz {
+        width: 100px;
+        height: 100px;
+        
+        background-color: yellow;
+        position: absolute;
+        left: 100px;
+        top: 100px;
+        z-index: 2;
+    }
+.quiz2 {
+        width: 100px;
+        height: 100px;
+        
+        background-color: skyblue;
+        position: absolute;
+        left: 150px;
+        top: 150px;
+        z-index: 3;
+    } 

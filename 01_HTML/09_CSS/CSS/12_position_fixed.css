@@ -1,0 +1,16 @@
+/* TODO:    */
+.top-bar {
+    height: 10vh;
+    background-color: aqua;
+    position: fixed;
+    left: 0;
+    /* TODO:x좌표(왼쪽->오른쪽)*/
+    top:0;
+    /* TODO:y좌표(위에서 아래)*/
+    right: 0;
+    /* TODO:x좌표(왼쪽->오른쪽)*/
+    }
+.container {
+/* TODO: 메뉴바 세로두께만큼 여백주기  */
+margin-top: 10vh;
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+    <style>
+      .santa {
+        width: 100%;
+        height: 60vh;
+        background-image: url("../image/05_01_quiz_1.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .gift {
+        width: 100%;
+        height: 60vh;
+        background-image: url("../image/05_01_quiz_2.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+      .swiper {
+        width: 100%;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper quiz">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- TODO: 여기에 1 번 배경이미지 사용하기 -->
+          <div class="santa"></div>
+        </div>
+        <div class="swiper-slide">
+          <!-- TODO: 여기에 2 번 배경이미지 사용하기 -->
+          <div class="gift"></div>
+        </div>
+      </div>
+    </div>
+    <div class="swiper-pagination"></div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      var swiper = new Swiper(".quiz", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+      });
+    </script>
+  </body>
+</html>

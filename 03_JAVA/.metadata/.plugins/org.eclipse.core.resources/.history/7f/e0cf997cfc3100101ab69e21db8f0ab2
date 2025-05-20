@@ -1,0 +1,10 @@
+package chap13.section01;
+
+public class S11_Trim {
+public static void main(String[] args) {
+	String a=" 02";
+	String b=" 0 2 ";
+	System.out.println(a.trim());
+	System.out.println(b.trim());
+}
+}

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!-- input type,= text  빈칸을 만들고 안에 값을 넣을수 있음
+    -laber for 코드는 input type을 통해 만든 박스 앞에 놔두어 이 빈칸에 무엇을 넣어야하는지 정의의
+    -value= 빈칸으로 넣어두면 안에 값을 비워둠
+    -placeholder 희미한 글씨체로 type안에 넣어둠
+    -checkbox 체크박스 checked하면 체크해놓음
+    -radio 체크할수 있는 동그란 체커
+    -input button 사각형 안에 밸류 저장가능, 클릭가능능 -->
+    <form>
+        <label for="name">이름</label> <!-- todo:label 코드는 입력상자 앞의 이름을 설명하는 관례적 코드? -->
+        <input type="text" value="" id="name"
+        placeholder="이름을 입력하세요"/> 
+        <label for="password">암호</label>
+        <input type="text" value="" id="password" placeholder="암호를 입력하세요"/>
+        <br>
+        <br>
+        <input type="checkbox" checked/> 좋음 <input type="checkbox"/> 나쁨
+        <br>
+        <br>
+        <input type="radio" name="person"/>남
+        <input type="radio" name="person"/>여
+        <br>
+        <br>
+        <input type="button" value="버튼"/>
+        <br>
+        <br>
+        <input type="button" value="파일 선택"/> 선택된 파일 없음
+        <br>
+        <br>
+        <input type="button" value="제출"/>
+    </form>
+  </body>
+</html>

@@ -1,0 +1,40 @@
+package chap06.section03.example03;
+//클래스 3요소: 1)필드(핵심)  2)생성자   3)메소드(함수)
+public class Car {
+    int speed;
+    
+    
+    
+  //메소드 만들기 getter() vs setter()
+  //사용법: 우클릭=>source=>generate getter and setter
+     
+  //TODO:getter 함수 목적:필드의 값을 가져오는 메소드  
+	public int getSpeed() {
+		return speed;
+	}
+
+	
+	
+	public void setSpeed(int speed) {
+		this.speed = speed;
+	}
+    
+
+	
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+}

@@ -1,0 +1,7 @@
+/* TODO: 자식 선택자 사용법: 부모선택자 > 자식선택자{속성:값} */
+#header > h1 {
+    color: red;
+}
+#section > h1{
+    color: blue;
+}

@@ -1,0 +1,18 @@
+.example{
+    width: 12rem;
+    height: 10rem;
+    background-color: red;
+
+    border: 5px solid orange;
+    margin: 5px;
+    padding: 5px;
+}
+.quiz{
+    width: 12rem;
+    height: 10rem;
+    background-color: blue;
+
+    border: 5px solid skyblue;
+    margin: 5px;
+    padding: 5px;
+}

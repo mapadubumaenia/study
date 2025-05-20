@@ -1,0 +1,24 @@
+.card{
+    background-image: url(../../image/8_8_final_quiz.jpg);
+    width: 99vw;
+    height: 0;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding-top: calc(3/16*100%);
+}
+.text{
+    margin-left: 50px;
+    font-size: 1rem;
+}
+.button{
+    width: 100px;
+    height: 25px;
+    background-color: blue;
+    color: white;
+    margin-left: 130px;
+    padding: 3px;
+    font-size: 0.9rem;
+    text-align: center;
+    line-height: 25px;
+}

@@ -1,0 +1,14 @@
+package chap06.section04.example03;
+//실행 클래스
+public class PersonApplication {
+	public static void main(String[] args) {
+		
+		Person person=new Person("홍길동");
+		
+		System.out.println(person.name);
+		System.out.println(person.nation);
+		
+		
+	}
+    
+}

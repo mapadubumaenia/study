@@ -1,0 +1,29 @@
+/* todo: 가로크기 vw(viewport width) %라는뜻 */
+/* todo: 세로크기 vh(viewport height) %라는 뜻*/  
+/* todo: 출력되는 모니터값이 어떤값이든 일정하게 나오는 속성(모바일 컴퓨터 화면 공동으로씀) */  
+
+
+
+#header{
+width: 99vw;
+height: 19vh;
+background-color: aqua
+}
+#nav{width: 99vw;
+    height: 10vh;
+    background-color: cadetblue;
+}
+#section{
+    width: 99vw;
+    height: 50vh;
+    background-color: beige;
+}
+.article{width: 99vw;
+    height: 25vh;
+    background-color: lightgreen;
+}
+
+#footer{width: 99vw;
+    height: 10vh;
+    background-color: lightpink;
+}

@@ -1,0 +1,54 @@
+/*TODO : 전체 디자인(전체 문서 배경색:) */
+/*TODO : 태그에는 고유의 마진/패딩이 있음 (웹 브라우저마다 틀림) */
+/*TODO : 따라서 전체적으로 마진과 패딩을 0으로 만들고 시작 */
+/*TODO : 1)글자/이미지(컨텐츠) 크기 = width/height 크기(기본) 
+         2)모드변경: 컨텐츠+패딩= width/hwight 크기(패딩을 줘도 박스크기는 커지지 않음) */
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*TODO:모드 변경(추천) */ 
+}
+ /*TODO:도화지(크기지정) */ 
+#container{
+    width: 80vw;
+    height: 90vh;
+    background-color: beige;
+     /*TODO:중앙정렬 (상/하  좌/우 )(margin a auto) */ 
+     /*TODO:글자나 폰트의 중앙정렬의 경우 font 나 text로 시작하는 태그를 사용하지만 div태그로 만들어진
+     공간의 경우 margin을 이용한 중앙정렬을 사용하는것이 편리  */ 
+    margin: 1rem auto;
+}
+header{
+    height: 20%;
+    background-color: gray;
+}
+/* TODO: 대메뉴(GNB:global Navigation Bar) */
+nav  li {
+    height: 3rem;
+    /*TODO: 세로->가로배치 */
+    display: inline-block;
+}
+/* TODO: 본문(왼쪽:가로 70%) + 사이드바(오른쪽: 가로 30%) */
+/* TODO: 패딩은 신경안써도됨(모드 설치해놓음) 마진은 신경써야됨 */
+section{
+    width: 70%;
+    height: 50%;
+    background-color: aqua;
+    /* TODO: 박스 왼쪽배치 */
+    float: left;
+}
+aside{
+    width: 30%;
+    height: 50%;
+    background-color: orange;
+    /* TODO: 박스 오른쪽 배치 */
+    float: right;
+}
+/* TODO: 본문에서 float을 썻기 때문에 밑에 태그에 float인식을 넣어줘야함 */
+footer{
+    clear:both;
+    height: 20%;
+    background-color: brown;
+}

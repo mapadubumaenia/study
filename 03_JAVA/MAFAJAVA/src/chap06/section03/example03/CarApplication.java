@@ -1,0 +1,34 @@
+package chap06.section03.example03;
+
+public class CarApplication {
+public static void main(String[] args) {
+	Car car=new Car();
+	System.out.println(car.speed);// 이 방법이 꾸짐.
+//    	 실무에서는 필드에 접근하는 방법은 추천하지 않는다.
+//   TODO: 실무에서는 필드보다 함수를 이용하는 방법을 선호(안전)
+	System.out.println(car.getSpeed());
+	// 이 방법이 더 좋음(실무에서 사용), 필드가 노출되지 않고 함수로.
+	
+//     TODO: 왜? 필드에 바로 값을 사용하면 안돼나?
+//  	car.speed=-1  //상식적으로 차의 속도가 마이너스 되나? x
+     car.setSpeed(-2); //필드값 수정 함수(세터)	
+     System.out.println(car.getSpeed());
+     
+//TODO: 즉 getter setter 는 필드는 숨기고 메소드만 다른 클래스에게                      
+//    제공하는 코딩(필드는 접근 못하게 막는다)
+	
+  // 최종 본   
+	car.setSpeed(10);
+	System.out.println(car.getSpeed());
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

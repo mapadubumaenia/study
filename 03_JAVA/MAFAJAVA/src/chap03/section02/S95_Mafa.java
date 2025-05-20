@@ -1,0 +1,12 @@
+package chap03.section02;
+
+public class S95_Mafa {
+public static void main(String[] args) {
+	System.out.println("3과 5의 공배수");
+	for (int i = 0; i <= 100; i++) {
+		if (i%3==0&&i%5==0) {
+			System.out.println(i);
+		}
+	}
+}
+}

@@ -1,0 +1,9 @@
+h3{
+    border-left: 10px solid blue ;
+    padding: 3px;
+}
+p{
+    border: 1px solid black;
+    padding: 20px;
+    width: 500px;
+}

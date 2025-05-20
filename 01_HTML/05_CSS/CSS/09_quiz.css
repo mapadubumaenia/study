@@ -1,0 +1,11 @@
+.head{
+    @import url('https://fonts.googleapis.com/css2?family=Monofett&display=swap');
+    font-family: "Monofett", monospace;
+    font-weight: 400;
+    font-style: normal;
+    text-align: center;
+}
+.quiz{
+    text-align: center;
+    font-size: 3rem;
+}

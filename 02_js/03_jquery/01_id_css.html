@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">jquery</h1>
+    <!-- TODO: 퀴즈 -->
+    <h1 id="quiz">quiz</h1>
+    <!-- TODO: jquerry: 유용한 함수 묶음(라이브러리) -->
+    <!-- TODO: js 파일을 끼워넣기 script 태그 -->
+    <!-- TODO: 1) jquerry 홈페이지에서 js파일 다운로드해서 끼워넣기 -->
+    <!-- TODO: 1) jquerry 홈페이지에서 제공하는 인터넷 주소로 끼워넣기 -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <!--TODO: 코딩예제 -->
+      <script>
+        //자동완성때문에 사용
+        //사용법:$(funtion(){$("선택자").함수("속성","변경값");});
+        //css함수 사용법:$("선택자").css("css속성","변경값");
+        //용도) 태그의 디자인 변경
+        $(function () {
+            $("#title").css("color","skyblue");
+        });
+        $(function () {
+            $("#quiz").css("color","red");
+        })
+      </script>
+  </body>
+</html>

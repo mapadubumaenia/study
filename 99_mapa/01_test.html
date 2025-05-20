@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .items>[data-type] {
+  display: none;
+}
+
+input[name=a]:checked~.items div[data-type=a] ,
+input[name=b]:checked~.items div[data-type=b] ,
+input[name=c]:checked~.items div[data-type=c] {
+  display: block;
+}
+    </style>
+</head>
+<body>
+    <input type="checkbox" name="a" style="display: inline-block;"> A <br>
+<input type="checkbox" name="b" style="display: inline-block;"> B <br>
+<input type="checkbox" name="c" style="display: inline-block;"> C <br>
+<hr>
+<div class="items">
+  <div data-type="a">A</div>
+  <div data-type="b">B</div>
+  <div data-type="c">C</div>
+</div>
+</body>
+</html>

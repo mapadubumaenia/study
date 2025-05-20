@@ -1,0 +1,13 @@
+package chap01.section02;
+
+public class s4_Numeral {
+	public static void main(String[] args) {
+		String a = Integer.toBinaryString(10);
+		String b = Integer.toOctalString(10);
+		String c = Integer.toHexString(10);
+		System.out.println(a);
+		System.out.println(b);
+		System.out.println(c);
+
+	}
+}

@@ -1,0 +1,16 @@
+/*TODO: 배경이미지: 1)css파일에 넣음 */
+/*TODO:            2) 첫 페이지 배너(광고) */
+/*TODO:            3) 가로를 모두 채움(100%) */
+.example{
+    width: auto;
+    height: 30vh;
+    /*TODO: 배경이미지 url("이미지경로") */
+    background-image: url(/01_HTML/image/7_7_1_example.jpg);
+    /*TODO: 이미지 반복 중지 */
+    background-repeat: no-repeat;
+    /*TODO: 이미지 크기 (cover)가로크기보다 작으면 강제로 늘려서 모두 채움 */
+    background-size: cover;
+    /*TODO: 이미지 위치(center)중심, px , % */
+    background-position: center;
+    
+}

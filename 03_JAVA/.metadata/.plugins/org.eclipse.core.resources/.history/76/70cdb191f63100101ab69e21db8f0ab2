@@ -1,0 +1,10 @@
+package chap13.section01;
+
+public class S10_Split {
+public static void main(String[] args) {
+	String a="960516-1117416";
+	String[] b=a.split("-");
+	System.out.println(b[0]);
+	System.out.println(b[1]);
+}
+}

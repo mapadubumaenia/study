@@ -1,0 +1,19 @@
+#page{width: 100vw; margin: 0 auto;}
+
+footer {clear: both;height: 6rem;background-color:
+    lightgrey;font-size: 14px;font-style: italic;}
+
+    #address {height: 50%; display: flex; align-items: center;
+    margin-left: 2rem;}
+
+    #address > div > h5 {margin: 4px 0 4px 0;}
+
+    #address > div > p {margin: 4px 0 4px 0;}
+
+    #customer {height: 50%; display: flex; align-items: center;
+    margin-left: 2rem;}
+
+    @media screen and (min-width: 768px) {
+#address {height: 100%; float: left;}
+#customer {height: 100%; float: right;}
+}

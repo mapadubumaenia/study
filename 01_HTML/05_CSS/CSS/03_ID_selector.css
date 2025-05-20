@@ -1,0 +1,16 @@
+#header{
+    /*가로크기:px(픽셀) */
+    width: 600px;
+    background-color: skyblue;
+}
+
+#content{
+    width: 400px;
+    color: green;
+    background-color: yellow;
+}
+#footer{
+    width: 400px;
+    height: 200px;
+    background-color: gray;
+}

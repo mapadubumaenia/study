@@ -1,0 +1,32 @@
+/* TODO: 1)div태그 특징: width/height 적용, 자동줄바꿈(block속성) */
+/* TODO: 2)span태그 특징: width/height x, 자동줄바꿈 x (inline속성) */
+.example{
+    width: 100px;
+    height: 100px;
+    background-color: lightblue;
+    margin: 5px;
+    /* TODO: 강제로 성격 변경(최면어플?)*/
+    display: inline;
+}
+.example2{
+    width: 100px;
+    height: 100px;
+    background-color: lightgreen;
+    margin: 5px;
+    display: inline;
+}
+.quiz{
+    width: 200px;
+    height: 200px;
+    background-color: red;
+    margin: 5px;
+    display: inline;
+}
+.quiz2{
+    width: 300px;
+    height: 300px;
+    background-color: bisque;
+    margin: 5px;
+    display: inline;
+}
+/* TODO: 최면어플 성능 미쳣다. inline속성은 줄바꿈과 가로세로가 없음*/

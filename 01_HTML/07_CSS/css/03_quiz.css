@@ -1,0 +1,12 @@
+table,tr,th,td{
+    border: 1px solid black;
+    border-collapse: collapse;
+    padding: 10px;
+}
+th{
+    background-color: bisque;
+    font-size: 1rem;
+}
+td{
+    font-size: 0.7rem;
+}

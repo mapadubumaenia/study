@@ -1,0 +1,19 @@
+body{
+    background-color: black;
+    line-height: 2;
+}
+h3{
+    color: white;
+}
+li{
+    font-size: 0.7rem;
+    color: wheat;
+    list-style-type: none;
+}
+.bold{
+    color: gray;
+    text-decoration: underline;
+}
+.line{
+    text-decoration: underline;
+}

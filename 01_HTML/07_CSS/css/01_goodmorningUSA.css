@@ -1,0 +1,9 @@
+.banner{
+    width: auto;
+    height: 0;
+    background-image: url(/01_HTML/image/7_7_1_example.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    padding-top: calc(4/16*100%);
+}

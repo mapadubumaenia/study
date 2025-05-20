@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>셔틀버스 운행안내</h1>
+    <h2>순환버스 노선 및 운행시간 안내내</h2>
+    <table border="1">
+      <thead class="heading">
+        <!-- 셀의 제목 선언 -->
+        <tr>
+          <th scope="col">구분</th>
+          <th scope="col">운행시간</th>
+          <th scope="col">배차간격</th>
+          <th scope="col">운행구간</th>
+        </tr>
+      </thead>
+      <tbody class="content">
+        <!-- 셀의 숫자 선언언 -->
+        <tr>
+          <td>마을버스6</td>
+          <td rowspan="3">07:00~23:00</td>
+          <td rowspan="3">10분</td>
+          <!-- rowspan 속성으로 셀의 "3행" 병합 -->
+          <td>대학본부-00치안센터</td>
+        </tr>
+
+        <tr>
+          <td>마을버스6-1</td>
+          <td>대학본부-00역5번출구</td>
+        </tr>
+
+        <tr>
+          <td>마을버스9</td>
+          <td>생활관-00기숙사</td>
+        </tr>
+
+        <tr>
+          <td colspan="4">000번 시내버스 오전 11:00까지 00로타리 경유</td>
+          <!-- colspan속성으로 셀의 "4열"을 병합 -->
+        </tr>
+      </tbody>
+    </table>
+  </body>
+</html>

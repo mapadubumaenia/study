@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1 id="title">jquery</h1>
+    <button id="btn">버튼</button>
+    <!-- jquery 넣기 -->
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <!-- TODO: 예제 -->
+    <script>
+      // TODO : btn 을 click 하면 title 의 color 를 green 바꾸세요
+      // 사용법) $(function () {$("선택자").click(function () {실행문};
+     $(function () {
+        $("#btn").click(function () {
+            $("#title").css("color","green");
+        })
+     });
+    </script>
+  </body>
+</html>

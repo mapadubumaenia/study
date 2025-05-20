@@ -1,0 +1,30 @@
+/* TODO: class선택자: .class별명{속성:값}  */
+/* TODO: hover (마우스 위로 올리다) */
+/* TODO: 반응 선택자 사용법
+           1) 선택자: hover{속성:값} => 마우스 위로 올릴때 디자인 됨 
+           1) 선택자: active{속성:값} => 마우스 클릭하면면 디자인 됨 */
+.example:hover{
+    color: red;
+}
+.example:active{
+    color: blue;
+}
+.mafatofu:hover{
+    color: violet;
+}
+.mafatofu:active{
+    color: red;
+}
+.quiz:hover{
+    color: green;
+}
+.quiz:active{
+    color: yellow;
+}
+.btn{
+    background-color: #5877f9;
+    color: white;
+}
+.btn:active{
+    background-color: #0837f3;
+}

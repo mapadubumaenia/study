@@ -1,0 +1,10 @@
+.example{
+    width: 10rem;
+    height: 10rem;
+    /* TODO: 외곽선 사용밥: 선두께 선스타일 선색깔 */
+    border: 5px solid orange;
+    /* TODO: 마진(바깥여백) 팁(시계방향)(상 우 하 좌) */
+    margin: 50px 0 50px 0;
+    /* TODO: 패딩(안쪽여백) 팁(시계방향)(상 우 하 좌) */
+    padding: 50px 0 50px 0;
+}

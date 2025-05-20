@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <label for="userid">아이디</label>
+    <input type="text" name="userid" id="userid" value="" />
+    <button id="quiz">퀴즈</button>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function () {
+            $("#quiz").click(function () {
+                $("#userid").val("장길산");
+            });
+        });
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+#header{
+    width: 99vw;
+    height: 19vh;
+    background-color: aqua;
+}
+#nav{
+    width: 99vw;
+    height: 10vh;
+    background-color: cadetblue;
+}
+.article{
+    width: 99vw;
+    height: 25vh;
+    background-color: lightgreen;
+}
+#footer{
+    width: 99vw;
+    height: 10vh;
+    background-color: lightpink;
+}

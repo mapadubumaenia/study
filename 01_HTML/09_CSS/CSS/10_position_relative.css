@@ -1,0 +1,19 @@
+.example-relative {
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    /* TODO: 상대좌표(다른 태그를 고려하여 기준점을 정하고 그뒤 적용) */
+    position: relative;
+    left: 0;
+    /* TODO: x좌표 */
+    top:0;
+    /* TODO: y좌표 */
+}
+.example-quiz{
+    width: 100px;
+    height: 100px;
+    background-color: orange;
+    position: relative;
+    left: 0;
+    top: 0;
+}

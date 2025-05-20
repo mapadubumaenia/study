@@ -1,0 +1,29 @@
+/*TODO: 정리) 1) css(cascading style sheet)  */
+/*TODO: 정리) 2) 부모태그를 디자인하면 자식태그가 같이 디자인됨 */
+/*TODO: cascading(폭포수)   */
+/*TODO: 1) 디자인 서열 (우선순위) 정의   */
+/*TODO:     정리) 1)*(와일드카드) <태그<class별명 <id별명   */
+/*TODO:     정리) 2) 부모선택자보다 자식선택자의 디자인이 우선됩니다.   */
+/*TODO:     정리) 3) 같은 태그들은 아래에 (css파일내) 있는것 우선합니다.   */
+
+#id-div{
+    color: aqua;
+}
+#id-h1 {
+    color: coral;
+    }
+
+.class-h1 {
+    color: green !important;
+    }
+
+h1{
+    color: brown;
+    }
+
+* {
+    color: black;
+    }
+    
+
+    /*TODO: 동시 디자인,  강제우선순위 예약어: important, */

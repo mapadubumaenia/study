@@ -1,0 +1,13 @@
+h3{
+    color: black;
+}
+p{
+    color: green;
+    font-size: 2rem;
+    line-height: 2;
+}
+span{
+       color:blue ;
+       font-weight: bold;
+       text-decoration: underline;
+}

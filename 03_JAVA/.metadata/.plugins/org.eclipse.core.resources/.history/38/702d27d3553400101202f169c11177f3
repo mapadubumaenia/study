@@ -1,0 +1,10 @@
+package chap06.section02.example02;
+
+public class KoreanApplication {
+public static void main(String[] args) {
+	Korean korean =new Korean("홍길동", "960516");
+	
+	System.out.println(korean.name);
+}
+	
+}

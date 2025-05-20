@@ -1,0 +1,28 @@
+.example{
+    width: 100px;
+    height: 100px;
+    background-color: aqua;
+    margin: 5px;
+    display: block;
+}
+.example2{
+    width: 100px;
+    height: 100px;
+    background-color: blue;
+    margin: 5px;
+    display: block;
+}
+.quiz{
+    width: 100px;
+    height: 100px;
+    background-color: yellow;
+    margin: 5px;
+    display: block;
+}
+.quiz2{
+    width: 100px;
+    height: 100px;
+    background-color: lightcoral;
+    margin: 5px;
+    display: block;
+}

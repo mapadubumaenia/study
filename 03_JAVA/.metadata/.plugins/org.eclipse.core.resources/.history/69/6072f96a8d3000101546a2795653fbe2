@@ -1,0 +1,7 @@
+package chap03.section02;
+
+public class S6_InfiniteLoop {
+public static void main(String[] args) {
+	
+}
+}

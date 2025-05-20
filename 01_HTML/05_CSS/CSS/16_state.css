@@ -1,0 +1,15 @@
+/*TODO: 상태 선택자 사용법
+  => thml 태그 상태에 따라 디자인이 변경됨 */
+  /* TODO: 태그 선택자 사용법: 태그{속성:값} */
+input:enabled{
+    background-color: white;
+    /* TODO: 활성화 상태(입력할 수 있는 상태) */
+}
+input:disabled{
+    background-color: gray;
+    /* TODO: 비활성화 상태(입력할 수 없는 상태) */
+}
+input:focus{
+    background-color: orange;
+    /* TODO: 집중 상태(커서가 깜빡거리는 상태) */
+}

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=, initial-scale=1.0" />
+    <title>Document</title>
+    <!--TODO:swiper 쓰려면 넣으라는 css를 넣어야함.-->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <style>
+      .cat {
+        width: 100%;
+        height: 60vh;
+        background-image: url("../image/16_click_attr_cat.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+
+      .dog {
+        width: 100%;
+        height: 60vh;
+        background-image: url("../image/16_click_attr_dog_cat.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        background-position: center;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <!-- TODO: 여기에 1 번 배경이미지 사용하기 -->
+          <div class="cat"></div>
+        </div>
+        <div class="swiper-slide">
+          <!-- TODO: 여기에 2 번 배경이미지 사용하기 -->
+          <div class="dog"></div>
+        </div>
+      </div>
+    </div>
+    <!--TODO: Swiper JS 플러그인 인터넷 주소-->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      <!--TODO:데모코딩 넣기-->
+       var swiper = new Swiper(".mySwiper", {
+        //옵션추가자리(선택) 
+        autoplay: {
+        delay: 2500,
+        disableOnInteraction: false
+      },
+        
+       });
+    </script>
+  </body>
+</html>

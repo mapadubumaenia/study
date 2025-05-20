@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      #page {
+        width: 98vw;
+      }
+      #fab {
+        width: 50px;
+        height: 50px;
+        background-color: pink;
+        border-radius: 50%;
+        position: sticky;
+        top: 90vh;
+        left: 100vw;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="page">
+      <div id="fab"></div>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+      <p>Lorem ipsum dolor sit amet</p>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+    <script>
+        $(function () {
+            //scrollTop() 이해를 돕기위한 샘플
+            //scrollTop() = 스크롤바의 위치를 가져오는 함수
+            $(window).scroll(function () {
+                let a=$(window).scrollTop();
+                console.log(a);
+            })
+        //fab을 클릭하면 맨위로 스크롤이 올라가는 함수, 
+        //스크롤탑 태그에 숫자로 어느정도 조정이 가능하다.
+        //스크롤탑 위치에 따라 나무위키처럼 특정 위치로 이동도 가능? 
+        //사용법: $("html").scrollTop(Y좌표);
+            $("#fab").click(function () {
+                $("html").scrollTop(0);
+            });
+        });
+    </script>
+  </body>
+</html>

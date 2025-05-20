@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/06_costummenu.css" />
+    <link rel="stylesheet" href="./css/00_style.css" />
+    <link rel="stylesheet" href="./css/07_custom_content.css" />
+    <link rel="stylesheet" href="./css/08_custom_menu.css" />
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+  </head>
+  <body>
+    <div id="page">
+      <!-- 메뉴 -->
+      <nav>
+        <h1 class="brand"><a href="#">BRAND</a></h1>
+        <div class="fab">
+          <img src="../image/11_5_icon_1.png" alt="햄버거메뉴" />
+        </div>
+        <ul class="menu">
+          <li><a href="#">Home</a></li>
+          <li><a href="#">About</a></li>
+          <li><a href="#">Forum</a></li>
+          <li><a href="#">Contact</a></li>
+        </ul>
+      </nav>
+      <div class="swiper mySwiper clear">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <!-- TODO: 여기에 1 번 배경이미지 사용하기 -->
+            <div class="main-banner"></div>
+          </div>
+          <div class="swiper-slide">
+            <!-- TODO: 여기에 2 번 배경이미지 사용하기 -->
+            <div class="main-banner2"></div>
+          </div>
+        </div>
+      </div>
+      <div class="container clear">
+        <!-- content-area -->
+        <div class="content-area clear" data-aos="zoom-in">
+          <div class="content-box">
+            <img src="https://placehold.co/600x400" alt="빈이미지" />
+          </div>
+          <div class="content-box">
+            <img src="https://placehold.co/600x400" alt="빈이미지" />
+          </div>
+          <div class="content-box">
+            <img src="https://placehold.co/600x400" alt="빈이미지" />
+          </div>
+        </div>
+        <!-- product-area -->
+        <div class="product-area clear" data-aos="zoom-in">
+          <h2>Product Overview</h2>
+          <ul class="product-list clear">
+            <li><a href="#">All Product</a></li>
+            <li><a href="#">Women</a></li>
+            <li><a href="#">Men</a></li>
+            <li><a href="#">Bag</a></li>
+            <li><a href="#">Shoes</a></li>
+          </ul>
+          <div class="product-box clear">
+            <div class="product">
+              <img src="https://placehold.co/600x400" alt="빈이미지" />
+              <p class="title">OO Shirt $16</p>
+            </div>
+            <div class="product">
+              <img src="https://placehold.co/600x400" alt="빈이미지" />
+              <p>OO Pants $26</p>
+            </div>
+            <div class="product">
+              <img src="https://placehold.co/600x400" alt="빈이미지" />
+              <p>OO Blazer $36</p>
+            </div>
+            <div class="product">
+              <img src="https://placehold.co/600x400" alt="빈이미지" />
+              <p>OO Jumper $46</p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <footer>
+        <div id="address">
+          <div id="address-detail">
+            <h5>About | Course | Contact | Guest Book</h5>
+            <p>부산시 동래구 충렬대로</p>
+          </div>
+        </div>
+        <div id="customer">
+          <p>Tel: 010-0000-0000</p>
+        </div>
+      </footer>
+    </div>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      <!--TODO:데모코딩 넣기-->
+      var swiper = new Swiper(".mySwiper", {
+        autoplay: {
+          delay: 2500,
+          disableOnInteraction: false,
+        },
+      });
+    </script>
+
+    <script>
+      AOS.init();
+    </script>
+  </body>
+</html>

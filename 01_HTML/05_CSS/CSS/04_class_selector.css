@@ -1,0 +1,11 @@
+/* todo : clss 선택자: .class별명{css속성:값} */
+/* todo : 참고) 선호도,(디자이너/퍼블리셔: class 별명 사용) */
+/* todo :              (js 개발자: id 별명 사용)*/
+.hello{
+    color: red;
+}
+.bye{
+    color: aqua;
+}
+
+/* todo : 4가지 기본 선택자: 1, 태그  2,전체  3,id  4,class   */
