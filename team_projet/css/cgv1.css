@@ -1,0 +1,91 @@
+
+footer {
+  height: 10vh;
+  width: 65vw;
+  margin: 0 auto;
+  border-top: 1px solid gray;
+  
+  bottom: 0;
+  display: flex;
+  justify-content: space-between;
+}
+
+#foot {
+  height: 4vh;
+  width: 28vw;
+  display: flex;
+  flex-direction: column;
+}
+
+#interface{
+    height: 4vh;
+    width: 29vw;
+    display: flex;
+    flex-wrap: wrap;
+   
+}
+#interface > li {
+  display: inline-flex;
+  text-align: center;
+  margin: 0.3rem;
+  padding-inline: 0.5rem;
+  border-left: 1px solid black;
+}
+#interface > li:first-child {
+  border-left: none;
+  justify-content: center;
+}
+
+#cdline{
+  width: 20vw;
+  height: 15vh;
+  display: flex;
+  justify-content: center space-between;
+  align-items: center; 
+  overflow: hidden; 
+  margin: 0 10px;
+ 
+}
+
+#credit {
+  width: 20vw;
+  height: 15vh;
+  position: relative;   
+  text-align: center;
+  justify-content: center;
+ 
+}
+
+.credit-content{
+  width: 18vw;
+  font-size: 0.9rem;
+ 
+  justify-content: center;
+  position: absolute;
+  top: 100%;
+  animation: scrollUp 10s linear infinite;
+  
+}
+.cr{
+ 
+  margin-top: 0.4rem;}
+
+
+#line {
+  height: 4vh;
+  width: 8rem;
+  position: relative;
+  margin-right: 4rem;
+  font-size: 1px;
+}
+
+
+
+@keyframes scrollUp {
+  0% {
+    top: 100%;
+  }
+  100% {
+    top: -400%;
+  }
+}

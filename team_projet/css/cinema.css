@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap');
+:root{
+    --black:black;
+    --gray: gray;
+}
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    /*TODO: 영문/한글 웹폰트 적용 */
+    /*TODO: font-family:폰트1, 폰트2,... 
+    ==> 폰트1있으면 폰트1 적용 없으면 폰트2 적용, ...*/
+    font-family: "Montserrat","Noto Sans KR", sans-serif;
+}
+li{list-style-type: none;}
+/* TODO: a 태그(페이지 이동태그) */
+a{
+    /*TODO: 밑줄 없앰 */
+    text-decoration: none;
+    color: var(--black);
+}

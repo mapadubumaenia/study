@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="css/event.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  </head>
+  <body class="clear">
+    <div id="event">
+      <div id="event-head">
+        <h3>EVENT</h3>
+        <a href="#"><p class="watching">전체보기 &gt;</p></a>
+      </div>
+
+      <div class="swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide ev-banner">
+            <a href="#"
+              ><img src="../3GROUP/img/4.png" alt="event1" width="300"
+            /></a>
+            <div class="ev-title">
+              미션 임파서블: 파이널 레코닝<br />포스터 증정
+            </div>
+            <p class="since">2025-05-17 ~ 2025-05-20</p>
+          </div>
+
+          <div class="swiper-slide ev-banner">
+            <a href="#"
+              ><img src="../3GROUP/img/1.png" alt="event2" width="300"
+            /></a>
+            <div class="ev-title">
+              파이널 데스티네이션<br />스페셜 티켓 증정
+            </div>
+            <p class="since">2025-05-14 ~ 2025-05-21</p>
+          </div>
+
+          <div class="swiper-slide ev-banner">
+            <a href="#"
+              ><img src="../3GROUP/img/2.png" alt="event3" width="300"
+            /></a>
+            <div class="ev-title">5월 가정의 달 이벤트</div>
+            <p class="since">2025-05-01 ~ 2025-05-31</p>
+          </div>
+
+          <div class="swiper-slide ev-banner">
+            <a href="#"
+              ><img src="../3GROUP/img/3.png" alt="event3" width="300"
+            /></a>
+            <div class="ev-title">승부 N차 관람 이벤트</div>
+            <p class="since">2025-04-30 ~ 2025-05-06</p>
+          </div>
+        </div>
+
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
+      </div>
+    </div>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    </script>
+  </body>
+</html>

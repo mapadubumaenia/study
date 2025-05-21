@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- 신첩섭님 헤더 부분 -->
+
+    <link rel="icon" href="../image/simple-coding.png" type="image/png" />
+    <link rel="stylesheet" href="./css/cinema.css" />
+    <link rel="stylesheet" href="./css/cinema2.css" />
+
+    <!--이상민님 본문 부분  -->
+
+    <link rel="stylesheet" href="./css/movie_chart.css">
+
+    <!-- 최수진님 이벤트 부분 -->
+
+    <link rel="stylesheet" href="css/event.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"
+    />
+
+    <!-- 손근일님 서비스 부분 -->
+
+    <link rel="stylesheet" href="./css/css_01.css" />
+    <link rel="stylesheet" href="./css/css_02.css" />
+
+    <!-- 박희망님님 꼬리말 부분 -->
+
+    <link rel="stylesheet" href="./css/00.css" />
+    <link rel="stylesheet" href="./css/cgv1.css" />
+
+  </head>
+  <body>
+    <!-- 꼬리말 담당 스크롤 버튼  -->
+    <div id="fab"><img src="./img/film_white.png" alt="film_icon" /></div>
+    
+    <!-- 신천섭님 헤더 -->
+    <header>
+
+    
+      <nav>
+        <div class="top-bar">
+          <div class="brand">
+            <h1><a href="#">le cinema</a></h1>
+          </div>
+          <div class="menu">
+            <ul>
+              <li>
+                <a href="#"
+                  ><img src="./img/icons8-login-100.png" alt="login" />log in</a
+                >
+              </li>
+              <li>
+                <a href="#">
+                  <img src="./img/icons8-signin-100.png" alt="signin" />sign
+                  in</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img src="./img/icons8-mypage-100.png" alt="mypage" />my
+                  page</a
+                >
+              </li>
+              <li>
+                <a href="#"
+                  ><img
+                    src="./img/icons8-contact-100.png"
+                    alt="contact"
+                  />Contact</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="bottom-bar">
+          <div class="nav-menu">
+            <ul>
+              <li>
+                <a href="#">극장</a>
+                <ul class="sub-menu">
+                  <li><a href="#">극장</a></li>
+                  <li><a href="#">cinema 극장</a></li>
+                  <li><a href="#">특별관</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">영화</a>
+                <ul class="sub-menu">
+                  <li><a href="#">영화</a></li>
+                  <li><a href="#">무비차트</a></li>
+                  <li><a href="#">아트하우스</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">예매</a>
+                <ul class="sub-menu">
+                  <li><a href="#">예매</a></li>
+                  <li><a href="#">빠른예매</a></li>
+                  <li><a href="#">상영스케쥴</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">스토어</a>
+                <ul class="sub-menu">
+                  <li><a href="#">스토어</a></li>
+                  <li><a href="#">영화관람권</a></li>
+                  <li><a href="#">패키지</a></li>
+                  <li><a href="#">기프트카드</a></li>
+                  <li><a href="#">콤보</a></li>
+                  <li><a href="#">팝콘</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">이벤트</a>
+                <ul class="sub-menu">
+                  <li><a href="#">이벤트</a></li>
+                  <li><a href="#">스페셜</a></li>
+                  <li><a href="#">멤버싶</a></li>
+                  <li><a href="#">VIP</a></li>
+                </ul>
+              </li>
+              <li>
+                <a href="#">혜택</a>
+                <ul class="sub-menu">
+                  <li><a href="#">혜택</a></li>
+                  <li><a href="#">멤버싶 할인</a></li>
+                  <li><a href="#">vip 라운지</a></li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+          <div class="serch">
+            <input type="text" placeholder="Search..." />
+            <a href="#"
+              ><img src="./img/icons8-수색-100.png" alt="serch"
+            /></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <br>
+    <div class="main-banner"></div>
+<br>
+<!--이상민님 섹션  -->
+ <div id = "page">
+      <section id="movie_chart">
+        <ul class="chart_name">
+          <li><button class = "mchart"><h1>무비차트</h1></button></li>
+          <li><h5>|</h5></li>
+          <li><button class="scheduled"><h1>상영예정작</h1></button></li>
+        </ul>
+        <div class ="view_all"><a href="#">전체보기 ></a></div>
+        <ul class="ranking clear">
+          <li class = "rank">
+            <div class= "hover1 movie_btn">1
+              <img id="rank1" src="./img/to_busan.png" alt="1위">
+              <div class = "chart_detail detail1"><a href="#">상세보기</a></div>
+              <div class = "movie_reserve reserve1"><a href="#">예매하기</a></div>
+              <div class = "movie_name name1">부산행</div>
+            </div>
+          </li>
+          <li class = "rank ">
+            <div class= "hover2 movie_btn">2 
+              <img id="rank2" src="./img/Exhuma.jpg" alt="2위">
+              <div class = "chart_detail detail2"><a href="#">상세보기</a></div>
+              <div class = "movie_reserve reserve2"><a href="#">예매하기</a></div>
+              <div class = "movie_name name2">파묘</div>
+            </div>
+          </li>
+          <li class = "rank">
+            <div class= "hover3 movie_btn">3 
+              <img id="rank3" src="./img/lala_land.jpg" alt="3위">
+              <div class = "chart_detail detail3"><a href="#">상세보기</a></div>
+              <div class = "movie_reserve reserve3"><a href="#">예매하기</a></div>
+              <div class = "movie_name name3">라라랜드</div>
+            </div>
+          </li>
+          <li class ="rank">
+            <div class= "hover4 movie_btn">4 
+              <img id="rank4" src="./img/pan's_labyrinth.jpg" alt="4위">
+              <div class = "chart_detail detail4"><a href="#">상세보기</a></div>
+              <div class = "movie_reserve reserve4"><a href="#">예매하기</a></div>
+              <div class = "movie_name name4">판의 미로 - 오필리아와 세 개의 열쇠</div>
+            </div>
+          </li>
+          <li class = "rank">
+            <div class= "hover5 movie_btn">5 
+              <img id="rank5" src="./img/crime_city_3.jpg" alt="5">
+              <div class = "chart_detail detail5"><a href="#">상세보기</a></div>
+              <div class = "movie_reserve reserve5"><a href="#">예매하기</a></div>
+              <div class = "movie_name name5">범죄도시3</div>
+            </div>
+          </li>
+        </ul>
+      </section>
+<br>
+<br>
+<br>
+<br>
+<!-- 최수진님 이벤트-->
+<body class="clear">
+  <div id="event">
+    <div id="event-head">
+      <h3>EVENT</h3>
+      <a href="#"><p class="watching">전체보기 &gt;</p></a>
+    </div>
+
+    <div class="swiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide ev-banner">
+          <a href="#"
+            ><img src="./img/4.png" alt="event1" width="300"
+          /></a>
+          <div class="ev-title">
+            미션 임파서블: 파이널 레코닝<br />포스터 증정
+          </div>
+          <p class="since">2025-05-17 ~ 2025-05-20</p>
+        </div>
+
+        <div class="swiper-slide ev-banner">
+          <a href="#"
+            ><img src="./img/1.png" alt="event2" width="300"
+          /></a>
+          <div class="ev-title">
+            파이널 데스티네이션<br />스페셜 티켓 증정
+          </div>
+          <p class="since">2025-05-14 ~ 2025-05-21</p>
+        </div>
+
+        <div class="swiper-slide ev-banner">
+          <a href="#"
+            ><img src="./img/2.png" alt="event3" width="300"
+          /></a>
+          <div class="ev-title">5월 가정의 달 이벤트</div>
+          <p class="since">2025-05-01 ~ 2025-05-31</p>
+        </div>
+
+        <div class="swiper-slide ev-banner">
+          <a href="#"
+            ><img src="./img/3.png" alt="event3" width="300"
+          /></a>
+          <div class="ev-title">승부 N차 관람 이벤트</div>
+          <p class="since">2025-04-30 ~ 2025-05-06</p>
+        </div>
+      </div>
+
+      <div class="swiper-pagination"></div>
+      <div class="swiper-button-next"></div>
+      <div class="swiper-button-prev"></div>
+    </div>
+  </div>
+<br>
+
+<!-- 손근일님 서비스 메뉴-->
+
+
+<section id="customer-service">
+  <div class="service-list">
+    <div class="service-item">
+      <a href="#" class="service-link">
+        <img src="./img/one.png" alt="고객센터" />
+        <p>고객센터</p>
+      </a>
+    </div>
+    <div class="service-item">
+      <a href="#" class="service-link">
+        <img src="./img/two.png" alt="자주 묻는 질문" />
+        <p>자주 묻는 질문</p>
+      </a>
+    </div>
+    <div class="service-item">
+      <a href="#" class="service-link">
+        <img src="./img/three.png" alt="1:1 문의" />
+        <p>1:1 문의</p>
+      </a>
+    </div>
+    <div class="service-item">
+      <a href="#" class="service-link">
+        <img src="./img/four.png" alt="단체/대관문의" />
+        <p>단체/대관문의</p>
+      </a>
+    </div>
+    <div class="service-item">
+      <a href="#" class="service-link">
+        <img src="./img/five.png" alt="멤버십" />
+        <p>멤버십</p>
+      </a>
+    </div>
+  </div>
+</section>
+<br>
+
+<!-- 박희망님 꼬리말 -->
+    <footer>
+      <div id="foot">
+        <ul id="interface">
+          <li><a href="#">이용약관</a></li>
+          <li><a href="#">채용정보</a></li>
+          <li><a href="#">편성기준</a></li>
+          <li><a href="#">윤리경영</a></li>
+          <li><a href="#">사이버감사실</a></li>
+        </ul>
+      </div>
+      <div id="cdline">
+        <div id="credit">
+          <div class="credit-content">
+            <div class="credit-content">
+              <p class="cr">PROJECT END</p>
+              <br />
+              <p class="cr">A KH EDUCATION STUDIO</p>
+              <br />
+              <p class="cr">Directed by</p>
+              <p class="cr">E Class 3rd Team</p>
+              <br />
+              <p class="cr">Top Title & Menu by</p>
+              <p class="cr">SIN CUHN SUP</p>
+              <br />
+              <p class="cr">Movie Chat by</p>
+              <p class="cr">LEE SANG MIN</p>
+              <br />
+              <p class="cr">Event by</p>
+              <p class="cr">CHOI SOO JIN</p>
+              <br />
+              <p class="cr">Main Banner &</p>
+              <p class="cr">Service Menu</p>
+              <p class="cr">SON GUEN IL</p>
+              <br />
+              <p class="cr">Credit & Footer</p>
+              <p class="cr">PARK HEE MANG</p>
+          </div>
+          
+
+           
+          </div>
+        </div>
+      </div>
+      <div id="line">
+        <select name="site-line">
+          <option value="name" disabled selected hidden>Made by</option>
+          <optgroup label="손근일">
+            <option disabled>all-rounder Serve</option>
+          </optgroup>
+          <optgroup label="신천섭">
+            <option>Headline</option>
+            <option>Mainbanner</option>
+          </optgroup>
+
+          <optgroup label="이상민">
+            <option>Hovering movie chart</option>
+          </optgroup>
+
+          <optgroup label="최수진">
+            <option>Event chart</option>
+          </optgroup>
+        </select>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="./js/movie_chart.js"></script>
+
+    <script src="./cinema.js"></script>
+
+    <script>
+      const swiper = new Swiper(".swiper", {
+        slidesPerView: 3,
+        spaceBetween: 20,
+        loop: true,
+        autoplay: {
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        },
+        pagination: {
+          el: ".swiper-pagination",
+          clickable: true,
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        breakpoints: {
+          1024: {
+            slidesPerView: 3,
+          },
+          768: {
+            slidesPerView: 2,
+          },
+          0: {
+            slidesPerView: 1,
+          },
+        },
+      });
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      $(function () {
+        $("#fab").click(function () {
+          $("html").scrollTop(0);
+        });
+      });
+    </script>
+        </div>
+        <script src="./js/cinema.js"></script>  <!-- 신천섭 js 스크립트트 -->
+  </body>
+</html>

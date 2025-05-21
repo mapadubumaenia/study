@@ -1,0 +1,90 @@
+#page{
+    width: 99vw;
+    margin: 0 auto;
+}
+
+section{
+    width : 63rem;
+    margin: 0 auto;
+}
+.chart_name{
+    width: 45%;
+    float: left;
+    margin-bottom: 2rem;
+}
+.view_all{
+    float: right;
+    width: 45%;
+    text-align: right;
+    font-size: 1rem;
+    margin-top: 1rem;
+    margin-right: 2rem;
+}
+.view_all a{
+    color: gray;
+}
+
+.clear{
+    clear: both;
+}
+
+.chart_name button{
+    border: none;
+    background:none;
+    font-size: 1rem;
+}
+li{
+    list-style: none;
+}
+.chart_name li, .rank{
+    display: inline-block;
+}
+.ranking{
+    margin: 0 0 0 2rem;
+}
+
+.scheduled{
+    color: gray;
+}
+.movie_btn{
+    position: relative;
+    font-size: 1.5rem;
+}
+.chart_detail ,.movie_reserve{
+    width: 6rem;
+    height: 1.7rem;
+    background-color: lemonchiffon;
+    border: 3px;
+    font-size: 1.1rem;
+    margin-top: 5px;
+    font-weight: bold;
+    display: none;
+    position: absolute;
+    text-align: center;
+}
+.chart_detail {
+    left: 48px;
+    top: 70px;
+}
+
+.movie_reserve {
+    left: 48px;
+    top: 105px;
+
+}
+
+.movie_name{
+    text-align: center;
+    width: 190px;           
+    white-space: nowrap;    
+    overflow: hidden;       
+    text-overflow: ellipsis;
+    margin-top: 2px;
+    padding-left: 20px;
+    font-size: 1.2rem;
+}
+
+.movie_btn img{
+    width: 150px;
+    height:200px;
+}

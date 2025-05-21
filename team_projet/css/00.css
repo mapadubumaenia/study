@@ -1,0 +1,61 @@
+/* TODO: 전체 디자인 파일(공통 디자인) */
+/* TODO: 1) 웹폰트 (무료: 영문(Montserrat), 한글(Noto Sans KR)) */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans+KR:wght@100..900&display=swap");
+
+/* TODO: 디자인 컨셉: 색깔 지정 */
+/* 피그마 디자인 응용 */
+/* TODO: --이름 (css 변수: 색깔이나 글자크기 등을 넣어두는곳)  */
+/* TODO: 사용법:var(--이름) */
+
+:root {
+  --black: black;
+  --gray: gray;
+}
+
+* {
+  /* TODO: 마진/패딩 0(초기값) */
+  margin: 0;
+  padding: 0;
+  /* TODO: 보드 변경 : 컨텐츠+패딩 = width/height 크기(추천) */
+  box-sizing: border-box;
+}
+/* TODO: 영문/한글 웹폰트 적용*/
+/* TODO: font-family: 폰트1, 폰트2,...
+=> 폰트1 있으면 폰트1 적용, 없으면 폰트2 적용...*/
+
+body {
+  font-family: "Montserrat", "Noto Sans KR", sans-serif;
+}
+
+/* 목록 점 없애기 */
+li {
+  list-style: none;
+}
+/* TODO: a 태그(페이지 이동태그) */
+a {
+  /*TODO: 밑줄 없앰  */
+  text-decoration: none;
+  color: var(--black);
+}
+
+#fab {
+  width: 40px;
+  height: 40px;
+  background-color: red;
+  border-radius: 50%;
+  position: sticky;
+  top: 65vh;
+  left: 100vw;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  }
+
+  #fab img {
+    width: 30px;
+    height: 30px;
+  }
+
+
+  
