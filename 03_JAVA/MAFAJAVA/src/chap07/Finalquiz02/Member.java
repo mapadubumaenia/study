@@ -5,9 +5,6 @@ public class Member {
      String name;
 	
      
-     
-     
-     
      public Member(String id, String name) {
 		super();
 		this.id = id;

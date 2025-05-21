@@ -1,0 +1,26 @@
+package chap09.quiz02;
+
+public class ColorPoint extends Point{
+
+	String Color;
+
+
+	public void setColor(String color) {
+		this.Color = color;
+	}
+
+
+	void showColorPoint() {
+		System.out.println(Color);
+       showPoint();}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

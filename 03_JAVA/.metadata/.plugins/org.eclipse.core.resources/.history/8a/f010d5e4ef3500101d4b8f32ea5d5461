@@ -1,0 +1,5 @@
+package chap08.section01.example05;
+
+public class Person extends Member{
+
+}

@@ -1,0 +1,23 @@
+package chap08.section02.example02;
+
+public class DriverApplication {
+public static void main(String[] args) {
+	
+	Bus bus= new Bus();
+	Taxi taxi = new Taxi();
+	
+    Vehicle vehicle= bus;
+    vehicle.run();
+    vehicle=taxi;
+    vehicle.run();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

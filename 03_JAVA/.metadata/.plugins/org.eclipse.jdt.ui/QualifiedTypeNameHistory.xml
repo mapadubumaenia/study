@@ -1,12 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.lang.Integer"/>
-    <fullyQualifiedTypeName name="java.lang.Double"/>
-    <fullyQualifiedTypeName name="sun.security.util.Cache.EqualByteArray"/>
-    <fullyQualifiedTypeName name="com.sun.org.apache.xpath.internal.operations.String"/>
-    <fullyQualifiedTypeName name="java.lang.ArrayIndexOutOfBoundsException"/>
-    <fullyQualifiedTypeName name="chap06.section01.example01.Car"/>
-    <fullyQualifiedTypeName name="chap06.section01.example01.Taxi"/>
     <fullyQualifiedTypeName name="chap06.section01.example01.Field"/>
     <fullyQualifiedTypeName name="chap06.section02.Car"/>
     <fullyQualifiedTypeName name="chap06.section02.quiz01.Taxi"/>
@@ -21,7 +14,6 @@
     <fullyQualifiedTypeName name="chap06.section03.example03.Car"/>
     <fullyQualifiedTypeName name="chap06.section03.quiz03.Taxi"/>
     <fullyQualifiedTypeName name="chap06.section03.example04.Car"/>
-    <fullyQualifiedTypeName name="java.util.Scanner"/>
     <fullyQualifiedTypeName name="chap06.section04.Calculator"/>
     <fullyQualifiedTypeName name="chap06.section04.quiz01.Car"/>
     <fullyQualifiedTypeName name="chap06.section04.example02.CarApplication"/>
@@ -39,7 +31,33 @@
     <fullyQualifiedTypeName name="chap07.Finalquiz01.Member"/>
     <fullyQualifiedTypeName name="chap07.Finalquiz02.Member"/>
     <fullyQualifiedTypeName name="chap07.Finalquiz03.Board"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.lang.Boolean"/>
+    <fullyQualifiedTypeName name="chap08.section01.quiz03.Calculator"/>
+    <fullyQualifiedTypeName name="chap08.section01.quiz04.AirPlane"/>
+    <fullyQualifiedTypeName name="chap08.section01.quiz04.SuperAirPlane"/>
+    <fullyQualifiedTypeName name="chap08.section01.example05.Member"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="chap08.section01.example06.Car"/>
+    <fullyQualifiedTypeName name="java.lang.CharSequence"/>
+    <fullyQualifiedTypeName name="chap08.section02.example01.Child"/>
+    <fullyQualifiedTypeName name="chap08.section02.example01.Child2"/>
+    <fullyQualifiedTypeName name="chap08.section02.example01.Parent"/>
+    <fullyQualifiedTypeName name="chap08.section02.quiz01.Student"/>
+    <fullyQualifiedTypeName name="chap08.section02.quiz01.People"/>
+    <fullyQualifiedTypeName name="chap08.section02.example02.Vehicle"/>
+    <fullyQualifiedTypeName name="chap08.section02.example02.Bus"/>
+    <fullyQualifiedTypeName name="chap08.section02.example02.Taxi"/>
+    <fullyQualifiedTypeName name="chap08.section02.quiz02.AsianaAir"/>
+    <fullyQualifiedTypeName name="chap08.section02.quiz02.Airplane"/>
+    <fullyQualifiedTypeName name="chap08.section02.quiz02.koreaAir"/>
+    <fullyQualifiedTypeName name="chap08.section02.example03.Parent"/>
+    <fullyQualifiedTypeName name="chap08.section02.example03.Child"/>
+    <fullyQualifiedTypeName name="java.lang.AbstractMethodError"/>
+    <fullyQualifiedTypeName name="chap08.section03.example01.Animal"/>
+    <fullyQualifiedTypeName name="chap08.section03.example01.Dog"/>
+    <fullyQualifiedTypeName name="chap08.section03.example01.Cat"/>
+    <fullyQualifiedTypeName name="chap08.section03.quiz01.Animal"/>
+    <fullyQualifiedTypeName name="chap09.quiz02.Point"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
 </qualifiedTypeNameHistroy>

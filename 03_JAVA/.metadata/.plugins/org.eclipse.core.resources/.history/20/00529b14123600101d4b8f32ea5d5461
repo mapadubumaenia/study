@@ -1,0 +1,9 @@
+package chap08.section02.example03;
+//실행클래스
+public class ChildApplication {
+public static void main(String[] args) {
+	
+	Parent parent=new Child();
+	parent.method1();
+}
+}

@@ -1,0 +1,13 @@
+package chap08.section01.quiz04;
+//실행클래스
+public class AirPlaneApplication {
+public static void main(String[] args) {
+	
+   SuperAirPlane superAirPlane= new SuperAirPlane(1);
+   superAirPlane.takeOff();
+   
+	
+	
+}
+	
+}

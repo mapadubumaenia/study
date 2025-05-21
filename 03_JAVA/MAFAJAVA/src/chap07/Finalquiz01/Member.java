@@ -1,9 +1,8 @@
 package chap07.Finalquiz01;
 
 public class Member {
-	String name="최하얀";
+	String name;
 	
 	
-	
-    String id = "23";
+    String id ;
 }

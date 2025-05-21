@@ -1,0 +1,11 @@
+package chap09.quiz01;
+
+public class Person {
+
+	int age;
+	String name;
+	int height;
+	int setweight;
+	
+	
+}

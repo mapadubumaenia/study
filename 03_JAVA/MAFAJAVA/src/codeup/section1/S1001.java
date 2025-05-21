@@ -5,14 +5,9 @@ import java.util.Scanner;
 public class S1001 {
 public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
-	 String a= "A";
-	 String b= "B";
-	 System.out.printf("%x",a);
-	 System.out.printf("%x",b);
-	 
-	 sc.close();
-	
+	float a=sc.nextFloat();
+	System.out.printf("%.2f",a);
+
+
 }
-
-
 }

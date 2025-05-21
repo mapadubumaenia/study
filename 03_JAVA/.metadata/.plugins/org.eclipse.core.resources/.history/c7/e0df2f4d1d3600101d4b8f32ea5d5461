@@ -1,0 +1,27 @@
+package chap09.quiz02;
+
+public class ColorPoint extends Point{
+
+	String Color;
+
+
+	public void setColor(String color) {
+		Color = color;
+	}
+
+
+	public void showColorPoint() {
+		System.out.println("(" + x + "," + y + ")");
+	
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
