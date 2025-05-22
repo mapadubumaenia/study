@@ -1,0 +1,5 @@
+package chap12.section01.example01;
+
+public class ArrayIndexOutOfBoundsExcetion {
+
+}

@@ -1,0 +1,19 @@
+package chap10.section01.example01;
+
+public class SmartApplication {
+public static void main(String[] args) {
+	SmartTv smartTv=new SmartTv();
+	smartTv.trunOn();
+	
+	
+//인터페이스 사용법:(주의: 생성자 없음, 자식클래스를 넣어서 사용함(자연적으로 다형성)
+	Remote remote=smartTv;
+	Searchable searchable=smartTv;
+	
+	remote.trunOn();
+	
+}      
+
+	
+	
+}

@@ -1,0 +1,18 @@
+package chap10.section01.example03;
+
+public class SoundableApplication {
+     public static void main(String[] args) {
+		
+    	 Soundable soundable= new Dog();
+    	 soundable.sound();
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+    	 
+	}
+}

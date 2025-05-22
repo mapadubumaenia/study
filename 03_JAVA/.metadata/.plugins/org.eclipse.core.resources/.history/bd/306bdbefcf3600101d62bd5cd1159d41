@@ -1,0 +1,11 @@
+package chap12.section02.quiz01;
+
+public class Rssdfw {
+public static void main(String[] args) {
+	try {
+		
+	} catch (Exception e) {
+		// TODO: handle exception
+	}
+}
+}

@@ -1,0 +1,19 @@
+package chap13.section01.example01;
+
+public class MemberApplication {
+public static void main(String[] args) {
+	Member member=new Member(blue);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

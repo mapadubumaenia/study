@@ -1,0 +1,40 @@
+package chap10.section01.example02;
+
+public class RemoteApplication {
+public static void main(String[] args) {
+	
+	
+	Audio audio=new Audio();
+	Tv tv=new Tv();
+	
+	
+	Remote remote= audio;
+	Remote remote2=tv;
+	
+	remote.turnOn();
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

@@ -1,0 +1,22 @@
+package chap09.quiz05;
+
+public class Penguin {
+
+	String pororo;
+
+	public String getPororo() {
+		return pororo;
+	}
+
+	public void setPororo(String pororo) {
+		this.pororo = pororo;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

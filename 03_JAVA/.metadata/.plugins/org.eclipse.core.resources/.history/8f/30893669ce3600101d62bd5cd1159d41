@@ -1,0 +1,11 @@
+package chap12.section01.example03;
+
+public class NumberFormatApplication {
+public static void main(String[] args) {
+	 String a="a100";
+	 System.out.println(Integer.parseInt(a));
+	 
+	 
+	 
+}
+}

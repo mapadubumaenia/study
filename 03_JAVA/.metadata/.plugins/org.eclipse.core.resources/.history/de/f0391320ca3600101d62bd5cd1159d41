@@ -1,0 +1,16 @@
+package chap12.section01.example01;
+/**
+NPE 에러?
+null: 아무것도 없는 것을 의미
+
+
+*/
+public class NullApplication {
+public static void main(String[] args) {
+	
+	String data="";
+	System.out.println(data.toUpperCase());
+	
+	
+}
+}

@@ -1,0 +1,12 @@
+package chap13.section01.example08;
+
+public class S8_Replace {
+public static void main(String[] args) {
+	String old="자바 프로그램. 자바 API";
+	String newStr=old.replace("자바", "JAVA");
+	
+	System.out.println(old);
+	System.out.println(newStr);
+	
+}
+}

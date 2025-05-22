@@ -1,0 +1,29 @@
+package chap10.section01.example02;
+
+public class Remote implements Audio, Tv {
+
+	@Override
+	public void turnOn() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
