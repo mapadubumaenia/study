@@ -1,0 +1,22 @@
+package chap09.quiz04;
+
+public class Computer {
+
+	public void turnOn() {
+		System.out.println("전원을 켭니다.");
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

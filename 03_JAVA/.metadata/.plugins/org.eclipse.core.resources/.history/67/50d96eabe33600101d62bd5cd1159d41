@@ -1,0 +1,16 @@
+package chap13.section01.example01;
+
+public class MemberApplication {
+public static void main(String[] args) {
+	Member member=new Member("blue");
+	Member member2=new Member("blue");
+	
+// 같은 지 비교: 글자 equals(),member==member2 (개발자 입장:같다)
+	if (member.equals(member2)) {
+		System.out.println("같다");
+	}else {
+		System.out.println("다름");
+	} //다름으로 나옴,
+	
+}
+}

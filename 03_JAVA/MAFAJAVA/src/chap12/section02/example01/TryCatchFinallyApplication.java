@@ -1,0 +1,16 @@
+package chap12.section02.example01;
+
+public class TryCatchFinallyApplication {
+public static void main(String[] args) {
+	
+	try {
+	//	String data=null;
+	//	System.out.println(data.toUpperCase());
+	} catch (Exception e) {
+		System.out.println(e.toString());//에러메시지
+		System.out.println("관리자에게 문의하세요.");
+	}
+	
+	
+}
+}

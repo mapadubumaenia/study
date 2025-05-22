@@ -1,0 +1,17 @@
+package chap13.section01.example09;
+
+public class S9_SubString {
+public static void main(String[] args) {
+	String ssn="960516-1117416";
+	String str=ssn.substring(0,6);
+	System.out.println(str);
+	
+	
+	
+	String shin="shin cheonseop";
+	String prenom=shin.substring(4,14);
+	System.out.println(prenom);
+//글자에서 일부분을 잘라내서 보여주는 함수	
+// 공백 즉 스페이스바도 숫자로 치기때문에 조심	
+}
+}

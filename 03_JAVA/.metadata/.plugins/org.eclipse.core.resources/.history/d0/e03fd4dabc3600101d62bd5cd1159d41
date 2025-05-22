@@ -1,0 +1,19 @@
+package chap10.section02.korea;
+//private: 나 뺴고 아무도 사용못함
+//기본(default): 폴더(패키지)안에 클래스만 사용할 수 있음
+//protected : 상속받은 자식만 사용할 수 있음
+//public    : 모든 클래스가 사용할 수 있음
+//추천 코딩: 필드는 private, 메소드는 public을 사용하는게 원칙
+public class Person {
+//필드!
+	private int no;            //private=개인적인(비밀), 다른 클래스는 사용못함
+	int name;                  //기본(default) 필드
+	protected String address;  //상속 받은 자식만 사용가능
+	
+	
+//메소드
+	public void print() {   //모든 클래스가 사용 가능
+		System.out.println("no");
+	}
+	
+}

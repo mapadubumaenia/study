@@ -1,0 +1,16 @@
+package chap09.quiz05;
+
+public class PenguinApplication {
+public static void main(String[] args) {
+	
+	
+	Penguin pororo = new Penguin();
+	 pororo.setName("뽀로로"); // Setter
+	 pororo.setHabitat("남극"); // Setter
+	 System.out.println(pororo.getName()); 
+	 System.out.println(pororo.getHabitat()); 
+	
+
+	
+}
+}

@@ -1,0 +1,9 @@
+package chap12.section02.quiz01;
+
+public class TryCatchFinallyApplication {
+	public static void main(String[] args) {
+		
+		int[] a= {1,2};  //개수:2개, a[0]=1, a[1]=2
+		System.out.println(a[5]); //에러발생
+	}
+}

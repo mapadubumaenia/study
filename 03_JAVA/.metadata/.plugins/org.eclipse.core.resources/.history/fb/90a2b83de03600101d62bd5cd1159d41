@@ -1,0 +1,12 @@
+package chap13.section01.example01;
+
+public class Member {
+public String id;
+
+public Member(String id) {
+	super();
+	this.id = id;
+}
+
+
+}

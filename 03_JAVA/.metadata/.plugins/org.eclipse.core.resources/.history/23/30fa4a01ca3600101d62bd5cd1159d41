@@ -1,0 +1,11 @@
+package chap10.section02.korea;
+
+public class Korean extends Person{
+ 
+	public void pKorean() {
+		System.out.println(name);
+	}
+	
+	
+	
+}

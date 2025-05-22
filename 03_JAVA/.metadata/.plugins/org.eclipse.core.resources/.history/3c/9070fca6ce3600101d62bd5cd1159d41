@@ -1,0 +1,10 @@
+package chap12.section02.example01;
+
+public class TryCatchFinallyApplication {
+public static void main(String[] args) {
+	
+	String data=null;
+	System.out.println(data.toUpperCase());
+	
+}
+}
