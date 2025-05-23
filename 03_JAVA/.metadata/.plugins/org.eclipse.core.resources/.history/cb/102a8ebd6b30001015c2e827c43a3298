@@ -1,9 +1,0 @@
-package chap03.section01;
-
-public class S4_3Operator {
-public static void main(String[] args) {
-	int a=9;
-	String b=(a>=9)? "출발":"대기"; 
-	System.out.println(b);
-}
-}
