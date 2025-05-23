@@ -1,0 +1,21 @@
+package chap14.section01.example02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 컬렉션 프레임워크: 여러가지 값을 다루는 자료구조
+ * ArrayList: 배열을 개선한 자료구조
+ *
+ */
+public class ArrayListApplication {
+public static void main(String[] args) {
+	List<String> list=new ArrayList<String>();
+	
+	list.add("a");
+	list.add("b");
+	list.add("c");
+	
+	System.out.println(list);
+}
+}

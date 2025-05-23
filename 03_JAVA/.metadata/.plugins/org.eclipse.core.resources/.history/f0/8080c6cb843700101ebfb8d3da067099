@@ -1,0 +1,16 @@
+package chap13.section02.example01;
+
+/**
+ * 과거 날짜 함수들 소개: date,calender 클래스의 함수들
+ *
+ */
+import java.util.Date;
+
+public class DateApplication {
+	public static void main(String[] args) {
+
+		Date date = new Date();
+		System.out.println(date.toString());
+
+	}
+}

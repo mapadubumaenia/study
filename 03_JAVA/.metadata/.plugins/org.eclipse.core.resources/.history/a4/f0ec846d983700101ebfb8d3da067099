@@ -1,0 +1,35 @@
+package chap14.section01.example02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 컬렉션 프레임워크: 여러가지 값을 다루는 자료구조
+ * ArrayList: 배열을 개선한 자료구조
+ *List: 배열을 개선한 인터페이스, 자식클래스 ArrayList,LinkedList 
+ * 장점) 1) int 변수= new[방예약]; <=미리 방을 충분히 예약해야함(배열단점)
+ *        => 개선: 방개수 필요없이 부족하면 자동으로 공간이 늘어남
+ */
+public class ArrayListApplication {
+public static void main(String[] args) {
+// <>  제네릭, 목적) 값을 저장할 떄 자료형을 제한하기 위해 사용	
+//인터페이스 사용법: 인터페이스 변수 =new 자식생성자함수(); (다형성)	
+	List<String> list=new ArrayList<String>();
+// TODO: 변수.add("값") : 값 추가 메소드
+	list.add("a");
+	list.add("b");
+	list.add("c");
+	
+	System.out.println(list);
+	
+// TODO: 변수.set(방번호(인덱스번호),"바꿀값")  :수정메소드
+	list.set(0,"가");
+	System.out.println(list);
+	
+//TODO:
+	list.remove(0);
+	System.out.println(list);
+	
+	
+}
+}

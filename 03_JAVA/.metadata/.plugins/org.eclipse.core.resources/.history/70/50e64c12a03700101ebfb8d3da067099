@@ -1,0 +1,31 @@
+package chap14.section01.example03;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * list 자식클래스: ArrayList,LinkedList, Vector
+ * ArrayList 클래스 넣기
+ *
+ */
+public class BoardApplicaton {
+public static void main(String[] args) {
+//인터페이스 사용법: 인터페이스<클래스자료형> 변수 =new 자식생성자<>();
+	List<Board> list=new ArrayList<Board>();
+//TODO: 변수.add(값), 변수.add(new 생성자함수());
+	
+	
+	list.add(new Board("제목","내용"));
+	list.add(new Board("제목2","내용2"));
+	System.out.println(list);
+	
+//반복문 안쓰고 코딩
+	
+	for (int i = 0; i < 2; i++) {
+		System.out.println(list.get(0).subject);
+		System.out.println(list.get(0).content);
+	}
+	
+	
+}
+}

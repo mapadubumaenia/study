@@ -1,0 +1,23 @@
+package chap14.section01.example04;
+
+import java.util.LinkedList;
+import java.util.List;
+
+/**  
+ * 
+ *
+ */
+public class LinkedListApplication {
+public static void main(String[] args) {
+//사용법: 인터페이스<클래스자료형> 변수=new 자식생성자<클래스자료형>();
+	List<String> list=new LinkedList<String>();
+//사용법: 변수.add(값)	
+	list.add("홍길동");
+	list.add("장길산");
+	list.add("임꺽정");
+//사용법: 변수.remove(방번호)
+	list.remove(1);
+	System.out.println(list);
+	
+}
+}

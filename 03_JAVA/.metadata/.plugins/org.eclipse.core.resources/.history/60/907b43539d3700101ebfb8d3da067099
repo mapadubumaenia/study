@@ -1,0 +1,19 @@
+package chap14.section01.example03;
+/**
+ * Array클래스 넣기 
+ *
+ */
+public class BoardApplicaton {
+
+	String subject;
+	String content;
+	public BoardApplicaton(String subject, String content) {
+		super();
+		this.subject = subject;
+		this.content = content;
+	}
+	
+	
+	
+	
+}

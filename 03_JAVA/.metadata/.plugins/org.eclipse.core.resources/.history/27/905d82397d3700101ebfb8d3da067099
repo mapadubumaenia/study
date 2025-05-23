@@ -1,0 +1,25 @@
+package chap13.section01.example03;
+/**
+ * system 클래스 exit 함수 소개: 프로그램 강제 종료
+ * 
+ *
+ */
+public class ExitApplication {
+public static void main(String[] args) {
+//0부터 9까지 반복문 실행하다가 5가되면 강제 종료
+	for (int i = 0; i < 10; i++) {
+		if (i==5) {
+			System.exit(0);  //0은 정상종료 의미, 비정상종료: -1(음수)
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

@@ -5,17 +5,10 @@ public class Point {
   int x;
   int y;
   
-  
-  
-  
-  
+ 
 public Point() {
 	super();
 }
-
-
-
-
 
 public Point(int x, int y) {
 	super();

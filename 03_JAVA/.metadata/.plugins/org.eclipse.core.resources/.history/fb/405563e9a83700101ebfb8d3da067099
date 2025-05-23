@@ -1,0 +1,26 @@
+package chap14.section01.example05;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * 컬렉션 프레임워크:
+ * HashSet:수학의 집합을 구현한 자료구조
+ *
+ */
+public class HashSetApplication {
+public static void main(String[] args) {
+//     사용법: 인터페이스<클래스자료형> 변수 =new 자식생성자<클래스자료형>();	
+	Set<String> set=new HashSet<String>();
+
+	//TODO:	
+	set.add("a");
+	set.add("a");
+	set.add("b");
+	set.add("c");
+	
+	System.out.println(set);
+	
+	
+}
+}

@@ -1,0 +1,17 @@
+package chap13.section01.example04;
+/**
+ * Class 클래스는 클래스의 정보를 제공하는 클래스입니다.
+ *
+ */
+public class CarApplication {
+public static void main(String[] args) {
+//자바소스 작성: xx.java ->컴파일(빌드) ->xx.class파일(컴퓨터가 아는 파일:바이트코드)
+	
+//	Class a=Car.class;
+//	System.out.println(a.getName());
+//	System.out.println(a.getSimpleName());
+	
+// .getname():폴더(패키지)+클래스명 정보가 나옴
+// .gwtSimplename():클래스명만 나옴.	
+}
+}

@@ -1,0 +1,12 @@
+package chap13.section02.example03;
+
+import java.time.LocalDateTime;
+
+public class LocalDateTimeApplication {
+public static void main(String[] args) {
+	
+	LocalDateTime localDateTime=LocalDateTime.now();
+	System.out.println(localDateTime);
+	
+}
+}

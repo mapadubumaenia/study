@@ -1,0 +1,9 @@
+package chap14.section01.quiz01;
+
+import java.awt.List;
+
+public class ArrayListApplication {
+public static void main(String[] args) {
+	List<String> list= new ArrayList();
+}
+}

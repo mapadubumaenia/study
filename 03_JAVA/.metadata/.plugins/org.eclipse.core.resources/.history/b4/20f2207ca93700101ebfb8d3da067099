@@ -1,0 +1,31 @@
+package chap14.section01.example05;
+
+import java.util.HashSet;
+import java.util.Set;
+
+/**
+ * 컬렉션 프레임워크:
+ * set: 부모인터페이스, 자식클래스: HashSet,HashTable(멀티 쓰레드에서 사용)
+ * HashSet:수학의 집합을 구현한 자료구조
+ * 집합: 중복된 값은 1개로 표시됨
+ */
+public class HashSetApplication {
+public static void main(String[] args) {
+//     사용법: 인터페이스<클래스자료형> 변수 =new 자식생성자<클래스자료형>();	
+	Set<String> set=new HashSet<String>();
+
+	//TODO:	 변수.add(값): 값 추가
+	set.add("a");
+	set.add("a");
+	set.add("b");
+	set.add("c");
+	
+	System.out.println(set);
+	
+	//향상된 for문
+	for (String e : set) {
+		System.out.println(e);
+	}
+}
+}
+//[a, b, c]
