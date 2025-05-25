@@ -1,8 +1,0 @@
-package chap05.section02;
-
-public class S97_Mafa {
-public static void main(String[] args) {
-	int[] a = {3, 6, 9, 12, 15, 18, 21, 24, 27, 30};
-	
-}
-}
