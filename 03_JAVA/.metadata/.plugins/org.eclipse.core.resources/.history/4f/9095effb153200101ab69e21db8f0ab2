@@ -1,8 +1,0 @@
-package chap06.section01.example01;
-//실행클래스
-public class CarApplication {
-public static void main(String[] args) {
-	Car car = new Car();
-	System.out.println(car.company);
-}
-}
