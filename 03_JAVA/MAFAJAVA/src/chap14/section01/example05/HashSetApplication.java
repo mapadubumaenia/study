@@ -26,9 +26,20 @@ public static void main(String[] args) {
 	for (String e : set) {
 		System.out.println(e);
 	}
+	
+//집합의 크기 화면표시 사용법:   집합변수.size()
+	System.out.println(set.size());
+	
+//집합의 원소(값) 삭제
+	set.remove("a");
+	System.out.println(set);
+	
+	
+	
+	
 }
 }
 //[a, b, c]
-a
-b
-c
+//a
+//b
+//c

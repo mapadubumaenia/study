@@ -1,0 +1,15 @@
+package chap14.section03.example01;
+
+import java.util.Arrays;
+
+/**
+ * 참고: 자료구조의 유용한 함수 소개
+ * Arrays 클래스: 배열에 관련된 것
+ */
+public class StackApplication {
+public static void main(String[] args) {
+	int[] arr= {0,1,2};
+//  1)1차원 배열 화면표시
+	System.out.println(Arrays.toString(arr));
+}
+}

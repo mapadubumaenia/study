@@ -1,0 +1,29 @@
+package chap09.quiz06;
+
+public class Student extends Person{
+
+	String id;
+
+
+
+	public Student(String name) {
+		super(name);
+	}
+
+	  
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

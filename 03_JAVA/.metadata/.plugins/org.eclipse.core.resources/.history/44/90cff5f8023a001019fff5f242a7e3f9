@@ -1,0 +1,36 @@
+package chap15.section01.example01;
+/**
+ * 이름 없는 클래스: 익명 클래스
+ * 1)필드:
+ * 2)메소드 안에서:
+ * 3)메소드의 매개변수 자리:
+ */
+public class Noname {
+
+// 익명클래스 정의: 	
+	Person person=new Person(){
+		@Override
+		public void wake() {
+			System.out.println("5시 일어남");
+		}
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

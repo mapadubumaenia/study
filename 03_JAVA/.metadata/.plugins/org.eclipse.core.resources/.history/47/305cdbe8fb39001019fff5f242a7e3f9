@@ -1,0 +1,33 @@
+package chap14.section03.example02;
+
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
+
+/**
+ * 
+ *
+ */
+public class CollectionsApplication {
+public static void main(String[] args) {
+	List<Integer> list=new ArrayList<Integer>();
+	
+//  1)리스트에 값을 편하게 (한방에) 넣기
+	Collections.addAll(list,123);
+	System.out.println(list);
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

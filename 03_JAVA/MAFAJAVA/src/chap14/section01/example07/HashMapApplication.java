@@ -1,0 +1,40 @@
+package chap14.section01.example07;
+
+import java.util.HashMap;
+import java.util.Map;
+
+/**
+ *  map: 인터페이스, 자식클래스: HashMap
+ *  키와 값이 1개의 세트로 저장되는 자료구조
+ *  특징: 1)키는 중복되면 안됨
+ *       2)값은 중복되도 됨
+ *  map<키자료형,값자료형>
+ *  {키=값,  키2=값2,....}
+ */
+public class HashMapApplication {
+public static void main(String[] args) {
+	
+//  인터페이스<클래스자료형> 변수=new 자식생성자<클래스자료형>();	
+	Map<String, Object> map=new HashMap<String, Object>();
+// object :조상 클래스 예)단군할아버지와 유사, 모든 클래스가 상속받고 있음
+//         모든 자료형을 넣을 수 있다. string, double...	
+
+// 사용법: 맵변수.put(키,값); //맵에 값 추가하는 메소드	
+	map.put("no",1);
+	map.put("name","홍길동");
+	System.out.println(map);
+
+	
+//맵의 원소 개수 가져오기 메소드  사용법: 맵변수.size
+	System.out.println(map.size());
+
+// 맵안의 키의 값을 뽑아내기   사용법:맵변수.get(키)	
+	System.out.println(map.get("no"));
+	
+// 사용법: 맵변수.remove(키);   
+// 키의 원소를 삭제하는 메소드	
+	map.remove("no");
+	System.out.println(map);
+	
+}
+}

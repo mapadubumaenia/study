@@ -1,0 +1,42 @@
+package chap14.section02.example02;
+
+import java.util.Stack;
+
+/**
+ * 스택에 객체넣기
+ *
+ */
+public class StackApplication {
+public static void main(String[] args) {
+	//클래스<클래스자료형> 변수= new 생성자함수<>();
+	Stack<Coin>stack =new Stack<Coin>();
+
+    // 객체넣기: 변수.push(new 생성자함수());
+	stack.push(new Coin(100));
+	stack.push(new Coin(50));
+
+	
+	//값 꺼내기: 변수.pop()
+	System.out.println(stack.pop());
+	System.out.println(stack.peek());
+	
+	//
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

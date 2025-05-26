@@ -1,0 +1,36 @@
+package chap14.section02.example04;
+/**
+ * 실행클래스
+ * 
+ */
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueApplication {
+public static void main(String[] args) {
+	
+	Queue<Coin> queue=new LinkedList<Coin>();
+	
+	
+// 추가사용법: 변수.offer(new 생성자());
+	queue.offer(new Coin(100));
+	queue.offer(new Coin(50));
+	System.out.println(queue);
+	
+	Coin coin=queue.poll();
+	System.out.println(coin);
+	System.out.println(queue.peek());
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

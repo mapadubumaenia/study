@@ -1,0 +1,31 @@
+package chap14.section02.example04;
+
+import java.util.LinkedList;
+import java.util.Queue;
+
+public class QueueApplication {
+public static void main(String[] args) {
+	
+	Queue<Coin> queue=new LinkedList<Coin>();
+	
+	queue.offer(new Coin(100));
+	queue.offer(new Coin(50));
+	
+	
+	Coin coin=queue.poll();
+	System.out.println(coin);
+	System.out.println(queue.peek());
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}
+}

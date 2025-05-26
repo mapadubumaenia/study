@@ -1,0 +1,24 @@
+package chap14.section02.example01;
+
+import java.util.Stack;
+
+/**
+ * 
+ *
+ */
+public class StackApplication {
+public static void main(String[] args) {
+// 클래스<클래스자료형> 변수=new 생성자함수<>();
+	Stack<Integer> stack=new Stack<Integer>();
+// 사용법: 변수.push(값) : 값 추가
+	stack.push(1);  //1번째 값
+	stack.push(2);
+	stack.push(3);
+	System.out.println(stack);
+// 사용법: 변수.pop()  :마지막 값 꺼내기, 스택에서 값이 사라짐
+	System.out.println(stack.pop());  //꺼낸 값:3
+	System.out.println(stack); //변수.pop 으로 3이 꺼내졌다!.
+	
+//사용법: 변수.peek    :마지막 값 조회하기
+	System.out.println(stack.peek());  // 스택의 마지막 값 조회
+}

@@ -1,0 +1,37 @@
+package chap14.section03.example01;
+
+import java.util.Arrays;
+import java.util.Collection;
+import java.util.Collections;
+
+/**
+ * 참고: 자료구조의 유용한 함수 소개
+ * Arrays 클래스: 배열에 관련된 것
+ */
+public class StackApplication {
+public static void main(String[] args) {
+	int[] arr= {0,1,2};
+	
+// System.out.println(arr);	이러면 배열의 메모리 정보가 표시된다
+	
+//  1)1차원 배열 화면표시 : Arrays.toString(배열)
+	System.out.println(Arrays.toString(arr));
+	
+	
+//  2)2차원 배열 화면표시 :Arrays.deepToString(2차원배열)
+	int [][] arr2 = {{1,2},{3,4}};
+	System.out.println(Arrays.deepToString(arr2));
+	
+//  3)어떤 값으로 배열 채우기: Arrays.fill(배열,채울값)
+	int[] arr3=new int[3]; //방예약3개
+	Arrays.fill(arr3,9);
+	System.out.println(Arrays.toString(arr3));  //[9,9,9]
+	
+//  4)정렬 내림차순 ,오름차순
+//   char= Character 자료형	
+	Character[] a= {'A','B','C'};
+	Arrays.sort(a,Collections.reverseOrder());
+	System.out.println(a);
+	
+}
+}

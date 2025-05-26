@@ -1,0 +1,18 @@
+package chap14.section01.example08;
+
+import java.util.HashMap;
+import java.util.Map;
+
+//실행 클래스
+public class StudentApplication {
+public static void main(String[] args) {
+	Map<String,Student> map =new HashMap<String,Student>();
+	
+//사용법: 맵변수.put(키,값),  맵변수.put(키,new 생성자)	
+    map.put("홍",new Student(1,"홍길동"));
+    map.put("장",new Student(2,"장길산"));
+    map.put("임",new Student(3,"임꺽정"));
+    System.out.println(map);
+	
+}
+}
