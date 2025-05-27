@@ -1,0 +1,20 @@
+package chap15.section02.example01;
+
+import java.util.Optional;
+
+/**
+ * 옵셔널2:
+ *
+ */
+public class S2_OptionalApplication {
+public static void main(String[] args) {
+	
+// 사용법: 변수.ofnullable(값)	
+	Optional<String> optional= Optional.ofNullable("a");
+// if문 생략 : null헀음
+	
+//  사용법: 변수.get(): 옵셔널에서 값 꺼내기 메소드	
+	System.out.println(optional.get()); //"a"값이 꺼내집니다.
+	
+}
+}

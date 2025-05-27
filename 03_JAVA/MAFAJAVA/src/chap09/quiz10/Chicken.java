@@ -6,6 +6,4 @@ public class Chicken extends Animal{
 	void crying() {
 		System.out.println("꼬끼오");
 	}
-
-	
 }

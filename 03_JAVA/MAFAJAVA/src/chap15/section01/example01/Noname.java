@@ -29,4 +29,14 @@ public class Noname {
 		};
 		person2.wake();
 	}
+	
+	//메소드의 매개변수로 익명클래스 사용
+	public void method2(Person person) {
+		person.wake();
+	}
+	
+	
+	
+	
+	
 }

@@ -1,0 +1,21 @@
+package chap15.section01.example02;
+/**
+ * 실행클래스
+ *
+ */
+public class RemoteApplication {
+public static void main(String[] args) {
+
+     Noname noname=new Noname();
+     
+     
+//   필드위치의 익명클래스 turnOn함수 실행 
+     noname.remote.turnOn();
+    
+//   메소드1 실행
+     noname.method1();
+     
+//메소드의 매개변수로 실행     
+     
+}
+}

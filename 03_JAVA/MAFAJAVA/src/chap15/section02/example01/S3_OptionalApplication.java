@@ -1,0 +1,20 @@
+package chap15.section02.example01;
+
+import java.util.Optional;
+
+/**
+ * 옵셔널3:
+ *
+ */
+public class S3_OptionalApplication {
+	public static void main(String[] args) {
+		Optional<String> optional = Optional.ofNullable("a");
+
+//만약 옵셔널에 null 이 있으면 에러메세지 표시
+// 아니면 그냥 값을 화면에 표시	
+//사용법: 변수.orElseThrow(람다식)		
+		String str = optional.orElseThrow
+				(() -> new NullPointerException("에러발생"));
+  System.out.println(str);		
+	}
+}

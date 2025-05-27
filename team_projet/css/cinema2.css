@@ -6,7 +6,7 @@ header{
 nav {
    margin: 0 auto;  
   width: 60%;
-  background-color: white;
+  background-color: black;
   padding: 1rem 2rem;
 
 }
@@ -26,7 +26,7 @@ nav {
   align-items: center;
   margin-top: 3rem;
   white-space: nowrap; 
-  border-top: 1px solid lightgray;
+ 
 }
 
 /* 메뉴들 스타일 */
@@ -38,11 +38,12 @@ nav {
   padding: 0;
 }
 
-.brand h1 {
-  margin: 0;
-  font-size: 3rem;
-}
 
+
+.brand a img{
+  height: 10rem;
+  margin: 0;
+}
 .serch input {
   padding: 0.5rem;
   border: 1px solid #ccc;
@@ -65,7 +66,7 @@ nav {
   align-items: center;
   gap: 0.5rem;
   text-decoration: none;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 
@@ -111,7 +112,7 @@ nav {
   text-decoration: none;
   padding: 0.5rem 1rem;
   display: block;
-  color: #333;
+  color: white;
   font-weight: bold;
 }
 

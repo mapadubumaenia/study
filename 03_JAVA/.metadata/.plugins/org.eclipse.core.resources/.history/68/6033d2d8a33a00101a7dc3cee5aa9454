@@ -1,0 +1,19 @@
+package chap15.section02.example01;
+
+import java.util.Optional;
+
+/**
+ * 옵셔널:null을 처리하는 다양한 메소드가 있는 클래스
+ * 목적: null 코딩을 편리하게 하기위해 사용
+ * 참고) 코딩시 null에러가 발생하면 어디서 잘못 코딩했는지 알기 힘듬
+ *
+ */
+public class S1_OptionalApplication {
+public static void main(String[] args) {
+	Optional<String> optional=Optional.ofNullable(null);
+//  null이 아닐때만 뭔가를 처리: 이렇게 코딩함.
+	if(optional.isPresent()) {
+		System.out.println("값이 있음");
+	}
+}
+}

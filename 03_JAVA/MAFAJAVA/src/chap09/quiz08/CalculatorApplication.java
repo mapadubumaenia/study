@@ -7,3 +7,4 @@ public class CalculatorApplication {
 		System.out.println(goodCalc.subtract(2, 3));
 	}
 }
+ 

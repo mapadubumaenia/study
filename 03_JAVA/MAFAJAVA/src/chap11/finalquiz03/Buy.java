@@ -1,0 +1,6 @@
+package chap11.finalquiz03;
+
+public interface Buy {
+	void buy();
+
+}

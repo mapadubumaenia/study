@@ -1,0 +1,27 @@
+package chap15.section02.example04;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 스트림: 짧게 코딩하기 위해 나옴 특징: 사용하면 자동으로 반복문이 실행됨
+ *
+ */
+public class StreamApplication {
+	public static void main(String[] args) {
+      List<String> list= new ArrayList<String>();
+      list.add("a");
+      list.add("a");
+      list.add("B");
+   //   System.out.println(list); //이 출력 말고
+      
+   //  스트림 사용
+      list.forEach(s->System.out.println(s));
+      
+      
+      
+      
+      
+      
+	}
+}

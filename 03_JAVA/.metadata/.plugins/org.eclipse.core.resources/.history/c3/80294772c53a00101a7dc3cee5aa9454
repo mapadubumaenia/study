@@ -1,0 +1,28 @@
+package chap15.section03.example02;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+/**
+ *  스트림2: map 메소드
+ *
+ */
+public class StreamApplication {
+public static void main(String[] args) {
+	
+	List<String> list= new ArrayList<String>();
+    list.add("a");
+    list.add("a");
+    list.add("B");
+    
+ // TODO: 배열값을 대문자로 바꿔서 (새로운 배열) 화면에 표시   
+ //   글자.toUpperCase() : 대문자 바꾸기 함수   
+    List<String> list2=list.stream()
+	  .map(s->s.toUpperCase())
+	  .collect(Collectors.toList());
+    
+    list2.forEach(a->System.out.println(a));
+	
+}
+}

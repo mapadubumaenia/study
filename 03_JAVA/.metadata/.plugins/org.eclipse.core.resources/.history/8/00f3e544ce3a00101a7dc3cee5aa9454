@@ -1,0 +1,20 @@
+package chap15.section03.example08;
+
+import java.util.Arrays;
+import java.util.stream.Collectors;
+
+/**
+ * int[] 에서 map()사용하기
+ *
+ */
+public class StreamApplication {
+public static void main(String[] args) {
+	String[] str= {"a","a","B"};
+
+// 배열값-> 대문자로 바꾸기
+	String[] str2=Arrays.stream(str)      //정의부
+			.map(s->s.toUpperCase())      //가공
+			.toArray(x->new String[x]);    //새배열 내보내기
+	Arrays.stream(str2).forEach(a->System.out.println(a));
+}
+}

@@ -1,0 +1,13 @@
+package chap11.finalquiz01;
+
+public class Bus implements Vehicle{
+
+	@Override
+	public void run() {
+		 
+	}
+
+	
+	
+	
+}

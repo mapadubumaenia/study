@@ -1,0 +1,26 @@
+package chap15.section03.quiz02;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.stream.Collectors;
+
+public class StreamApplication {
+public static void main(String[] args) {
+	
+	List<String> list= new ArrayList<String>();
+	list.add("a");
+	list.add("b");
+	list.add("b");
+	
+	List<String>list2=list.stream()
+			.map(s->s.toUpperCase())
+			.collect(Collectors.toList());
+	
+	list2.forEach(a->System.out.println(a));
+			
+	
+	
+	
+	
+}
+}

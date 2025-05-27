@@ -1,0 +1,29 @@
+package chap15.section03.example01;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 스트림: 짧게 코딩하기 위해 나옴 특징: 사용하면 자동으로 반복문이 실행됨
+ *
+ */
+public class StreamApplication {
+	public static void main(String[] args) {
+      List<String> list= new ArrayList<String>();
+      list.add("a");
+      list.add("a");
+      list.add("B");
+   //   System.out.println(list); //이 출력 말고
+      
+   //  스트림 사용 : 배열에서만 사용, 배열의 끝까지 자동반복
+   //  보충설명) 1)0번방: "a" :"a" s->System.out.println("a")  
+   //  보충설명) 2)1번방: "a" :"a" s->System.out.println("a")  
+   //  보충설명) 3)2번방: "B" :"B" s->System.out.println("B")  
+   //         4) 배열 원소 없음: 반복 중단   
+   //  사용법: 리스트변수.forEach(매개변수->System.out.println(매개변수))
+      list.forEach(s->System.out.println(s));
+      
+   // 참고
+      list.forEach(System.out::println);  //이렇게도 사용가능 
+	}
+}

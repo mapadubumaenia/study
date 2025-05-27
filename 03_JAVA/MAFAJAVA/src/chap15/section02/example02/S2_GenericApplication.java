@@ -1,0 +1,27 @@
+package chap15.section02.example02;
+
+import java.util.ArrayList;
+import java.util.List;
+
+/**
+ * 제네릭2:
+ *
+ */
+public class S2_GenericApplication {
+public static void main(String[] args) {
+	List<Product> parents= new ArrayList<Product>();
+	List<Audio> child= new ArrayList<Audio>();
+	
+//  사용법: List<? extends 자식> 변수= 객체;
+//   =>자신과 자식클래스만 배열에 들어가게 허용	
+	List<? extends Audio> list=child;
+	
+//  사용법:List<? super 자식> 변수= 객체;
+//   =>자신과 부모클래스만 이 배열에 들어가게 만듬
+	 List<? super Audio> list2=parents;
+	
+	 System.out.println(list);
+		System.out.println(list2);
+	
+}
+}

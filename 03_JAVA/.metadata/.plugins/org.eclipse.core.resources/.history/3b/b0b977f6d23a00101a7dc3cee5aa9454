@@ -1,0 +1,10 @@
+package chap11.finalquiz02;
+
+public class Whale implements Flyable{
+
+	@Override
+	public void fly() {
+		public void swimable
+	}
+
+}

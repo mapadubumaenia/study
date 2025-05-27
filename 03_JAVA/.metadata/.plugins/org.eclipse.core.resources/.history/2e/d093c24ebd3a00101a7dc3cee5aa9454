@@ -1,0 +1,31 @@
+package chap15.section02.example03;
+
+/**
+ * 람다식3
+ * 
+ *
+ */
+@FunctionalInterface
+interface MyHistory {
+	int score(int s);
+}
+
+public class S3_RamdaApplication {
+	public static void main(String[] args) {
+		MyHistory m = new MyHistory() {
+
+			@Override
+			public int score(int s) {
+				// TODO Auto-generated method stub
+				return s;
+			}
+		};
+		System.out.println(m.score(80));
+		
+//     TODO:람다식		
+		MyHistory m2=(s)->s;
+		System.out.println(m.score(80));
+		
+
+	}
+}

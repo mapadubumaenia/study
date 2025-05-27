@@ -1,0 +1,5 @@
+package chap11.finalquiz02;
+
+public interface Swimable {
+	void swim();
+}

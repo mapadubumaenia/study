@@ -11,5 +11,5 @@ public class ComputerApplication {
 		computer.typing(); // NoteBook Typing()
 		computer.turnOff(); // "전원을 끕니다."
 	}
-
 }
+  

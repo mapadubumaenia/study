@@ -1,0 +1,23 @@
+package chap15.section01.example01;
+/**
+ * 실행클래스
+ *
+ */
+public class PersonApplication {
+public static void main(String[] args) {
+	Noname noname=new Noname();
+	
+	
+	//익명클래스의 필드쪽 wake 함수 실행
+	noname.person.wake();
+	
+	//익명클래스의 메소드 안에 wake 실행
+	noname.method1();
+	
+	//익명클래스의 메소드 매개변수 사용
+	noname.method2(new Person() {
+		
+	});
+	
+}
+}
