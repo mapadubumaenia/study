@@ -1,0 +1,26 @@
+package chap17.example02;
+/**
+ * 내부클래스(중첩클래스)를 필드/메소드에서 사용하기
+ * 일반 내부클래스는 전역 필드/메소드안에서 사용 불가
+ */
+public class S1_Outer {
+// 필드	
+    class Attr{}
+    
+    
+ //  TODO: 실습:   
+    Attr attr=new Attr();          //가능! o
+    
+ // static Attr attr2=new Attr();  //불가능!x 
+ //            =>일반 내부클래스는 일반클래스만 가능, 전역은 불가능 
+    
+    public void name() {
+//		Attr attr=new Attr();
+	}                               // 가능! o
+    
+    
+//     public static void name2() {
+//	  static Attr attr2=new Attr();
+//	}                                // 불가능! X
+//               => 일반 내부클래스는 전역 필드/메소드안에서 사용 불가 
+}

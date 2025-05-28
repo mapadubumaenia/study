@@ -1,0 +1,28 @@
+package chap16.section01.example01;
+
+import java.io.FileOutputStream;
+import java.io.OutputStream;
+
+/**
+ * 이진 파일: 1)쓰기 2)읽기
+ * 쓰기: OutputStream
+ * 파일 처리: 쓰기/읽기, 반드시 예외처리 해야함 
+ *       1)try/catch,
+ *       2)throw
+ */
+public class WriteApplication {
+public static void main(String[] args) throws Exception {
+	OutputStream outputStream
+	  = new FileOutputStream("src/chap16/output/test1.db");
+	
+//   byte:정수형(1byte)
+	byte a=10;
+	byte b=20;
+	
+	outputStream.write(a);
+	outputStream.write(b);
+	
+	outputStream.flush();
+	outputStream.close();
+}
+}

@@ -1,0 +1,17 @@
+package chap17.example01;
+/**
+ * 실행클래스:main
+ *
+ */
+public class S1_OuterApplication {
+public static void main(String[] args) {
+	
+//  1)외부클래스 외부변수=new 외부생성자();
+	S1_Outer outer=new S1_Outer();
+	
+//  2)외부클래스.내부클래스 변수=외부변수.new 내부생성자();	
+	S1_Outer.Attr attr=outer.new Attr();
+	
+	
+}   
+}

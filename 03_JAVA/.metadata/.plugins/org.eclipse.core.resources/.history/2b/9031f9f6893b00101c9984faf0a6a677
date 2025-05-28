@@ -1,0 +1,11 @@
+package chap16.section02.example02;
+/**
+ *  보조스트림2:파일 읽기 속도 증가
+ *  BufferedReader (한줄씩 빠르게 읽기)
+ *
+ */
+public class ReadLineApplication {
+public static void main(String[] args)throws Exception {
+	
+}
+}

@@ -1,0 +1,37 @@
+package chap16.section02.example02;
+
+import java.io.BufferedReader;
+import java.io.FileReader;
+import java.io.Reader;
+
+/**
+ *  보조스트림2:파일 읽기 속도 증가
+ *  BufferedReader (한줄씩 빠르게 읽기)
+ *
+ */
+public class ReadLineApplication {
+public static void main(String[] args)throws Exception {
+//	
+	Reader reader
+	   =new FileReader("src/chap16/output/test3.txt");
+	
+	
+//  보조스트림 추가:new 보조스트림(기본스트림)
+//  BufferedReader:보조스트림 	
+	BufferedReader bufferedReader
+	 =new BufferedReader(reader);
+	
+//  반복문 파일읽기: test3.txt
+	while (true) {
+//   한줄씩 읽기
+		String data=bufferedReader.readLine();
+//   중단조건: 파일의 끝: null ->break;
+		if (data==null)break; {
+//   화면표시
+			System.out.println(data);
+		
+		}
+	}
+	bufferedReader.close();
+}
+}

@@ -1,0 +1,14 @@
+package chap17.example01;
+/**
+ * 실행클래스
+ *
+ */
+public class S3_OuterApplication {
+public static void main(String[] args) {
+
+	S3_Outer outer=new S3_Outer();
+	outer.method();
+	
+	
+}
+}

@@ -1,0 +1,26 @@
+package chap16.section01.example08;
+
+import java.io.FileReader;
+import java.io.Reader;
+
+/**
+ * 텍스트 파일 읽기:
+ *
+ */
+public class ReadApplication {
+public static void main(String[] args) throws Exception {
+	
+	Reader reader
+	  =new FileReader("src/chap16/output/test4.txt");
+	
+//  파일 읽기: 글자가 몇개인지 모름=>무한 반복문!, (파일 끝:-1(종료조건)break)
+      while (true) {
+		int data=reader.read();
+		
+		if (data==-1)break; {
+			System.out.println(data);
+		}
+	}	   
+	reader.close();
+}
+}

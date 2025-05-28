@@ -1,0 +1,24 @@
+package chap16.section02.example01;
+
+import java.io.FileInputStream;
+import java.io.InputStreamReader;
+import java.io.Reader;
+
+/**
+ * 기본스트림: OutputStream,InputStream(이진파일 쓰기/읽기) 
+ * 보조스트림: 기본스트림+ 추가 기능 
+ *  종류 예) 언어셋을 바꾸는 기능추가: UTF-8 언어셋(한글,일어,영어모두 사용가능)
+ *            (윈도우: ms949 언어셋)  
+ *             파일 쓰기/읽기 속도 증가시키는 보조스트림 등
+ */
+public class UtfApplication {
+public static void main(String[] args) throws Exception {
+//  예제) 텍스트파일을 UTF-8 언어셋 파일로 읽기   
+	FileInputStream fileInputStream
+	  =new FileInputStream("src/chap16/output/test3.txt");
+	
+//  기본스트림에 보조스트림기능 넣기(UTF-8)
+	Reader reader=new InputStreamReader(fileInputStream,"UTF-8");
+	
+}
+}

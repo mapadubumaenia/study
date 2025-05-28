@@ -1,0 +1,24 @@
+package chap16.section01.example07;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+/**
+ * 텍스트 파일 쓰기3: 글자(String)으로 글자 쓰기
+ *
+ */
+public class WriteApplication {
+public static void main(String[] args) throws Exception{
+//   사용법:Writer 변수=new FileWriter("파일경로");
+	Writer writer
+	  =new FileWriter("src/chap16/output/test5.txt");
+	
+	
+//   문자열 (String)
+	String str="AB";
+	
+    writer.write(str);       //메모리(버퍼)에 쓰기
+    writer.flush();          //하드디스크에(파일) 진짜 쓰기
+    writer.close();          // 파일 닫기
+}
+}

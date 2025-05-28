@@ -1,0 +1,29 @@
+package chap16.section01.example03;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+/**
+ * 이진 파일 읽기:
+ *
+ */
+public class ReadApplication {
+public static void main(String[] args) throws Exception {
+	InputStream inputStream
+	    = new FileInputStream("src/chap16/output/test1.db");
+	
+//   파일 읽기: 숫자가 몇개 작성되었는지 모름
+//	       => 파일을 끝까지(숫자가 없으면-1)읽어서(반복문) 화면에 표시하는 방법
+//         =>무한반복문 사용: 종료조건(값==-1) break;	
+	while (true) {
+		int data=inputStream.read();
+		
+//   종료조건:(값==-1)
+		if (data==-1)break; {
+			System.out.println(data);
+		}
+		
+	}
+	inputStream.close();
+}
+}

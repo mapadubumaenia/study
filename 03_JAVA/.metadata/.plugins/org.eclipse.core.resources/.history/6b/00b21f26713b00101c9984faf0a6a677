@@ -1,0 +1,33 @@
+package chap16.section01.example04;
+
+import java.io.FileInputStream;
+import java.io.InputStream;
+
+/**
+ * 이진 파일 읽기: 배열크기만큼 1번에 읽기 (속도빠름)
+ *
+ */
+public class ReadApplication {
+public static void main(String[] args)throws Exception {
+	InputStream inputStream=
+	  new FileInputStream("src/chap16/output/test2.db");
+	
+	//   읽은 배열: 보따리 큰것??
+	byte[] space=new byte[100];
+	
+    //   파일 읽기: 글자 몇개인지 모른다!=> 무한반복 사용,(파일 끝: -1)종료조건	
+	while (true) {
+    //   읽은 글자는 space 배열에 저장, 읽은 갯수는 num에 저장
+		int num=inputStream.read(space);
+		
+		if (num==-1) break; {
+			for (int i = 0; i < num; i++) {
+				System.out.println(space[i]);
+			}
+			
+		// 읽은 것 화면표시: 배열개수만큼 또는 num 숫자만큼	
+		}
+	}
+	inputStream.close();
+}
+}

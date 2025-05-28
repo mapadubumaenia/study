@@ -1,0 +1,19 @@
+package chap16.section01.example06;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+/**
+ * 텍스트파일: 배열 이용
+ *
+ */
+public class WriteApplication {
+public static void main(String[] args) throws Exception {
+	
+	Writer writer
+	  =new FileWriter("src/chap16/output/test4.txt");
+	
+	
+	
+}
+}

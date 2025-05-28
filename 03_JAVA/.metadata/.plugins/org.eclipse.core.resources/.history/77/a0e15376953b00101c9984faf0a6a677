@@ -1,0 +1,13 @@
+package chap17.example01;
+/**
+ * 실행클래스
+ *
+ */
+public class S2_OuterApplication {
+public static void main(String[] args) {
+	
+//   static 전역 내부클래스 만들기
+//   전역 내부클래스의 전역메소드는 그냥.눌러서 실행하면 됨	
+	S2_Outer.Share.method1();
+}
+}

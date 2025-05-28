@@ -1,0 +1,19 @@
+package chap16.section03.example02;
+
+import java.io.BufferedReader;
+import java.io.Reader;
+
+
+/**
+ * 보조스트림: BufferedReader(키보드 입력을 빠르게)
+ *
+ */
+public class GetLineApplication {
+public static void main(String[] args) {
+// 클래스 변수=new 생성자();
+// 보조스트림 변수=new 보조스트림생성자(기본스트림); =>기본스트림에 기능추가
+	Reader reader=new InputStreamReader(System.in);
+	BufferedReader bufferedReader
+	 =new BufferedReader(reader);
+}
+}

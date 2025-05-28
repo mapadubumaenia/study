@@ -1,0 +1,26 @@
+package codeup.section1;
+
+public class ArrayUtils {
+	
+	public static int findMax(int []arr) {
+		int max= arr[0];
+		for (int i = 1; i < arr.length; i++) {
+			if (arr[i]>max) {
+				max=arr[i];
+			}
+			return 0;
+		}
+	}
+public static void main(String[] args) {
+	
+	
+	
+	
+	int[] nums = {5, 3, 9, 1, 6};
+    int max = ArrayUtils.findMax(nums);
+    System.out.println("최댓값: " + max); // 출력: 최댓값: 9
+	
+	
+	
+}
+}

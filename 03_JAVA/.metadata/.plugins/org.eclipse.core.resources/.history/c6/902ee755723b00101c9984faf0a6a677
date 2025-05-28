@@ -1,0 +1,30 @@
+package chap16.section01.example05;
+
+import java.io.FileWriter;
+import java.io.Writer;
+
+/**
+ * 텍스트 파일:
+ *  특징:더블클릭하면 볼수 있음
+ *
+ */
+public class WriteApplication {
+public static void main(String[] args) throws Exception {
+	Writer writer
+	  =new FileWriter("src/chap16/output/test3.txt");
+	
+//   글자: char: 1글자 자료형(홀따옴표)
+	char a='A';
+	char b='B';
+	
+//  메모리(버퍼)에 쓰기
+	writer.write(a);
+	writer.write(b);
+	
+//  하드디스크의 파일에 진짜 쓰기
+	writer.flush();
+	
+//   파일닫기
+	writer.close();
+}
+}

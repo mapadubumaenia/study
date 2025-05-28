@@ -1,0 +1,11 @@
+package chap17.example02;
+/**
+ * 내부클래스: 중첩클래스, 전역으로(Static)만들기
+ *
+ */
+public class S1_Outer {
+//전역필드로 중첩클래스
+	static class Share{
+		
+	}
+}
