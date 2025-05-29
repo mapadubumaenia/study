@@ -1,0 +1,8 @@
+package chap17.example05;
+/**
+ * 내부클래스에서 this 사용?
+ *
+ */
+public class S1_Outer {
+
+}

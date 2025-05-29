@@ -1,0 +1,15 @@
+package chap17.example05;
+/**
+ * 내부클래스에서 this 사용?
+ * this: 클래스 자기자신을 의미
+ *  vs super: 부모클래스를 의미
+ */
+public class Outer {
+
+
+//  내부클래스 정의
+      class Inner{
+    	  public void name2() {}
+      }
+
+}

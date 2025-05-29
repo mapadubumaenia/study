@@ -1,0 +1,20 @@
+package chap17.example04;
+
+/**
+ * 메소드 안에서 내부클래스(중첩) 
+ * 사용할 떄 주의점: 지역변수가 상수로 자동변경됨
+ * 
+ */
+public class S1_Outer {
+	public void name(int arg) {
+		int a = 1; // (지역)변수 =>내부클래스에서는 상수로 자동변경
+ // 내부클래스
+		class Inner {
+			public void name2() {
+//	        a=2;       //a는 자동으로 상수가 됩니다.(수정불가)
+				int b=arg+a;
+			}
+		}
+
+	}
+}

@@ -1,0 +1,30 @@
+package chap18.example03;
+/**
+ * 실행 클래스:
+ * 쓰레드 사용의 주의점: 동시 실행시 결과에 오류가 있을수 있다!
+ * 해결법: 1)동시 실행을 잠깐 막기:
+ *   => 작업스레드1번 실행이 끝날때까지 2번이기다리기
+ *    or 작업스레드2번 실행이 끝날때까지 1번이 기다리기
+ *    => 해결책 키워드 쓰기 synchronized
+ */
+public class CalculatorApplication {
+public static void main(String[] args) {
+//   클래스 변수=new 생성자();
+	Calculator calculator=new Calculator();
+	
+//   1번 작업쓰레드 실행:50저장
+	  User2 user1=new User2();
+	  user1.setCalculator(calculator);
+	  user1.start();               //쓰레드 실행(50저장)
+	  
+//   2전 작업쓰레드 실행:100저장	  
+	  User2 user2=new User2();
+	  user2.setCalculator(calculator);
+	  user2.start();               //쓰레드 실행(100저장)
+	
+//     예상: 50       현실:  100
+//	        100            100
+//=> 동시실행시 결과에 오류가 날수 있음! 신뢰성 없음	  
+	   
+}
+}

@@ -1,16 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="java.util.LinkedList"/>
-    <fullyQualifiedTypeName name="chap14.section02.example04.Coin"/>
-    <fullyQualifiedTypeName name="java.lang.Character"/>
-    <fullyQualifiedTypeName name="java.util.Collection"/>
-    <fullyQualifiedTypeName name="java.util.Collections"/>
-    <fullyQualifiedTypeName name="com.sun.tools.sjavac.comp.dependencies.PublicApiCollector"/>
-    <fullyQualifiedTypeName name="chap09.quiz08.Calculator"/>
-    <fullyQualifiedTypeName name="chap09.quiz09.Computer"/>
-    <fullyQualifiedTypeName name="chap09.quiz10.Animal"/>
-    <fullyQualifiedTypeName name="chap15.section01.example01.Noname"/>
-    <fullyQualifiedTypeName name="chap15.section01.example01.Person"/>
     <fullyQualifiedTypeName name="java.lang.Override"/>
     <fullyQualifiedTypeName name="chap15.section01.example02.Noname"/>
     <fullyQualifiedTypeName name="chap15.section01.example02.Remote"/>
@@ -48,11 +37,8 @@
     <fullyQualifiedTypeName name="jdk.internal.org.jline.utils.InputStreamReader"/>
     <fullyQualifiedTypeName name="java.io.BufferedReader"/>
     <fullyQualifiedTypeName name="java.io.InputStreamReader"/>
-    <fullyQualifiedTypeName name="java.lang.System"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="java.io.File"/>
     <fullyQualifiedTypeName name="java.lang.Exception"/>
-    <fullyQualifiedTypeName name="java.util.Arrays"/>
     <fullyQualifiedTypeName name="chap17.example01.S1_Outer"/>
     <fullyQualifiedTypeName name="chap17.example01.S1_Outer.Attr"/>
     <fullyQualifiedTypeName name="chap17.example01.S2_Outer"/>
@@ -60,4 +46,18 @@
     <fullyQualifiedTypeName name="Local"/>
     <fullyQualifiedTypeName name="chap17.example01.S3_Outer"/>
     <fullyQualifiedTypeName name="chap17.example02.S1_Outer.Attr"/>
+    <fullyQualifiedTypeName name="java.lang.Runnable"/>
+    <fullyQualifiedTypeName name="chap18.example01.BeepTask"/>
+    <fullyQualifiedTypeName name="java.awt.Toolkit"/>
+    <fullyQualifiedTypeName name="chap18.example02.BeepThread"/>
+    <fullyQualifiedTypeName name="java.lang.Thread"/>
+    <fullyQualifiedTypeName name="chap18.example03.Calculator"/>
+    <fullyQualifiedTypeName name="chap18.example03.User1"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="chap19.example01.Week"/>
+    <fullyQualifiedTypeName name="chap19.example02.Week"/>
+    <fullyQualifiedTypeName name="com.sun.java_cup.internal.runtime.Scanner"/>
+    <fullyQualifiedTypeName name="java.util.Scanner"/>
+    <fullyQualifiedTypeName name="java.lang.System"/>
+    <fullyQualifiedTypeName name="java.util.Arrays"/>
 </qualifiedTypeNameHistroy>

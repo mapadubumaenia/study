@@ -1,0 +1,17 @@
+package chap18.example01;
+/**
+ *  실행클래스: main()함수도 1개의 쓰레드
+ *
+ */
+public class BeepTaskApplication {
+public static void main(String[] args) {
+//   인터페이스 변수=new 자식생성자();        //다형성	
+    Runnable runnable=new BeepTask(); //작업쓰레드(오디오 띵)   
+    Thread thread=new Thread(runnable);//실제 쓰레드 클래스의 생성자에 넘김
+    thread.start();                    //실제 쓰레드 실행(오디오 띵 실행)
+    
+//   main 함수에서 할 일: 화면에 띵 표시
+    System.out.println("띵");          //메인쓰레드
+
+}
+}
