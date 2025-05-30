@@ -1,0 +1,15 @@
+--② 퀴즈) 부서번호(DNO)가 10 ~ 20 번 사이에 있는 사원들을 화면에 표시하세요
+
+SELECT * FROM EMPLOYEE
+WHERE DNO BETWEEN 10 AND 20;
+
+
+--③ 예제) 급여가(SALARY) 1000 미만이거나 1500 초과인 사원 조회하기
+SELECT * FROM EMPLOYEE
+WHERE SALARY NOT BETWEEN 1000 AND 1500;
+
+
+
+--④ 퀴즈) 1982 년에 입사한(HIREDATE) 사원 화면에 표시하세요
+SELECT * FROM EMPLOYEE
+WHERE HIREDATE BETWEEN '82/01/01' AND '82/12/31';

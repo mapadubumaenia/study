@@ -6,13 +6,12 @@ public class S1001 {
 public static void main(String[] args) {
 
 	Scanner sc=new Scanner(System.in);
-	String a=sc.nextLine();
+	String a=sc.next();
 	
-	String[] b=a.split("\\.");
-	System.out.println(b[0]);
-	System.out.println(b[1]);
+	System.out.printf("%02d",a);
 	
-	sc.close();
-
+	
+	
+	
 }
 }

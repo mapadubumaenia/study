@@ -8,11 +8,11 @@ public static void main(String[] args) {
 	Scanner sc=new Scanner(System.in);
 	String a=sc.nextLine();
 	
-	String[] b=a.split("\\.");
+	String[] b=a.split("//.");
 	System.out.println(b[0]);
 	System.out.println(b[1]);
 	
-	sc.close();
+	
 
 }
 }

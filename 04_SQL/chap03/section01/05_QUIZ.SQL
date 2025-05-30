@@ -1,0 +1,11 @@
+--② 퀴즈) 부서 번호가(DNO) 20 이거나 직급이(JOB) 'MANAGER' 인 사원만 표시하세요
+SELECT * FROM EMPLOYEE
+WHERE DNO=20
+OR JOB='MANAGER';
+
+
+
+--③ 퀴즈) 월급이(SALARY) 1000 미만이거나 또는 1500 초과인 사원 표시하세요
+SELECT * FROM EMPLOYEE
+WHERE SALARY > 1500
+OR SALARY < 1000;

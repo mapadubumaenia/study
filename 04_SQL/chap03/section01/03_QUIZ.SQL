@@ -1,0 +1,5 @@
+--② 퀴즈) 입사일(HIREDATE) 이 '1987/01/01' 이상인 사원만 표시하세요
+
+SELECT * FROM EMPLOYEE
+WHERE HIREDATE <='87/01/01';
+

@@ -1,0 +1,23 @@
+package codeup.section1;
+
+import java.util.Scanner;
+
+public class S1001 {
+public static void main(String[] args) {
+
+	Scanner sc=new Scanner(System.in);
+	String a=sc.nextLine();
+	
+	String[] parts = a.split("\\.");
+	
+	int year= Integer.parseInt(parts[0]);
+	int month= Integer.parseInt(parts[1]);
+	int day= Integer.parseInt(parts[2]);
+	
+	System.out.printf("%04d.%02d.%02d\n",year,month,day);
+	
+	
+	
+	
+}
+}
