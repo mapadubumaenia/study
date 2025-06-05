@@ -1,0 +1,25 @@
+package codeup.section1;
+
+import java.util.Scanner;
+
+/*
+ * s1025
+ */
+public class S1025 {
+public static void main(String[] args) {
+	
+	Scanner sc= new Scanner(System.in);
+	String a= sc.next();
+	
+	System.out.println(a.charAt(1)*10000);
+	System.out.println(a.charAt(2)*1000);
+	System.out.println(a.charAt(3)*100);
+	System.out.println(a.charAt(4)*10);
+	System.out.println(a.charAt(5));
+	
+	sc.close();
+	
+	
+	
+}
+}
