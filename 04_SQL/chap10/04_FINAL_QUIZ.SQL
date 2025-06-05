@@ -1,0 +1,5 @@
+--£ 평균 월급이(SALARY) 가장 적은 사원의 직위(JOB)를 찾아 직위와 평균 월급을
+--표시하세요.
+
+SELECT JOB, AVG(SALARY) AS 평균월급 FROM EMPLOYEE
+WHERE ENAME =(SELECT ENAME FROM EMPLOYEE WHERE AVG(SALARY) )
