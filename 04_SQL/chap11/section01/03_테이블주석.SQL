@@ -1,0 +1,33 @@
+--£ 테이블/컬럼 주석만들기
+--① 예제) DEPT2 에 테이블 주석과 컬럼 주석을 추가하세요
+--단, DEPARTMENT 의 테이블 /컬럼 주석을 참고하세요
+-- 사용법) COMMENT ON TABLE 테이블 IS '설명';
+-- 사용법) COMMENT ON COLUMN 테이블.컬럼 IS '컬럼설명';
+
+
+
+--테이블 주석
+COMMENT ON TABLE DEPT2 IS '부서정보';
+
+--컬럼 주석
+COMMENT ON COLUMN DEPT2.DNO IS '부서번호';
+COMMENT ON COLUMN DEPT2.DNAME IS '부서명';
+COMMENT ON COLUMN DEPT2.LOC IS '부서위치';
+
+
+
+
+--QUIZ
+--② 퀴즈) EMP2 에 테이블 주석과 컬럼 주석을 추가하세요
+--단, EMPLOYEE 의 테이블 /컬럼 주석을 참고하세요
+
+COMMENT ON TABLE EMP2 IS '사원정보';
+
+COMMENT ON COLUMN EMP2.ENO IS '사원번호';
+COMMENT ON COLUMN EMP2.ENAME IS '사원이름';
+COMMENT ON COLUMN EMP2.JOB IS '직무';
+COMMENT ON COLUMN EMP2.MANAGER IS '관리자';
+COMMENT ON COLUMN EMP2.HIREDATE IS '입사일';
+COMMENT ON COLUMN EMP2.SALARY IS '급여';
+COMMENT ON COLUMN EMP2.COMMISSION IS  '커미션';
+COMMENT ON COLUMN EMP2.DNO  IS '부서번호';

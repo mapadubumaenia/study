@@ -1,0 +1,10 @@
+--② 퀴즈) DEPT 테이블에 아래와 같이 NULL 값을 넣어서 추가하세요
+
+
+INSERT INTO DEPT(DNO,DNAME,LOC)
+VALUES(50,'COMPUTING',NULL);
+
+COMMIT;
+SELECT * FROM DEPT;
+
+
