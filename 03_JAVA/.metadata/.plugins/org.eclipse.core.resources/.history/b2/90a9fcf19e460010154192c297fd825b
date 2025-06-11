@@ -1,0 +1,16 @@
+package codeup.section1;
+
+import java.util.Scanner;
+
+public class S1035 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	String hextalinput = sc.next();
+	int a = Integer.parseInt(hextalinput, 8);
+	
+	String hex =String.valueOf(a);
+	int b = Integer.parseInt(hex, 16);
+	System.out.println(b);
+	sc.close();
+}
+}

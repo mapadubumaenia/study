@@ -1,0 +1,18 @@
+package codeup.section1;
+
+import java.util.Scanner;
+
+public class S1035 {
+public static void main(String[] args) {
+	Scanner sc=new Scanner(System.in);
+	 String hextalInput = sc.next(); // 16진수 문자열 입력 (예: "f")
+     
+     int decimal = Integer.parseInt(hextalInput, 16); // 16진수 → 10진수
+     
+     String octal = Integer.toOctalString(decimal); // 10진수 → 8진수 문자열
+     
+     System.out.println(octal); // 8진수 출력
+     
+     sc.close();
+ }
+}

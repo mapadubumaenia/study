@@ -1,0 +1,5 @@
+package egovframework.example.controllerExam.web.ex01;
+
+public class BasicController {
+
+}
