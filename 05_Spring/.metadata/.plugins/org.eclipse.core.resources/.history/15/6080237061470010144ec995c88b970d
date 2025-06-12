@@ -1,0 +1,27 @@
+package egovframework.example.controllerExam.web.quiz03;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class Quiz03Controller {
+
+//	② 퀴즈) 아래 요건에 따라 controller 함수 작성하고 JSP 화면에 결과 출력하세요
+//	단, 쿼리스트링(query string) 방식을 이용하세요
+	
+	@GetMapping("/qz03/quiz03")
+	public String quiz03(Model model,
+			@RequestParam(defaultValue = "0") String dno,
+			@RequestParam(defaultValue = "") String dname,
+			@RequestParam(defaultValue = "") String loc
+			) {
+		model.addAttribute("dno",dno);
+		model.addAttribute("dname",dname);
+		model.addAttribute("loc",loc);
+		return "qz03/quiz03";
+	}
+	
+	
+}

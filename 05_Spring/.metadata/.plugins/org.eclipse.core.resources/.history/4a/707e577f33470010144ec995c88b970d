@@ -1,0 +1,15 @@
+package egovframework.example.controllerExam.web.quiz01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+@Controller
+public class Quiz01Controller {
+		@GetMapping("/quiz01/quizexample01.do")
+		public String quizexample01() {
+			return "quiz01/quizexample01";
+			
+		}
+		
+	
+}

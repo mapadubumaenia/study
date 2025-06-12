@@ -1,0 +1,5 @@
+package egovframework.example.controllerExam.web.quiz01;
+
+public class Quiz01Controller {
+
+}

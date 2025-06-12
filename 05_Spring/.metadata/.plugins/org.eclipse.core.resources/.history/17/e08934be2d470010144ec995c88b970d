@@ -1,0 +1,26 @@
+package egovframework.example.controllerExam.web.ex01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+/*
+ * 1)컨트롤러 코딩 배우기: url 경로와 jsp 파일을 연결하는 역할
+ * @controller: 클래스에 컨트롤러 기능을 부여하는 어노테이션
+ * @RequestMapping: 메소드에 url을 지정하는 어노테이션
+ *       -url이 웹브라우저 주소창에 입력되면 해당 메소드가 실행됩니다.
+ * 2)어노테이션 사용하기
+ *  사용법:
+ *  @RequestMapping  (value = "url경로",method = RequestMethod.GET)
+ *  (참고) RequestMethod.GET: 화면에 조회될 경우 사용합니다.
+ */
+@Controller
+public class BasicController {
+// 예제: Hello World 표시하기
+	@RequestMapping  (value = "/ex01/hello.do",method = RequestMethod.GET)
+	public String hello() {
+		return "/ex01/hello";     //화면(jsp)파일명
+	}
+	
+	
+}

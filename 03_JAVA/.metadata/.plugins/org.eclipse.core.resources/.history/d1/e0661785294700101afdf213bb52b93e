@@ -1,0 +1,15 @@
+package codeup.section1;
+
+import java.util.Scanner;
+
+public class S1041 {
+public static void main(String[] args) {
+	Scanner sc= new Scanner(System.in);
+	char a = sc.next().charAt(0); 
+	int num= (int) a;
+	int ascli= num+1;
+	char b=(char) ascli;
+	System.out.println(b);
+	sc.close();
+}
+}

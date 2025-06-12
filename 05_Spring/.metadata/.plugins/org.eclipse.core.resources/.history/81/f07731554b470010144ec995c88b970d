@@ -1,0 +1,89 @@
+package egovframework.example.controllerExam.web.ex01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestMethod;
+
+/*
+ * 1)컨트롤러 코딩 배우기: url 경로와 jsp 파일을 연결하는 역할
+ * @controller: 클래스에 컨트롤러 기능을 부여하는 어노테이션
+ * @RequestMapping: 메소드에 url을 지정하는 어노테이션
+ *       -url이 웹브라우저 주소창에 입력되면 해당 메소드가 실행됩니다.
+ * 2)어노테이션 사용하기
+ *  사용법:
+ *  @RequestMapping  (value = "url경로",method = RequestMethod.GET)
+ *  (참고) RequestMethod.GET: 화면에 조회될 경우 사용합니다.
+ *  2-2)@GetMapping("url경로")
+ *  =>@RequestMapping 과 기능이 똑같음, 코딩은 짧아짐, 자동으로 get방식 동작합니다.
+ *  =>인터넷 통신 방식(약속): get(조회),post(DB저장/수정/삭제)
+ *  * 3) 컨트롤러 메소드 사용법:
+ *       @GetMapping("url경로")
+       public String 메소드명() {
+         return "폴더명/jsp이름";
+       }
+
+ */
+@Controller
+public class BasicController {
+// 예제: Hello World 표시하기
+	@RequestMapping  (value = "/ex01/hello.do",method = RequestMethod.GET)
+	public String hello() {
+		return "/ex01/hello";     //화면(jsp)파일명
+	}
+	
+// TODO: 예제 1)	 안녕 JSP & Spring 을 화면에 표시하세요.
+	@GetMapping("/ex01/example01.do")
+	public String example01() {
+		return "ex01/example01";
+	}
+
+	
+	
+//TODO: 예제2) 예제) 안녕 JSP & Spring 을 화면에 표시하세요. 아래 그림처럼 컨트롤러와 JSP 를 코딩하세요
+//	단, @GetMapping, Model 을 사용하세요	
+	@GetMapping("/ex01/example02.do")   // do 는 전자정부의 프레임워크주소
+	public String example02(Model model) {
+//		모델: map 구조: (키,값)
+//		jsp el 표현식: ${변수}
+//		jsp 결과확인: ${키}
+		model.addAttribute("greeting","안녕 스프링");
+		return "ex01/example02";      //"jsp폴더명/jsp 이름"
+	}
+	
+	
+//TODO: 예제3) 아래 그림처럼 컨트롤러와 JSP 를 코딩하세요
+//	단, @GetMapping, Model 은 2 개 사용하세요
+
+	@GetMapping("/ex01/example03.do")
+	public String example03(Model model) {
+		model.addAttribute("greeting","안녕 스프링");
+		model.addAttribute("greeting2","안녕 스프링2");
+		return"ex01/example03";
+		
+	}
+	
+//	TODO 예제4)
+//	아래 그림처럼 컨트롤러와 JSP 를 코딩하세요
+//	단, @GetMapping, Model 은 3 개 사용하고 키는 자유롭게 코딩하세요
+//	단, 변수를 이용해서 Model 값을 넣고 사용하세요
+	
+	@GetMapping("/ex01/example04.do")
+	public String example04(Model model) {
+		String str="abc";
+		int num=10;
+		boolean value=true;
+		return"ex01/example04";
+		
+	}
+	
+	
+	
+}
+
+
+
+
+
+

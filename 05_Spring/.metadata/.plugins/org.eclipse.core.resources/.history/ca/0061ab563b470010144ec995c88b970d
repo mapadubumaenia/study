@@ -1,0 +1,32 @@
+package egovframework.example.controllerExam.web.quiz01;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+
+
+@Controller
+public class Quiz01Controller {
+		@GetMapping("/qz01/quiz01.do")
+		public String quiz01() {
+			return "qz01/quiz01";
+			
+		}
+		
+//		퀴즈2) 안녕 페이지를 화면에 표시하세요. 아래 그림처럼 컨트롤러와 JSP 를 코딩하세요
+//		단, @GetMapping, Model 을 사용하세요
+		
+		@GetMapping("/qz01/example02.do")   // do 는 전자정부의 프레임워크주소
+		public String quiz02(Model model) {
+//			모델: map 구조: (키,값)
+//			jsp el 표현식: ${변수}
+//			jsp 결과확인: ${키}
+			model.addAttribute("greeting","안녕 스프링");
+			return "qz01/quiz02";      //"jsp폴더명/jsp 이름"
+		}
+		
+	
+		
+		
+		
+}

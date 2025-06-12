@@ -1,0 +1,20 @@
+package egovframework.example.controllerExam.web.quiz02;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+
+@Controller
+public class Quiz02Controller {
+
+	@GetMapping("/qz02/quiz01.do")
+	public String quiz01(Model model,
+			@RequestParam(defaultValue = "")String name
+			) {
+		model.addAttribute("name",name);
+		return "qz02/quiz01";
+	}
+	
+	
+}

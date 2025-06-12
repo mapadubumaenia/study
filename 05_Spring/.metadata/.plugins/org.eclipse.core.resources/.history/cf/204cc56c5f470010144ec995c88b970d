@@ -1,0 +1,5 @@
+package egovframework.example.controllerExam.web.ex03;
+
+public class MultiParamController {
+
+}
