@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-          <p>${dno}</p>
+	<p>${dno}</p>
 </body>
 </html>

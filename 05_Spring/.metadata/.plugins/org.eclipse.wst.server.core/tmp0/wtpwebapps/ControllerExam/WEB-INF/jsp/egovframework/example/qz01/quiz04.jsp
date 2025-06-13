@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-           <p>${a}</p>
-           <p>${b}</p>
-           <p>${c}</p>
+	<p>${str}</p>
+	<p>${num}</p>
+	<p>${value}</p>
 </body>
 </html>

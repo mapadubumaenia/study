@@ -7,8 +7,8 @@
 <title>Insert title here</title>
 </head>
 <body>
-    <p>${greeting}</p>
-    <p>${greeting2}</p>
-    <p>${greeting3}</p>
+	<p>${quiz}</p>
+	<p>${quiz2}</p>
+	<p>${quiz3}</p>
 </body>
 </html>

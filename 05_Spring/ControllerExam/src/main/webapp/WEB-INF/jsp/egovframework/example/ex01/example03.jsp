@@ -7,7 +7,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-         <p>${greeting}</p>
-         <p>${greeting2}</p>
+	<p>${greeting}</p>
+	<p>${greeting2}</p>
 </body>
 </html>

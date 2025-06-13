@@ -7,6 +7,6 @@
 <title>Insert title here</title>
 </head>
 <body>
-     안녕 JSP  Spring MAFA
+	안녕 JSP & Spring
 </body>
 </html>
