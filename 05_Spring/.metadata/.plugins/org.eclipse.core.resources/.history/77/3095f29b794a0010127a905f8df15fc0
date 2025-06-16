@@ -1,0 +1,5 @@
+package egovframework.example.controllerexam.web.qz05;
+
+public class Quiz05AjaxController {
+
+}

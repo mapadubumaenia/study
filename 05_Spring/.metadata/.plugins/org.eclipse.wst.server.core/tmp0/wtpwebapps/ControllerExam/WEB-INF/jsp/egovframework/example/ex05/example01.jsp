@@ -1,0 +1,55 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/00_style.css">
+</head>
+<body>
+   <div class="page mt5">
+      <h2>Ajax 예제</h2>
+      <button id="btn">Hello</button>
+      <p id="result"></p>
+   </div>
+
+<!-- 주석: ctrl+shift+/ -->   
+<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+<script type="text/javascript">
+   $(function () {
+      /* 버튼 클릭 */
+      $("#btn").click(function () {
+         /* 장점: 부분 새로고침 기능으로 속도 빠름 */
+         /* 비동기 방식: 결과를 기다리지 않고 바로 다음라인 실행함 */
+         /* 사용법:
+            $.ajax({
+               url: "컨트롤러url경로",
+               type: "GET[POST]",
+               success: function (data) {
+                   ajax 실행이 성공하면(벡엔트에 요청했는데 결과가 왔을때) 코딩할 곳
+               },
+               error: function () {
+                  ajax 실행이 실패하면(벡엔트에 요청했는데 결과가 안왔을때) 코딩할 곳
+               }
+            });
+            */
+         $.ajax({
+            url: "/api/select.do",
+            type: "GET",
+            success: function (data) {
+               console.log(data);      // 콘솔탭 확인용도
+               alert(data);            // 결과 화면 표시
+               $("#result").text(data); // 태그사이에 data 표시함
+            },
+            error: function () {
+               console.log("에러 발생");
+            }
+         });
+      });
+   });
+</script>
+</body>
+</html>
+

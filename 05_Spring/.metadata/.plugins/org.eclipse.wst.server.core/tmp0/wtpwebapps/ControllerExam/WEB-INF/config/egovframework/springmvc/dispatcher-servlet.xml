@@ -12,6 +12,10 @@
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Service"/>
         <context:exclude-filter type="annotation" expression="org.springframework.stereotype.Repository"/>
     </context:component-scan>
+    
+    <!--여기!  -->
+       <!-- @RestController 사용 목적 -->
+    <mvc:annotation-driven />
 
     <bean class="org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter">
         <property name="webBindingInitializer">

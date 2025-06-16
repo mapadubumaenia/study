@@ -1,0 +1,38 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/00_style.css">
+</head>
+<body>
+           <div class="page mt5">
+           <h2>Ajax 예제</h2>
+           <button id="btn">Hello</button>
+           <p id="result"></p>
+           </div>
+           <!--주석 컨트롤 쉬프트 /  -->
+       <script src="https://code.jquery.com/jquery-3.1.0.js"></script>  
+       <script type="text/javascript">
+       $(function() {
+		$("#btn").click(function() {
+			$.ajax({
+				url:"/api/selcect.do",
+				type:"GET",
+				success: function (data) {
+					console.log(data);     //콘솔탭 확인용도
+					alert(data);            //결과 화면 표시
+				},
+				error: function () {
+					console.log("과징금 크악! 시팔!");
+				}
+			});
+		});
+	});
+       </script>  
+      
+</body>
+</html>

@@ -1,0 +1,29 @@
+package egovframework.example.controllerexam.web.ex04;
+/*
+ * 
+ */
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+
+import egovframework.example.controllerexam.service.MemberVO;
+
+@Controller
+public class ObjectController {
+
+//	① 예제) 아래 요건에 따라 controller 함수 작성하고 객체를 전달해서 JSP 화면에 결과 출력
+//	하세요
+//	단, MemberVO 는 미리 소소가 제공되었다고 가정합니다.
+//	MemberVO: 필드(id,name)
+//	풀 인터넷주소: 프로토콜://도메인:포트번호/url경로?변수=값&변수2=값2
+//	쿼리스트링:?변수=값&변수2=값2 
+//	@ModelAttribute :@model + @requestparam 
+//	클래스의 필드명과 쿼리스트링의 필드명이 같으면 (데이터를 전달함)
+	@GetMapping ("/ex04/example01.do")
+	public String example01(
+			@ModelAttribute MemberVO a
+			) {
+		return "ex04/example01";
+	}
+}

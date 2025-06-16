@@ -1,0 +1,18 @@
+package egovframework.example.controllerexam.web.ex05;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+/*
+ * ajax: 결과가 json으로 내보내기 됩니다. 
+ * pom.xml: (1) Ajax 라이브러리 설치, (2) 추가 설정
+ * json: 자바스크립트 객체 예) {속성:값, 속성2:값...}
+ */
+
+@RestController
+public class SelectController {
+   @GetMapping("/api/selcect.do")
+	public String name() {
+		return "Hello Ajax";
+	}
+}

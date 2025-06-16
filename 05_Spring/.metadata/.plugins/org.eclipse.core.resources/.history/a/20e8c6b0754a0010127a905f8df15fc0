@@ -1,0 +1,53 @@
+<%@ page language="java" contentType="text/html; charset=UTF-8"
+    pageEncoding="UTF-8"%>
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Insert title here</title>
+<link rel="stylesheet" href="/css/00_style.css">
+</head>
+<body>
+           <div class="page mt5">
+           <h2>Ajax 예제</h2>
+           <button id="btn">Hello</button>
+           <p id="result"></p>
+           </div>
+           <!--주석 컨트롤 쉬프트 /  -->
+       <script src="https://code.jquery.com/jquery-3.1.0.js"></script>  
+       <script type="text/javascript">
+       $(function() {
+		$("#btn").click(function() {
+			$.ajax({
+				url:"/api/selcect.do",
+				type:"GET",
+				success: function (data) {
+					console.log(data);     //콘솔탭 확인용도
+					alert(data);            //결과 화면 표시
+					  $("#result").text(data);
+				},
+				error: function () {
+					console.log("과징금 크악! 시팔!");
+				}
+			});
+		});
+	});
+       </script>  
+        <!-- /* 사용법:
+        장점: 속도가 빠름
+            $.ajax({
+               url: "컨트롤러url경로",
+               type: "GET[POST]",
+               success: function (data) {
+                   ajax 실행이 성공하면(벡엔트에 요청했는데 결과가 왔을때) 코딩할 곳
+               },
+               error: function () {
+                  ajax 실행이 실패하면(벡엔트에 요청했는데 결과가 안왔을때) 코딩할 곳
+               }
+            });
+            */ -->
+       
+      
+</body>
+</html>
