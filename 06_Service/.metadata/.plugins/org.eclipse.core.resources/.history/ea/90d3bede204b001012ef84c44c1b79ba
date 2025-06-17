@@ -1,0 +1,12 @@
+package egovframework.example.dept.service;
+/*
+ * 복습: 인터페이스: 추상메소드(실행블럭이 없음{})
+ */
+
+import java.util.List;
+
+import egovframework.example.common.Criteria;
+
+public interface DeptService {
+      List<?> seleDeptList(Criteria)
+}
