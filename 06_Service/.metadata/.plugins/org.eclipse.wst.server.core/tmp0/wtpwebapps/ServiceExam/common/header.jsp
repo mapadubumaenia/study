@@ -1,12 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<html>
-<head>
-<meta charset="UTF-8">
-<title>Insert title here</title>
-</head>
-<body>
+
      <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
                                    <!--브랜드명(사이트명)  -->
@@ -27,7 +21,7 @@
           </a>
           <ul class="dropdown-menu">
             <li><a class="dropdown-item" href="/dept/dept.do">Dept</a></li>
-            <li><a class="dropdown-item" href="#">Emp(퀴즈)</a></li>
+            <li><a class="dropdown-item" href="/emp/emp.do">Emp(퀴즈)</a></li>
             <li><hr class="dropdown-divider"></li>
             <li><a class="dropdown-item" href="#">Board(마무리퀴즈)</a></li>
           </ul>
@@ -38,5 +32,4 @@
     </div>
   </div>
 </nav>
-</body>
-</html>
+

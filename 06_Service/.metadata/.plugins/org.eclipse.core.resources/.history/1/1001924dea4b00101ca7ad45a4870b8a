@@ -1,0 +1,16 @@
+package egovframework.example.emp.service.impl;
+
+import org.springframework.stereotype.Service;
+
+import egovframework.example.emp.service.EmpService;
+/*
+ * service: 스프링이 실행버튼 누르면 클래스를 자동 으로 만들어 주는 어노테이션
+ * 서비스: DB의 데이터를 CRUD하기 위한 목적, 업무로직 등
+ */
+@Service
+public class EmpServiceimpl implements EmpService {
+
+	
+	//DB CRUD클래스 가져오기
+	private EmpMapper empMapper;
+}

@@ -2,6 +2,7 @@
 <%@page import="java.util.Date"%>
 <%@ page language="java" contentType="text/html; charset=UTF-8"
     pageEncoding="UTF-8"%>
+    <%@ taglib prefix="fmt" uri="http://java.sun.com/jsp/jstl/fmt" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib prefix="fn" uri="http://java.sun.com/jsp/jstl/functions"%>
 <!DOCTYPE html>
@@ -57,7 +58,7 @@
       
       <h3>4) 페이지 조각 끼워넣기: 머리말, 꼬리말 </h3>
       <%-- <jsp:include page="다른JSP파일"></jsp:include> --%>
-      <jsp:include page="/common/footer.jsp"></jsp:include>
+ <%--      <jsp:include page="/common/footer.jsp"></jsp:include> --%>
       
       <h3>5) URL 페이지 이동 </h3>
       <c:url value="http://www.naver.com" var="naver"></c:url>
@@ -87,14 +88,29 @@
       
       <!--JSP 버전업: 과거코딩(스크림틀릿) VS현재코딩(추천:jstl,el 표현식)  -->
       <!-- 과거: 스크립틀릿 코딩 -->
-    <%
-         /* 현재 날짜 가져오기   Date date =new java.util.Date();*/
+    <%/* 현재 날짜 가져오기   Date date =new java.util.Date();*/
           Date date=new java.util.Date();
       %>
       <p><%=date%></p> 
+      
+      
+      <h3>4. fmt 라이브러리</h3>
+      <!-- 숫자를 통화처럼 표시하기:3,000원  -->
+      <c:set var="a" value="1234"></c:set>
+      <p><fmt:formatNumber value="${a}"/></p>
+      
+      <!--화면표시하는 사용법(*)  -->
+      <!--해킹방지  -->
+      <c:out value="장길산"></c:out>
+      <!--해킹취약  -->
+      ${"홍길동"}
+      
+      
+      
+      <jsp:include page="/common/footer.jsp"></jsp:include>
    </div>
    
-   <jsp:include page="/common/footer.jsp"></jsp:include>
+  
 </body>
 </html>
 
