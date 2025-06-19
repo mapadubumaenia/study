@@ -19,7 +19,9 @@
 	<!-- jsp에서 파일을 분리하는 사용법: 머리말, 꼬리말 분리해서 합체 -->
 	<!-- header.jsp 의 내용이 아래에 보입니다. -->
 	<jsp:include page="/common/header.jsp"></jsp:include>
-	<form id="listform" name="listform" method="get" >
+	<form id="listform" name="listform" method="get">
+	      <!-- dno 값 -->  
+	 <input type="text" id="dno" name="dno">
 
 		<div class="page mt5">
 			<!--1)검색어  -->
@@ -27,9 +29,8 @@
 			<div class="input-group mb-3">
 				<input type="text" class="form-control" id="searchKeyword"
 					name="searchKeyword" placeholder="부서명 입력">
-				<button class="btn btn-primary" type="button" 
-				onclick="fn_egov_selectList()"
-				>Button</button>
+				<button class="btn btn-primary" type="button"
+					onclick="fn_egov_selectList()">Button</button>
 			</div>
 
 			<!--2)부트스트랩 테마: 테이블  -->
@@ -45,7 +46,8 @@
 					<!--반복문 돌릴 예정  -->
 					<c:forEach var="data" items="${list}">
 						<tr>
-							<td><c:out value="${data.dno}"></c:out></td>
+							<td><a href="javascript:fn_select('<c:out value="${data.dno}"></c:out>')"> <c:out value="${data.dno}"></c:out>
+							</a></td>
 							<td><c:out value="${data.dname}"></c:out></td>
 							<td><c:out value="${data.loc}"></c:out></td>
 						</tr>
@@ -54,30 +56,36 @@
 			</table>
 			<!--2)부트스트랩 테마: 추가 버튼  -->
 			<div class="tcenter">
-			<a href="javascript:fn_addView()" 
-			class="btn btn-primary" >추가</a>
+				<a href="javascript:fn_addView()" class="btn btn-primary">추가</a>
 			</div>
-			
+
 		</div>
 
 	</form>
-      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-      <script type="text/javascript">
-      /*검색어 조회  */
-      /*js 함수 사용법: function 함수명(매개변수){}  */
-      function fn_egov_selectList() {
-		/*/dept/dept.do 컨트롤러 함수로 검색어를 전송(쿼리스트링)  */
-		$("#listform").attr("action","<c:out value='/dept/dept.do' />")
-		   .submit();
-	}
-      /*추가 페이지 열기  */
-      function fn_addView() {
-		/* add_dept.jsp 페이지 열기 */
-		$("#listform").attr("action","<c:out value='/dept/addition.do'/>" )
-		      .submit();
-	}
-      </script>
-    
+	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+	<script type="text/javascript">
+		/*검색어 조회  */
+		/*js 함수 사용법: function 함수명(매개변수){}  */
+		function fn_egov_selectList() {
+			/*/dept/dept.do 컨트롤러 함수로 검색어를 전송(쿼리스트링)  */
+			$("#listform").attr("action", "<c:out value='/dept/dept.do' />")
+					.submit();
+		}
+		/*추가 페이지 열기  */
+		function fn_addView() {
+			/* add_dept.jsp 페이지 열기 */
+			$("#listform").attr("action", "<c:out value='/dept/addition.do'/>")
+					.submit();
+		}
+		/* 수정페이지 열기 */
+		function fn_select(dno) {
+			$("#dno").val(dno);
+			/* /dept/edition.do */
+			$("#listform").attr("action", "<c:out value='/dept/edition.do'/>")
+			.submit();
+		}
+	</script>
+
 
 
 	<jsp:include page="/common/footer.jsp"></jsp:include>

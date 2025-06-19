@@ -1,0 +1,42 @@
+package egovframework.example.emp.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.dept.service.DeptVO;
+import egovframework.example.emp.service.EmpService;
+import egovframework.example.emp.service.EmpVO;
+import egovframework.example.testdata.mapper.EmpMapper;
+/*
+ * service: 스프링이 실행버튼 누르면 클래스를 자동 으로 만들어 주는 어노테이션
+ * 서비스: DB의 데이터를 CRUD하기 위한 목적, 업무로직 등
+ */
+@Service
+public class EmpServiceimpl implements EmpService {
+
+	
+	//DB CRUD클래스 가져오기
+	@Autowired
+	private EmpMapper empMapper;
+
+	
+	//전체조회
+	@Override
+	public List<?> seleLictEmpList(Criteria criteria) {
+		return empMapper.selectEmpList(criteria);  //전체조회 실행
+	}
+
+
+	@Override
+	public void insert(EmpVO empVO) {
+		empMapper.insert(empVO);
+		
+	}
+	
+	
+	
+	
+}

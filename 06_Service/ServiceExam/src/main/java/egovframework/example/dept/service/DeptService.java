@@ -15,4 +15,9 @@ import egovframework.example.common.Criteria;
  */
 public interface DeptService {
    List<?> selectDeptList(Criteria criteria); // 전체조회
+   void insert(DeptVO deptVO);                // 추가
+   DeptVO selectDept (long dno);              // 상세조회  (수정페이지 열기할때 사용)
+   void update(DeptVO deptVO);                // 수정
+   
+   
 }

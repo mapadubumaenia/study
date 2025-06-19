@@ -1,0 +1,58 @@
+package egovframework.example.dept.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.dept.service.DeptService;
+import egovframework.example.dept.service.DeptVO;
+import egovframework.example.testdata.mapper.DeptMapper;
+
+/*
+ * 자바표기법: 1)카멜표기법: 변수,필드,메소드 예) DeptService
+ *   2) 파스칼표기법       : 클래스, 인터페이스
+ *            예) 단어(첫글자만 대문자)+단어(첫글자만 대문자) DeptService
+ *            
+ *     @Service: 스프링이 이 어노테이션이 붙은 클래스를 서버 실행할때 만듭니다.
+ *     (효과: 클래스 만들기를 자동으로 해줌: new 생성자함수())
+ *     예) 유사효과 어노테이션(참고): @Component, @Respository 등
+ *     위의 효과를 공식용어: IOC(제어의 역전)Inversion of Control
+ *     
+ *     @Autowired: 스프링이 만든 클래스(스프링 컨테이너:메모리방)를 이름(자료형)으로 가져오는 어노테이션
+ *     위의 효과를 공식용어: DI(의존성 주입) dependency injection
+ */
+@Service
+public class DeptServiceImpl implements DeptService {
+
+	//DB메소드 가진 클래스 가져오기: (참고)testData 모두 만들어 놨음
+	@Autowired
+	private DeptMapper deptMapper;
+
+	//전체조회
+	@Override
+	public List<?> selectDeptList(Criteria criteria) {
+		return deptMapper.selectDeptList(criteria);
+	}
+
+	//저장
+	@Override
+	public void insert(DeptVO deptVO) {
+		deptMapper.insert(deptVO);
+		
+	}
+
+	@Override
+	public DeptVO selectDept(long dno) {
+		deptMapper.selectDept(dno);
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+}

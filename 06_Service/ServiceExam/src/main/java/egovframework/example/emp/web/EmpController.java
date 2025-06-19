@@ -7,9 +7,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.emp.service.EmpService;
+import egovframework.example.emp.service.EmpVO;
 
 /*
  * 컨트롤러 : URL과 JSP 연결하는 역할, DB데이터를 JSP로 전달(MODEL)
@@ -37,6 +40,24 @@ public class EmpController {
 	}
 	
 	
+	//저장
+	@PostMapping("/emp/add.do")
+	public String insert(@ModelAttribute EmpVO empVO) {
+		
+		empService.insert(empVO);
+		return "redirect:/emp/emp.do";
+	}
+	//수정페이지 열기 
+		@GetMapping("/emp/edition.do")
+		public String updateEmpView(Model model,
+				@RequestParam(defaultValue = "0") long eno) {
+			
+			EmpVO empVO=empService.selectEmpVO(eno);
+			model.addAttribute("empVO",empVO);
+			
+			return "emp/update_emp";
+			
+		}
 	
 	
 }

@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.emp.service.EmpService;
+import egovframework.example.emp.service.EmpVO;
 import egovframework.example.testdata.mapper.EmpMapper;
 /*
  * service: 스프링이 실행버튼 누르면 클래스를 자동 으로 만들어 주는 어노테이션
@@ -26,6 +27,20 @@ public class EmpServiceimpl implements EmpService {
 	public List<?> seleLictEmpList(Criteria criteria) {
 		return empMapper.selectEmpList(criteria);  //전체조회 실행
 	}
+
+    //저장
+	@Override
+	public void insert(EmpVO empVO) {
+		empMapper.insert(empVO);
+		
+	}
+
+	@Override
+	public EmpVO selectEmpVO(long eno) {
+		return empMapper.selectMember(eno);
+	}
+	
+	
 	
 	
 	

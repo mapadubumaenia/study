@@ -7,7 +7,11 @@ package egovframework.example.emp.service;
 import java.util.List;
 
 import egovframework.example.common.Criteria;
+import egovframework.example.dept.service.DeptVO;
+
 
 public interface EmpService {
     public List<?> seleLictEmpList(Criteria criteria);
+    void insert(EmpVO empVO);
+    EmpVO selectEmpVO (long eno); 
 }

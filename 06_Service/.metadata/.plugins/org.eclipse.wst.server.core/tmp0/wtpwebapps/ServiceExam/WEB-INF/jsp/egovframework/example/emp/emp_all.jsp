@@ -17,7 +17,9 @@
 <body>
 	<!--머리말  -->
 	<jsp:include page="/common/header.jsp"></jsp:include>
+	
 	<form id="listform" name="listform" method="get">
+	<input type="text" id="eno" name="eno">
 		<div class="page mt5">
 			<!--검색어  -->
 			<div class="input-group mb-3">
@@ -40,7 +42,10 @@
 				<tbody>
 					<c:forEach var="data" items="${list}">
 						<tr>
-							<th scope="row"><c:out value="${data.eno}"></c:out></th>
+							<th scope="row"><a
+								href="javascript:fn_select('<c:out value="${data.eno}"/>')">
+									<c:out value="${data.eno}"></c:out>
+							</a></th>
 							<td><c:out value="${data.ename}"></c:out></td>
 							<td><c:out value="${data.job}"></c:out></td>
 							<td><c:out value="${data.manager}"></c:out></td>
@@ -52,8 +57,7 @@
 
 			<!--부트스트랩 테마: 추가버튼  -->
 			<div class="tcenter">
-			<a href="javascript:fn_addView()" 
-			class="btn btn-primary" >추가</a>
+				<a href="javascript:fn_addView()" class="btn btn-primary">추가</a>
 			</div>
 		</div>
 
@@ -69,12 +73,19 @@
 					.submit();
 		}
 		/*추가 페이지 열기  */
-	      function fn_addView() {
+		function fn_addView() {
 			/* add_dept.jsp 페이지 열기 */
-			$("#listform").attr("action","<c:out value='/emp/addition.do'/>" )
-			      .submit();
+			$("#listform").attr("action", "<c:out value='/emp/addition.do'/>")
+					.submit();
 		}
-		
+
+		/* 수정페이지 열기 */
+		function fn_select(eno) {
+			$("#eno").val(eno);
+			/* /emp/edition.do */
+			$("#listform").attr("action", "<c:out value='/emp/edition.do'/>")
+					.submit();
+		}
 	</script>
 
 

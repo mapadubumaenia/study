@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.dept.service.DeptService;
+import egovframework.example.dept.service.DeptVO;
 import egovframework.example.testdata.mapper.DeptMapper;
 
 /*
@@ -29,8 +30,38 @@ public class DeptServiceImpl implements DeptService {
 	@Autowired
 	private DeptMapper deptMapper;
 
+	//전체조회
 	@Override
 	public List<?> selectDeptList(Criteria criteria) {
 		return deptMapper.selectDeptList(criteria);
 	}
+
+	//저장
+	@Override
+	public void insert(DeptVO deptVO) {
+		deptMapper.insert(deptVO);
+		
+	}
+    
+	//상세조회
+	@Override
+	public DeptVO selectDept(long dno) {
+		return deptMapper.selectDept(dno);
+	}
+    
+	
+	//수정후 저장
+	@Override
+	public void update(DeptVO deptVO) {
+		deptMapper.update(deptVO);
+		
+	}
+	
+	
+	
+	
+	
+	
+	
+	
 }
