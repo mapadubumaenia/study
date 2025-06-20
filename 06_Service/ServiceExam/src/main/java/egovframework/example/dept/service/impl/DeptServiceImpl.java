@@ -56,6 +56,13 @@ public class DeptServiceImpl implements DeptService {
 		deptMapper.update(deptVO);
 		
 	}
+     
+	//삭제
+	@Override
+	public void delete(long dno) {
+		deptMapper.delete(dno);
+		
+	}
 	
 	
 	

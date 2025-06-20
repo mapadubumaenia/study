@@ -80,6 +80,19 @@ public class DeptController {
 }
    
    
+    //삭제 (삭제 버튼 클릭시 실행)
+   @PostMapping("/dept/delete.do")
+   public String delete(@RequestParam(defaultValue = "0") long dno) {
+	     deptService.delete(dno);
+	   return"redirect:/dept/dept.do";
+}
+   
+   
+	
+
+   
+   
+   
 }
 
 

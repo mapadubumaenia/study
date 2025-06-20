@@ -18,6 +18,8 @@ public interface DeptService {
    void insert(DeptVO deptVO);                // 추가
    DeptVO selectDept (long dno);              // 상세조회  (수정페이지 열기할때 사용)
    void update(DeptVO deptVO);                // 수정
+   void delete(long dno);                     // 삭제
+   
    
    
 }

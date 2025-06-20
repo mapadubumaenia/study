@@ -11,7 +11,10 @@ import egovframework.example.dept.service.DeptVO;
 
 
 public interface EmpService {
-    public List<?> seleLictEmpList(Criteria criteria);
-    void insert(EmpVO empVO);
-    EmpVO selectEmpVO (long eno); 
+    public List<?> seleLictEmpList(Criteria criteria);   //전체도회
+    void insert(EmpVO empVO);         // 추가
+    EmpVO selectEmpVO (long eno);     //상세조회
+    void update(EmpVO empVO);         // 수정 
+    void delete(long dno);            //삭제
+    
 }

@@ -27,7 +27,7 @@
 	<div class="page mt5">
 		<form id="addForm" name="addForm" method="post">
 		    <!-- dno 값 -->
-		    <input type="text" id="dno" name="dno" value="<c:out value="${deptVO.dno}"/>" >
+		    <input type="hidden" id="dno" name="dno" value="<c:out value="${deptVO.dno}"/>" >
 			<!-- TODO: 부트스트랩 테마 입력상자 -->
 			<!-- 부서명(dname) -->
 			<div class="mb3">
@@ -43,7 +43,7 @@
 			<!-- 버튼 추가 -->
 			<div class="mb3">
 				<button type="button" class="btn btn-warning" onclick="fn_save()">수정</button>
-				<button type="button" class="btn btn-danger">삭제</button>
+				<button type="button" class="btn btn-danger" onclick="fn_delete()">삭제</button>
 			</div>
 		</form>
 	</div>
@@ -58,6 +58,13 @@
 			$("#addForm").attr("action", "<c:out value='/dept/edit.do'/>")
 			.submit();
 		}
+	
+	/*삭제 요청  */
+	   function fn_delete() {
+		/*("/dept/delete.do") 컨트롤러 메소드 삭제 요청 */
+		   $("#addForm").attr("action", "<c:out value='/dept/delete.do'/>")
+			.submit();
+	}
 	</script>
 </body>
 </html>

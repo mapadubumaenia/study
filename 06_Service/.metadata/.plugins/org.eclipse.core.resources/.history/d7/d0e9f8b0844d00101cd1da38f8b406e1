@@ -1,0 +1,36 @@
+package egovframework.example.dept.web;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.RestController;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.dept.service.DeptService;
+
+/*
+ * 자동완성을(Auto Complete) 위한 Ajax 컨트롤러
+ * @RestController: JSON(js 클래스(객체)) 데이터를 전송(return)
+ *   예) JSON: {dname:"SALES", loc:"서울"}
+ * 
+ */
+
+
+@RestController
+public class DeptAjaxController {
+// 서비스의 전체조회를 사용하기 위해 클래스 가져오기
+	@Autowired
+	private DeptService deptService;
+	
+	
+	//자동완성
+	@GetMapping("/api/dept/dept.do")
+	public List<?> selectDeptList(@ModelAttribute Criteria criteria) {
+		
+		
+	}
+	
+	
+}

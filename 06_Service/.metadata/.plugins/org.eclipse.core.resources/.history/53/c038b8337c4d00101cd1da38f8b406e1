@@ -1,0 +1,19 @@
+package egovframework.example.emp.service;
+/*
+ *  서비스 코딩: 1)인터페이스  2)자식클래스
+ *  Criteria:검색기능을 위한 클래스
+ */
+
+import java.util.List;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.dept.service.DeptVO;
+
+
+public interface EmpService {
+    public List<?> seleLictEmpList(Criteria criteria);   //전체도회
+    void insert(EmpVO empVO);         // 추가
+    EmpVO selectEmpVO (long eno);     //상세조회
+    void update(EmpVO empVO);         // 수정 
+    
+}

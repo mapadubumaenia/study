@@ -16,16 +16,18 @@
 <link rel="stylesheet" href="/css/00_style.css">
 </head>
 <body>
-	<!-- jsp에서 파일을 분리하는 사용법: 머리말, 꼬리말 분리해서 합체 -->
-	<!-- header.jsp 의 내용이 아래에 보입니다. -->
+	<!-- 머리말 -->
 	<jsp:include page="/common/header.jsp"></jsp:include>
-	<form id="listform" name="listform" method="get">
-	      <!-- dno 값 -->  
-	 <input type="text" id="dno" name="dno">
-
+	<!-- 여기: form태그 -->
+	<form id="listForm" name="listForm" method="get">
+		<!-- dno 값 => 컨트롤러(수정페이지열기 메소드) -->
+		<input type="hidden" id="dno" name="dno">
+		<!-- 여기 -->
 		<div class="page mt5">
-			<!--1)검색어  -->
-			<!--쿼리스트링으로 검색어를 컨트롤로 전송 name="searchKeyword" (이 속성:쿼리스트링으로 전송됨)  -->
+			<!-- 1) 부트스트랩 테마: 검색어, 여기 -->
+			<!-- 쿼리스트링(?)으로 검색어를 컨트롤로로 전송
+       name="searchKeyword" (이 속성: 쿼리스트링으로 전송됨)
+    -->
 			<div class="input-group mb-3">
 				<input type="text" class="form-control" id="searchKeyword"
 					name="searchKeyword" placeholder="부서명 입력">
@@ -33,7 +35,9 @@
 					onclick="fn_egov_selectList()">Button</button>
 			</div>
 
-			<!--2)부트스트랩 테마: 테이블  -->
+			<!--ajax 결과 표시  -->
+			<div id="result"></div>
+			<!-- 2) 부트스트랩 테마: 테이블 -->
 			<table class="table">
 				<thead>
 					<tr>
@@ -43,51 +47,111 @@
 					</tr>
 				</thead>
 				<tbody>
-					<!--반복문 돌릴 예정  -->
+					<!-- 반복문 -->
 					<c:forEach var="data" items="${list}">
 						<tr>
-							<td><a href="javascript:fn_select('<c:out value="${data.dno}"></c:out>')"> <c:out value="${data.dno}"></c:out>
+							<td><a
+								href="javascript:fn_select('<c:out value="${data.dno}"/>')">
+									<c:out value="${data.dno}"></c:out>
 							</a></td>
 							<td><c:out value="${data.dname}"></c:out></td>
 							<td><c:out value="${data.loc}"></c:out></td>
 						</tr>
 					</c:forEach>
+
 				</tbody>
 			</table>
-			<!--2)부트스트랩 테마: 추가 버튼  -->
+			<!-- 3) 부트스트랩 테마: 추가 버튼 -->
 			<div class="tcenter">
 				<a href="javascript:fn_addView()" class="btn btn-primary">추가</a>
 			</div>
 
 		</div>
-
 	</form>
+	<!-- jquery cdn -->
 	<script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+
 	<script type="text/javascript">
-		/*검색어 조회  */
-		/*js 함수 사용법: function 함수명(매개변수){}  */
+		/* 검색어 조회 */
+		/* js 함수 사용법: function 함수명(매개변수){} */
 		function fn_egov_selectList() {
-			/*/dept/dept.do 컨트롤러 함수로 검색어를 전송(쿼리스트링)  */
-			$("#listform").attr("action", "<c:out value='/dept/dept.do' />")
-					.submit();
+			/* /dept/dept.do 컨트롤러 함수로 검색어를 전송(쿼리스트링) */
+			/* action(/dept/dept.do) */
+			$("#listForm").attr("action", "<c:out value='/dept/dept.do' />")
+					.submit(); // 이때 검색어 전송됩니다.
 		}
-		/*추가 페이지 열기  */
+		/* 추가 페이지 열기 */
 		function fn_addView() {
 			/* add_dept.jsp 페이지 열기 */
-			$("#listform").attr("action", "<c:out value='/dept/addition.do'/>")
+			$("#listForm")
+					.attr("action", "<c:out value='/dept/addition.do' />")
 					.submit();
 		}
-		/* 수정페이지 열기 */
+		/* 수정 페이지 열기 */
 		function fn_select(dno) {
 			$("#dno").val(dno);
-			/* /dept/edition.do */
-			$("#listform").attr("action", "<c:out value='/dept/edition.do'/>")
-			.submit();
+			/* /dept/edition.do 컨트롤러 */
+			$("#listForm").attr("action", "<c:out value='/dept/edition.do' />")
+					.submit();
+		}
+	</script>
+
+	<!-- ajax 코딩 -->
+	<script type="text/javascript">
+	/* 디바운싱: 시간 인터벌을 주어 조회를 하는것(성능개선) */
+	/* js함수: setTimeout(함수명,시간); 
+	   설정된 ID(별명) => clearTimeout(id);
+	   
+	*/
+		$(function() {
+			let timer;
+			/* 키입력 될때마다 */
+			$("#searchKeyword").keyup(function() {
+				clearTimeout(timer);     //setTimeout 실행된 ID지우기
+				timer=setTimeout(function () {fn_ajax();},500);  // 0.5초마다 실행
+			});
+		})
+		function fn_ajax() {
+			/* 검색어 가져오기: searchKeyword */
+			let searchKeyword = $("#searchKeyword").val();
+			console.log(searchKeyword); // 테스트
+			$.ajax({
+				/* ajax 요청 */
+				url : "/api/dept/dept.do",
+				type : "GET",
+				dataType : "json",
+				data : {
+					"searchKeyword" : searchKeyword
+				},
+				/* 컨트롤러 보내준 결과 */
+				success : function(data) {
+					console.log(data); // 테스트
+					$("#result").empty(); //태그사이 글자 지우기
+					if (searchKeyword != "") {
+						let res = "";
+						for (var i = 0; i < data.length; i++) {
+							res = res + data[i].dname + "<br>";
+						}
+						$("#result").html(res);
+					}
+				},
+				error : function(request) {
+					console.error(request);
+				}
+			});
 		}
 	</script>
 
 
 
+	<!-- 꼬리말 -->
 	<jsp:include page="/common/footer.jsp"></jsp:include>
 </body>
 </html>
+
+
+
+
+
+
+

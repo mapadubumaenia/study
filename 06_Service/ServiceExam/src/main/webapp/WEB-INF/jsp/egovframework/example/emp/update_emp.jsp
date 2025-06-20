@@ -20,7 +20,7 @@
  <div class="page mt5">
 		<form id="addForm" name="addForm" method="post">
 		    <!-- eno 값 -->
-		    <input type="text" id="eno" name="eno" value="<c:out value="${empVO.eno}"/>" >
+		    <input type="hidden" id="eno" name="eno" value="<c:out value="${empVO.eno}"/>" >
 			<!-- TODO: 부트스트랩 테마 입력상자 -->
 			
 			<!--사원명 (ename)  -->
@@ -47,7 +47,7 @@
 			<!-- 버튼 추가 -->
 			<div class="mb3">
 				<button type="button" class="btn btn-warning" onclick="fn_save()">수정</button>
-				<button type="button" class="btn btn-danger">삭제</button>
+				<button type="button" class="btn btn-danger" onclick="fn_delete()">삭제</button>
 			</div>
 		</form>
 	</div>
@@ -59,7 +59,15 @@
  <script type="text/javascript">
 	/* 수정 요청: */
 	function fn_save() {
-		 
+		/*   @PostMapping("/emp/edit.do") 수정 컨트롤러 메소드, url*/
+		 $("#addForm").attr("action","<c:out value='/emp/edit.do'/>" )
+	      .submit();
+	}
+ 
+ 
+    function fn_delete() {
+    	$("#addForm").attr("action","<c:out value='/emp/delete.do'/>" )
+	      .submit();
 	}
  </script>
  

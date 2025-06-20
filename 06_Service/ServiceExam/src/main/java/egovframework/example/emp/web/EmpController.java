@@ -58,6 +58,20 @@ public class EmpController {
 			return "emp/update_emp";
 			
 		}
-	
+	//수정(수정 버튼 클릭시 실행)
+		@PostMapping ("/emp/edit.do")
+		public String update(@RequestParam(defaultValue = "0") long eno,
+				@ModelAttribute EmpVO empVO) {
+			empService.update(empVO);
+			return "redirect:/emp/emp.do";
+		}
+		
+	//삭제(삭제 버튼 클릭시 실행)
+		@PostMapping("/emp/delete.do")
+		public String delete(@RequestParam(defaultValue = "0") long eno)  {
+			empService.delete(eno);
+			return "redirect:/emp/emp.do";
+		}
+		
 	
 }

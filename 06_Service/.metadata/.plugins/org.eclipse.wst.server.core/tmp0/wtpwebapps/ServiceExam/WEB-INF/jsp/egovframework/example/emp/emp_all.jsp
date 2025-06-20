@@ -17,9 +17,9 @@
 <body>
 	<!--머리말  -->
 	<jsp:include page="/common/header.jsp"></jsp:include>
-	
+
 	<form id="listform" name="listform" method="get">
-	<input type="text" id="eno" name="eno">
+		<input type="hidden" id="eno" name="eno">
 		<div class="page mt5">
 			<!--검색어  -->
 			<div class="input-group mb-3">
@@ -28,6 +28,10 @@
 				<button class="btn btn-primary" type="button"
 					onclick="fn_egov_selectList()">Button</button>
 			</div>
+
+			<!--ajax 결과 표시  -->
+			<div id="result"></div>
+
 
 			<!--부트스트랩 테마: 테이블  -->
 			<table class="table">
@@ -87,6 +91,48 @@
 					.submit();
 		}
 	</script>
+
+	<script type="text/javascript">
+		$(function() {
+			let timer;
+			/* 키입력 될때마다 */
+			$("#searchKeyword").keyup(function() {
+				clearTimeout(timer);     //setTimeout 실행된 ID지우기
+				timer=setTimeout(function () {fn_ajax();},500);  // 0.5초마다 실행
+			});
+		})
+		function fn_ajax() {
+			/* 검색어 가져오기: searchKeyword */
+			let searchKeyword = $("#searchKeyword").val();
+			console.log(searchKeyword); // 테스트
+			$.ajax({
+				/* ajax 요청 */
+				url : "/api/emp/emp.do",
+				type : "GET",
+				dataType : "json",
+				data : {
+					"searchKeyword" : searchKeyword
+				},
+				/* 컨트롤러 보내준 결과 */
+				success : function(data) {
+					console.log(data); // 테스트
+					$("#result").empty(); //태그사이 글자 지우기
+					if (searchKeyword != "") {
+						let res = "";
+						for (var i = 0; i < data.length; i++) {
+							res = res + data[i].ename + "<br>";
+						}
+						$("#result").html(res);
+					}
+				},
+				error : function(request) {
+					console.error(request);
+				}
+			});
+		}
+	</script>
+
+
 
 
 	<!--꼬리말  -->

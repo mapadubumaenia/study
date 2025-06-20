@@ -16,4 +16,5 @@
     <fullyQualifiedTypeName name="egovframework.example.emp.service.EmpVO"/>
     <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.PostMapping"/>
+    <fullyQualifiedTypeName name="egovframework.example.emp.service.EmpService"/>
 </qualifiedTypeNameHistroy>

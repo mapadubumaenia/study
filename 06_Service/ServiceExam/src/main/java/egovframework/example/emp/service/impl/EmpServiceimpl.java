@@ -39,6 +39,18 @@ public class EmpServiceimpl implements EmpService {
 	public EmpVO selectEmpVO(long eno) {
 		return empMapper.selectMember(eno);
 	}
+
+	@Override
+	public void update(EmpVO empVO) {
+		empMapper.update(empVO);
+		
+	}
+
+	@Override
+	public void delete(long eno) {
+		empMapper.delete(eno);
+		
+	}
 	
 	
 	
