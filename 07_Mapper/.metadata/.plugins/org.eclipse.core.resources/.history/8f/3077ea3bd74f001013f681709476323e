@@ -1,0 +1,5 @@
+package egovframework.example.dept.service;
+
+public class DeptVO {
+
+}

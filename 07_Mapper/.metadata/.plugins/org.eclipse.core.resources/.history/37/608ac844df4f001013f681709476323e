@@ -1,0 +1,5 @@
+package egovframework.example.dept.service.impl;
+
+public interface DeptMapper {
+
+}

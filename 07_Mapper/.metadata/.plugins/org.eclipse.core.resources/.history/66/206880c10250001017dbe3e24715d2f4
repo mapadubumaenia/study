@@ -1,0 +1,24 @@
+package egovframework.example.dept.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import egovframework.example.dept.service.DeptService;
+import lombok.extern.log4j.Log4j2;
+
+/*
+ * 
+ */
+@Log4j2
+@Controller
+public class DeptController {
+
+	@Autowired
+	private DeptService deptService;
+	
+	@GetMapping("/dept/dept.do")
+	public String name() {
+		return "dept/dept_all";
+	}
+}
