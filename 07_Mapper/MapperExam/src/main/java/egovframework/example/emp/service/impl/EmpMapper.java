@@ -5,6 +5,7 @@ import java.util.List;
 import org.egovframe.rte.psl.dataaccess.mapper.Mapper;
 
 import egovframework.example.common.Criteria;
+import egovframework.example.emp.service.EmpVO;
 
 /*
  * 마이바티스: 1)인터페이스: 메도스명  2) xml문
@@ -12,4 +13,6 @@ import egovframework.example.common.Criteria;
 @Mapper
 public interface EmpMapper {
 	 public List<?> selectEmpList(Criteria criteria);  //전체 조회
+	 int selectEmpListTotCnt(Criteria criteria);  //전체 개수 구하지
+	 public int insert(EmpVO empVO);    //부서 insert
 }

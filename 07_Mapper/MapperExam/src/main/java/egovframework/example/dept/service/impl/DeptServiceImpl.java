@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.dept.service.DeptService;
+import egovframework.example.dept.service.DeptVO;
 
 @Service
 public class DeptServiceImpl implements DeptService{
@@ -20,6 +21,19 @@ public class DeptServiceImpl implements DeptService{
 	public List<?> selectDeptList(Criteria criteria) {
 		// TODO Auto-generated method stub
 		return deptMapper.selectDeptList(criteria);
+	}
+
+    //총갯수 구하기
+	@Override
+	public int selectDeptListTotCnt(Criteria criteria) {
+		return deptMapper.selectDeptListTotCnt(criteria);
+	}
+
+	//부서 insert
+	@Override
+	public int insert(DeptVO deptVO) {
+		
+		return deptMapper.insert(deptVO);
 	}
 	
 	

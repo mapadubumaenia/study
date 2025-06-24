@@ -7,6 +7,7 @@ import org.springframework.stereotype.Service;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.emp.service.EmpService;
+import egovframework.example.emp.service.EmpVO;
 
 @Service
 public class EmpServiceImpl implements EmpService{
@@ -15,10 +16,25 @@ public class EmpServiceImpl implements EmpService{
 	@Autowired
 	private EmpMapper empMapper;
 
+	//전체조회
 	@Override
 	public List<?> selectEmpList(Criteria criteria) {
 		// TODO Auto-generated method stub
 		return empMapper.selectEmpList(criteria);
+	}
+
+	//전체 갯수 구하기
+	@Override
+	public int selectEmpListTotCnt(Criteria criteria) {
+		
+		return empMapper.selectEmpListTotCnt(criteria);
+	}
+
+	//부서 insert
+	@Override
+	public int insert(EmpVO empVO) {
+		
+		return empMapper.insert(empVO);
 	}
 	
 	

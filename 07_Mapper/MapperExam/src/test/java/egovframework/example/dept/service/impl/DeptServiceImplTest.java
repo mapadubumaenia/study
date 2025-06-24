@@ -12,6 +12,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.dept.service.DeptService;
+import egovframework.example.dept.service.DeptVO;
 import lombok.extern.log4j.Log4j2;
 
 @ExtendWith(SpringExtension.class)
@@ -33,16 +34,58 @@ class DeptServiceImplTest {
 
 	@Test
 	void testSelectDeptList() {
-		fail("Not yet implemented");
+		
 	
 	
 	//여기서 각 메소드별 테스트하면됨
 	//1)테스트 조건
 	Criteria criteria= new Criteria();
+	criteria.setSearchKeyword("");        //검색어
+	criteria.setFirstIndex(3);             //2페이지(3)
+	criteria.setPageUnit(3);               //화면에 보일 개수 (3)
+	
+	
+	
     //2)실제 메소드 실행
 	List<?> list =deptService.selectDeptList(criteria);
     //3)검증(확인): 로그, DB확인,
 	log.info(list);
 	
 	}
+	
+	
+	@Test
+	void testSelectDeptListTotCnt() {
+		
+		
+		//여기서 각 메소드별 테스트하면됨
+		//1)테스트 조건
+		Criteria criteria= new Criteria();
+		criteria.setSearchKeyword("");        //검색어
+		
+		
+	    //2)실제 메소드 실행
+		int count =deptService.selectDeptListTotCnt(criteria);
+	    //3)검증(확인): 로그, DB확인,
+		log.info(count);
+	
+	}
+	
+	@Test
+	void testInsert() {
+		
+		//여기서 각 메소드별 테스트하면됨
+				//1)테스트 조건:DeptVO(dno,dname,loc)
+				DeptVO deptVO=new DeptVO(0,"개발부2","스울");
+				
+			    //2)실제 메소드 실행
+				deptService.insert(deptVO);
+			    //3)검증(확인): 로그,아니면 DB에서확인,
+				
+		
+	}
+	
+	
+	
+	
 }

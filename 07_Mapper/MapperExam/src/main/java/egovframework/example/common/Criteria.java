@@ -32,7 +32,7 @@ public class Criteria {
 	/** 페이지갯수: 화면에 보일 행 개수 */
 	private int pageUnit = 3;
 
-	/** firstIndex */
+	/** firstIndex 등차숫자 자동 계산*/
 	private int firstIndex = 1;
 
 	private String insertTime;

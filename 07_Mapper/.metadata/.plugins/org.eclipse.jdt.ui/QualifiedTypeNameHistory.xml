@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <qualifiedTypeNameHistroy>
-    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="lombok.extern.java.Log"/>
     <fullyQualifiedTypeName name="org.egovframe.rte.psl.dataaccess.mapper.Mapper"/>
@@ -16,4 +15,8 @@
     <fullyQualifiedTypeName name="javax.enterprise.inject.Model"/>
     <fullyQualifiedTypeName name="java.util.List"/>
     <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
+    <fullyQualifiedTypeName name="org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo"/>
+    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
+    <fullyQualifiedTypeName name="egovframework.example.dept.service.DeptVO"/>
+    <fullyQualifiedTypeName name="egovframework.example.emp.service.EmpVO"/>
 </qualifiedTypeNameHistroy>

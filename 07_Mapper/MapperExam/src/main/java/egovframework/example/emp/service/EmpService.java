@@ -8,4 +8,6 @@ import egovframework.example.common.Criteria;
 
 public interface EmpService {
 	public List<?> selectEmpList(Criteria criteria);  //전체 조회
+	       int selectEmpListTotCnt(Criteria criteria);
+	       int insert(EmpVO empVO);  
 }

@@ -14,17 +14,26 @@
 </head>
 <body>
 <jsp:include page="/common/header.jsp"></jsp:include>
-
+${paginationInfo.totalPageCount}:총 페이지수<br>
+${paginationInfo.currentPageNo} : 현재페이지<br>
+${paginationInfo.recordCountPerPage} : 보일 갯수<br>
 <div class="page mt3">
    <form id="listForm" name="listForm" method="get">
        
+       <!--컨트롤러로 보낼 페이지 번호  -->
+       <input type="hidden" id="pageIndex" name="pageIndex">
+       
+       <!--jsp ->컨트롤러(검색어): input 태그의 name속성 이용  -->
       <div class="input-group mb3 mt3">
         <input type="text" 
-               class="form-control" 
+               class="form-control"
+               id="searchKeyword" 
+               name="searchKeyword"
                placeholder="부서명입력"
         >
         <button class="btn btn-primary" 
                 type="button" 
+                onclick="fn_egov_selectList()"
         >
                 검색
         </button>
@@ -51,14 +60,50 @@
              
         </tbody>
       </table>
+      <!--페이지 번호  -->
+      <ul class="pagination" id="pagination"></ul>
    </form>
 
 </div>
 
+
+
+
 <!-- jquery -->
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+<!-- 페이징 라이브러리 -->
+<script src="/js/jquery.twbsPagination.js" type="text/javascript"></script>
 <!-- 부트스트랩 js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script type="text/javascript">
+           /*전체조회  */
+     function fn_egov_selectList() {
+		$("#listForm").attr("action",'<c:out value="/dept/dept.do" />')
+		    .submit();
+	}
+           /*현재페이지 번호 저장  */
+     function fn_egov_link_page(pageNo) {
+        $("#pageIndex").val(pageNo);
+ 		$("#listForm").attr("action",'<c:out value="/dept/dept.do" />')
+ 		    .submit();
+ 	}
+</script>
+
+<!-- 페이징 처리 -->
+<script type="text/javascript">
+$('#pagination').twbsPagination({
+    totalPages: "${paginationInfo.totalPageCount}",
+    startPage: parseInt("${paginationInfo.currentPageNo}"),
+    visiblePages: "${paginationInfo.recordCountPerPage}",
+    initiateStartPageClick: false,
+    onPageClick: function (event, page) {
+    	/*여기에 재조회 함수  */
+    	fn_egov_link_page(page);
+    	
+    }
+});
+</script>
+
 
 <jsp:include page="/common/footer.jsp"></jsp:include>
 </body>

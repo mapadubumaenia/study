@@ -5,6 +5,7 @@ import java.util.List;
 import egovframework.example.common.Criteria;
 
 public interface DeptService {
-    public List<?> selectDeptList(Criteria criteria);  //전체 조회
-
+     List<?> selectDeptList(Criteria criteria);  //전체 조회
+     int  selectDeptListTotCnt(Criteria criteria);  //총 갯수 구하기
+     int insert(DeptVO deptVO);                   // 부서 insert 
 }
