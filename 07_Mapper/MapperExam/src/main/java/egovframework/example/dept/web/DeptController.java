@@ -8,9 +8,12 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.dept.service.DeptService;
+import egovframework.example.dept.service.DeptVO;
 import lombok.extern.log4j.Log4j2;
 
 /*
@@ -50,8 +53,50 @@ public class DeptController {
 		
 		
 		return "dept/dept_all";
-		
-		
-		
 	}
+		
+	
+	//추가페이지 열기
+	@GetMapping("/dept/addition.do")
+	public String createDeptView(Model model) {
+		model.addAttribute("deptVO",new DeptVO());
+		return "dept/add_dept";
+	}
+	
+	//insert :저장버튼 클릭시
+	 @PostMapping("/dept/add.do")
+	public String insert(@ModelAttribute DeptVO deptVO) {
+		 //deptVO 내용 확인
+		 log.info("테스트3:"+deptVO);
+		 
+		 //서비스의 insert 실행
+		 deptService.insert(deptVO);
+		return "redirect:/dept/dept.do";
+	}
+		
+	 
+	 //수정페이지 열기(상세조회)
+	 
+	 @GetMapping("/dept/edition.do")
+	 public String updateDeptView(@RequestParam int dno,Model model) {
+		//서비스의 상세조회
+		 DeptVO deptVO=deptService.selectDept(dno);
+		 model.addAttribute("deptVO",deptVO);
+		 return "dept/update_dept";
+	}
+		
+		
+	 //수정 버튼 클릭시 실행
+	 @PostMapping("/dept/edit.do")
+	 public String update(@RequestParam int dno,
+			 @ModelAttribute DeptVO deptVO) {
+		//서비스의 수정 실행
+		 deptService.update(deptVO);
+		 return "redirect:/dept/dept.do";
+	}
+		
+		
+	 
+	 //삭제 버튼 클릭시 실행
+	
 }

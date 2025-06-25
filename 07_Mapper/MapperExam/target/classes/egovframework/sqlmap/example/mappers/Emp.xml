@@ -36,7 +36,44 @@
 	HH24:MI:SS'))
     
     </insert>
+    
+    
+    
+    <!--id="메소드명", parameterType="매개변수자료형", resultType="return자료형"  -->
+    <select id="selectEmp"
+            parameterType="int"
+            resultType="EmpVO" >
+
+	SELECT * FROM TB_EMP
+	WHERE ENO=#{eno}
+            
+    
+    </select>
      
+     
+     <update id="update"
+         parameterType="EmpVO">
+      UPDATE TB_EMP
+      SET ENAME=#{ename},
+          JOB=#{job},
+            MANAGER=#{manager},
+            HIREDATE=#{hiredate},
+            SALARY=#{salary},
+            COMMISSION=#{commission},
+            DNO=#{dno},
+          UPDATE_TIME=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+      WHERE ENO=#{eno}
+   </update>
+     
+     
+     <delete id="delete"
+            parameterType="EmpVO">
+
+	DELETE TB_EMP
+	WHERE ENO=#{eno}
+            
+            
+            </delete>
 
      
      

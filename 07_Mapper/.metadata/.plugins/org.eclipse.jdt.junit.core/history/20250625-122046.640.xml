@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?><testrun name="DeptServiceImplTest.testSelectDept" project="MapperExam" tests="1" started="1" failures="0" errors="0" ignored="0">
+  <testsuite name="egovframework.example.dept.service.impl.DeptServiceImplTest" time="0.606" displayname="DeptServiceImplTest" uniqueid="[engine:junit-jupiter]/[class:egovframework.example.dept.service.impl.DeptServiceImplTest]">
+    <testcase name="testSelectDept" classname="egovframework.example.dept.service.impl.DeptServiceImplTest" time="0.606" displayname="testSelectDept()" uniqueid="[engine:junit-jupiter]/[class:egovframework.example.dept.service.impl.DeptServiceImplTest]/[method:testSelectDept()]"/>
+  </testsuite>
+</testrun>

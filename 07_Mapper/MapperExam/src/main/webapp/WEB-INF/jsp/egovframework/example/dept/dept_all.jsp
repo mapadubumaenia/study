@@ -20,6 +20,9 @@ ${paginationInfo.recordCountPerPage} : 보일 갯수<br>
 <div class="page mt3">
    <form id="listForm" name="listForm" method="get">
        
+         <!-- 수정페이지 열기때문에 필요 -->
+       <input type="hidden" id="dno" name="dno">
+       
        <!--컨트롤러로 보낼 페이지 번호  -->
        <input type="hidden" id="pageIndex" name="pageIndex">
        
@@ -51,7 +54,11 @@ ${paginationInfo.recordCountPerPage} : 보일 갯수<br>
         <!-- 반복문 -->
         <c:forEach var="data" items="${depts}">
 						<tr>
-							<td><c:out value="${data.dno}"></c:out></td>
+
+							<td><a
+								href="javascript:fn_select('<c:out value="${data.dno}" />')">
+									<c:out value="${data.dno}"></c:out>
+							</a></td>
 							<td><c:out value="${data.dname}"></c:out></td>
 							<td><c:out value="${data.loc}"></c:out></td>
 							
@@ -78,6 +85,7 @@ ${paginationInfo.recordCountPerPage} : 보일 갯수<br>
 <script type="text/javascript">
            /*전체조회  */
      function fn_egov_selectList() {
+    	 $("#pageIndex").val(1);
 		$("#listForm").attr("action",'<c:out value="/dept/dept.do" />')
 		    .submit();
 	}
@@ -87,6 +95,13 @@ ${paginationInfo.recordCountPerPage} : 보일 갯수<br>
  		$("#listForm").attr("action",'<c:out value="/dept/dept.do" />')
  		    .submit();
  	}
+           
+           /* 수정 페이지 열기 */
+           function fn_select(dno) {
+        	   $("#dno").val(dno);             //부서번호(기본키)
+        	   $("#listForm").attr("action",'<c:out value="/dept/edition.do"/>')
+    		    .submit();
+		}
 </script>
 
 <!-- 페이징 처리 -->

@@ -32,7 +32,34 @@
     
     </insert>
     
+    <!--id="메소드명", parameterType="매개변수자료형", resultType="return자료형"  -->
+    <select id="selectDept"
+            parameterType="int"
+            resultType="DeptVO" >
+
+	SELECT * FROM TB_DEPT
+	WHERE DNO=#{dno}
+            
     
+    </select>
+    
+    <update id="update"
+            parameterType="DeptVO">
+
+	UPDATE TB_DEPT
+	SET DNAME =#{dname},
+	LOC=#{loc},
+	UPDATE_TIME=TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS')
+	WHERE DNO =#{dno}
+    </update>
+    
+    
+    <delete id="delete"
+            parameterType="DeptVO">
+	DELETE TB_DEPT
+	WHERE DNO=#{dno}
+            
+            </delete>
     
     
     

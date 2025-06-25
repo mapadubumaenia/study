@@ -8,4 +8,9 @@ public interface DeptService {
      List<?> selectDeptList(Criteria criteria);  //전체 조회
      int  selectDeptListTotCnt(Criteria criteria);  //총 갯수 구하기
      int insert(DeptVO deptVO);                   // 부서 insert 
+     DeptVO selectDept(int dno);     //상세조회
+      int update(DeptVO deptVO);      //업데이트 메소드
+       int delete(DeptVO deptVO);      //삭제
+     
+     
 }

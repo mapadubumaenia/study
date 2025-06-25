@@ -15,4 +15,7 @@ public interface EmpMapper {
 	 public List<?> selectEmpList(Criteria criteria);  //전체 조회
 	 int selectEmpListTotCnt(Criteria criteria);  //전체 개수 구하지
 	 public int insert(EmpVO empVO);    //부서 insert
+	 public EmpVO selectEmp(int eno);        //상세조회
+	 public int update(EmpVO empVO);      //업데이트 메소드
+	 public int delete(EmpVO empVO);      //삭제
 }

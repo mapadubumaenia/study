@@ -15,6 +15,9 @@
 <div class="page mt3">
       <form id="listForm" name="listForm" method="get">
       
+      
+       <!-- 수정페이지 열기때문에 필요 -->
+       <input type="hidden" id="eno" name="eno">
       <!--컨트롤러로 보낼 페이지 번호  -->
        <input type="hidden" id="pageIndex" name="pageIndex">
       
@@ -50,7 +53,10 @@
 					<c:forEach var="data" items="${emps}">
 
 						<tr>
-							<td><c:out value="${data.eno}"></c:out></td>
+							<td><a
+								href="javascript:fn_select('<c:out value="${data.eno}" />')">
+									<c:out value="${data.eno}"></c:out>
+							</a></td>
 							<td><c:out value="${data.ename}"></c:out></td>
 							<td><c:out value="${data.job}"></c:out></td>
 							<td><c:out value="${data.manager}"></c:out></td>
@@ -80,6 +86,7 @@
 <script type="text/javascript">
           <!-- *전체조회  */ -->
           function fn_egov_selectList() {
+        	  $("#pageIndex").val(1);
         	  $("#listForm").attr("action",'<c:out value="/emp/emp.do" />')
   		    .submit();
 		}
@@ -90,7 +97,12 @@
       		$("#listForm").attr("action",'<c:out value="/emp/emp.do" />')
       		    .submit();
       	}
-          
+          /* 수정 페이지 열기 */
+          function fn_select(eno) {
+       	   $("#eno").val(eno);             //부서번호(기본키)
+       	   $("#listForm").attr("action",'<c:out value="/emp/edition.do"/>')
+   		    .submit();
+		}
           
 
 </script>

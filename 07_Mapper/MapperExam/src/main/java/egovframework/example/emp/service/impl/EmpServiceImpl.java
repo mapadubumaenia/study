@@ -36,6 +36,27 @@ public class EmpServiceImpl implements EmpService{
 		
 		return empMapper.insert(empVO);
 	}
+
+	//상세조회
+	@Override
+	public EmpVO selectEmp(int eno) {
+		
+		return empMapper.selectEmp(eno);
+	}
+
+	//업데이트
+	@Override
+	public int update(EmpVO empVO) {
+		
+		return empMapper.update(empVO);
+	}
+
+	//삭제
+	@Override
+	public int delete(EmpVO empVO) {
+		
+		return empMapper.delete(empVO);
+	}
 	
 	
 	

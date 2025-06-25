@@ -73,12 +73,13 @@ class EmpServiceImplTest {
 		//여기서 각 메소드별 테스트하면됨
 		//1)테스트 조건:EmpVO(eno,ename,job,manager,hiredate,salary,commission,dno)
 		EmpVO empVO=new EmpVO();
-		empVO.setEname("MAFA");
-		empVO.setJob("student");
-		empVO.setManager(8000);
-		empVO.setHiredate("2025-06-24");
-		empVO.setSalary(6000);
-		empVO.setCommission(1700);
+		empVO.setEno(8000);
+		empVO.setEname("11");
+		empVO.setJob("11");
+		empVO.setManager(11);
+		empVO.setHiredate("11");
+		empVO.setSalary(11);
+		empVO.setCommission(11);
 		empVO.setDno(10);
 		
 		
@@ -91,6 +92,52 @@ class EmpServiceImplTest {
 	}
 	
 	
+	
+	@Test
+	void testSelectEmp() {
+		//여기서 각 메소드별 테스트하면됨
+				//1)테스트 조건:(given)
+				int eno=8000;
+				
+			    //2)실제 메소드 실행 (when)
+				EmpVO empVO=empService.selectEmp(eno);
+			    //3)검증(확인): 로그,아니면 DB에서확인, (then)
+				log.info(empVO);
+	}
+	
+	
+	@Test
+	void testUpdate() {
+		//여기서 각 메소드별 테스트하면됨
+				//1)테스트 조건:EmpVO(eno,ename,job,manager,hiredate,salary,commission,dno)
+		EmpVO empVO=new EmpVO();
+		empVO.setEno(8000);
+		empVO.setEname("MAFA");
+		empVO.setJob("student");
+		empVO.setManager(8000);
+		empVO.setHiredate("2025-06-24");
+		empVO.setSalary(6000);
+		empVO.setCommission(1700);
+		empVO.setDno(10);
+				
+				
+				
+			    //2)실제 메소드 실행
+				empService.update(empVO);
+			    //3)검증(확인): 로그,아니면 DB에서확인,
+	}
+
+	@Test
+	void testDelete() {
+		// 여기서 각 메소드별 테스트하면됨
+		// 1)테스트 조건: 
+		EmpVO empVO = new EmpVO();
+		empVO.setEno(8000);
+
+		// 2)실제 메소드 실행
+		empService.delete(empVO);
+		// 3)검증(확인): 로그,아니면 DB에서확인,
+	}
 	
 	
 	

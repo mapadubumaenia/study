@@ -17,5 +17,9 @@ public interface DeptMapper {
       public List<?> selectDeptList(Criteria criteria);  //전체 조회
       public int  selectDeptListTotCnt(Criteria criteria);  //총 갯수 구하기
       public int insert(DeptVO deptVO);     //부서 insert
+      public DeptVO selectDept(int dno);     //상세조회
+      public int update(DeptVO deptVO);      //업데이트 메소드
+      public int delete(DeptVO deptVO);      //삭제
+      
       
 }

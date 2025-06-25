@@ -85,7 +85,42 @@ class DeptServiceImplTest {
 		
 	}
 	
+	@Test
+	void testSelectDept() {
+		
+		//여기서 각 메소드별 테스트하면됨
+		//1)테스트 조건:(given)
+		int dno=10;
+		
+	    //2)실제 메소드 실행 (when)
+		DeptVO deptVO=deptService.selectDept(dno);
+	    //3)검증(확인): 로그,아니면 DB에서확인, (then)
+		log.info(deptVO);
+		
+	}
 	
+	@Test
+	void testUpdate() {
+		//여기서 각 메소드별 테스트하면됨
+		//1)테스트 조건: (dno,dname,loc)  추가랑은 다르게 시퀀스를 설정해야함(수정이니까)
+		DeptVO deptVO=new DeptVO(10,"개발부","스울");
+		
+	    //2)실제 메소드 실행
+		deptService.update(deptVO);
+	    //3)검증(확인): 로그,아니면 DB에서확인,
+	}
+	
+	@Test
+	void testDelete() {
+		//여기서 각 메소드별 테스트하면됨
+				//1)테스트 조건: 
+		DeptVO deptVO=new DeptVO();
+		deptVO.setDno(10);
+				
+			    //2)실제 메소드 실행
+				deptService.delete(deptVO);
+			    //3)검증(확인): 로그,아니면 DB에서확인,
+	}
 	
 	
 }

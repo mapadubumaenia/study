@@ -10,4 +10,7 @@ public interface EmpService {
 	public List<?> selectEmpList(Criteria criteria);  //전체 조회
 	       int selectEmpListTotCnt(Criteria criteria);
 	       int insert(EmpVO empVO);  
+	     EmpVO selectEmp(int eno);        //상세조회
+	      int update(EmpVO empVO);      //업데이트 메소드
+	       int delete(EmpVO empVO);      //삭제
 }

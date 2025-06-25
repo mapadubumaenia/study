@@ -35,7 +35,29 @@ public class DeptServiceImpl implements DeptService{
 		
 		return deptMapper.insert(deptVO);
 	}
+
+	//상세조회
+	@Override
+	public DeptVO selectDept(int dno) {
+		
+		return deptMapper.selectDept(dno);
+	}
+
+	//수정
+	@Override
+	public int update(DeptVO deptVO) {
+		
+		return deptMapper.update(deptVO);
+	}
+
+	//삭제
+	@Override
+	public int delete(DeptVO deptVO) {
+		
+		return deptMapper.delete(deptVO);
+	}
 	
+    
 	
 	
 	

@@ -1,0 +1,75 @@
+/**
+ *
+ */
+$("#addForm").validate({
+  rules: {
+    // 유효성 검사 규칙
+    ename: {
+      // 이름 필드
+      required: true, // 필수 입력
+      minlength: 2, // 최소 입력 길이
+    },
+    job: {
+      // 이름 필드
+      required: true, // 필수 입력
+      minlength: 2, // 최소 입력 길이
+    },
+    manager: {
+      // 비밀번호 필드
+      required: true, // 필수 입력
+      minlength: 4, // 최소 입력 길이
+    },
+   
+    hiredate: {
+      required: true,     // 필수 입력
+      date: true,         // 날짜 포맷(yyyy-MM-dd)
+    },
+    
+    salary: {
+      // 비밀번호 필드
+      required: true, // 필수 입력
+      minlength: 2, // 최소 입력 길이
+    },
+    commission: {
+      // 비밀번호 필드
+      required: true, // 필수 입력
+     
+    },
+    dno: {
+      // 비밀번호 필드
+      required: true, // 필수 입력
+      minlength: 2, // 최소 입력 길이
+    }
+    
+  },
+  messages: {
+    // 오류값 발생시 출력할 메시지 수동 지정
+    ename: {
+      required: "필수 입력 항목입니다.",
+      minlength: "최소 {2}글자 이상 입력하세요.",
+    },
+    job: {
+      required: "필수 입력 항목입니다.",
+      minlength: "최소 {2}글자 이상 입력하세요.",
+    },
+    manager: {
+      required: "필수 입력 항목입니다.",
+      minlength: "최소 {4}글자 이상 입력하세요.",
+    },
+     hiredate: {
+      required: "필수 입력 항목입니다.",
+      digits: "날짜 포맷(yyyy-MM-dd)만 입력하세요.",
+    },
+    salary: {
+      required: "필수 입력 항목입니다.",
+      minlength: "최소 {2}글자 이상 입력하세요.",
+    },
+    commission: {
+      required: "필수 입력 항목입니다.",
+    },
+    dno: {
+      required: "필수 입력 항목입니다.",
+      minlength: "최소 {2}글자 이상 입력하세요.",
+    },
+  },
+});
