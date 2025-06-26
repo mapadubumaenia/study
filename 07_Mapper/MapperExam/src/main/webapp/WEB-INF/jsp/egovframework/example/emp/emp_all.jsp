@@ -72,7 +72,9 @@
 
 				</tbody>
       </table>
-       <ul class="pagination" id="pagination"></ul>
+        <div class="flex-center">
+      <ul class="pagination" id="pagination"></ul>
+      </div>
    </form>
    
 </div>

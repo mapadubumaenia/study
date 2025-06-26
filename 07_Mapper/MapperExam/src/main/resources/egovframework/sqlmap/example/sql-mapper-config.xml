@@ -17,6 +17,8 @@
         <typeAlias type="egovframework.example.common.Criteria" alias="Criteria"/>
         <typeAlias type="egovframework.example.dept.service.DeptVO" alias="DeptVO"/>
         <typeAlias type="egovframework.example.emp.service.EmpVO" alias="EmpVO"/>
+        <typeAlias type="egovframework.example.fileDb.service.FileDbVO" alias="FileDbVO"/>
+        <typeAlias type="egovframework.example.gallery.service.GalleryVO" alias="GalleryVO"/>
         
         
 		<typeAlias alias="egovMap" type="org.egovframe.rte.psl.dataaccess.util.EgovMap"/>

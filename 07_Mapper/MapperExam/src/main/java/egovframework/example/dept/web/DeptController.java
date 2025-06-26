@@ -98,5 +98,12 @@ public class DeptController {
 		
 	 
 	 //삭제 버튼 클릭시 실행
+	 @PostMapping("/dept/delete.do")
+	 public String delete(@ModelAttribute DeptVO deptVO) {
+		 deptService.delete(deptVO);
+		 return "redirect:/dept/dept.do";
+		 
+		
+	}
 	
 }

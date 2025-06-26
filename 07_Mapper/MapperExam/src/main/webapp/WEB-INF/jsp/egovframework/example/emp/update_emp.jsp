@@ -84,7 +84,7 @@ ${empVO}
             <button class="btn btn-warning"
             				onclick="fn_save()"
             >수정</button>
-            <button class="btn btn-danger">삭제</button>
+            <button class="btn btn-danger" onclick="fn_delete()">삭제</button>
         </div>
     </form>
 </div>
@@ -96,7 +96,12 @@ ${empVO}
 <script type="text/javascript">
 	function fn_save() {
 		/* 저장 함수: 저장 URL(/emp/edit.do) */
-		$("#addForm").attr("action",'<c:out value="/emp/edit.do" />')
+		$("#addForm").attr("action",'<c:out value="/emp/edit.do"/>')
+		.submit();
+	}
+	
+	function fn_delete() {
+		$("#addForm").attr("action",'<c:out value="/emp/delete.do"/>')
 		.submit();
 	}
 </script>

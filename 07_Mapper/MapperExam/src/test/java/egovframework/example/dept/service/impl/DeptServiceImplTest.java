@@ -1,7 +1,5 @@
 package egovframework.example.dept.service.impl;
 
-import static org.junit.jupiter.api.Assertions.fail;
-
 import java.util.List;
 
 import org.junit.jupiter.api.Test;
@@ -32,7 +30,7 @@ class DeptServiceImplTest {
 	 @Autowired
 	 DeptService deptService;
 
-	@Test
+	@Test   //전체조회
 	void testSelectDeptList() {
 		
 	

@@ -1,0 +1,19 @@
+package egovframework.example.fileDb.service.impl;
+
+import static org.junit.jupiter.api.Assertions.*;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+
+import egovframework.example.fileDb.service.FileDbService;
+
+class FileDbServiceImplTest {
+
+	@Autowired
+	FileDbService fileDbService;
+	@Test
+	void testSelectFileDbList() {
+		
+	}
+
+}

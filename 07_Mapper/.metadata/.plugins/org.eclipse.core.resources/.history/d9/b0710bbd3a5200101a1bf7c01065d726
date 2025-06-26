@@ -1,0 +1,33 @@
+package egovframework.example.gallery.service.impl;
+
+import org.springframework.web.multipart.MultipartFile;
+
+import egovframework.example.common.Criteria;
+import lombok.AllArgsConstructor;
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
+import lombok.ToString;
+
+@Getter
+@Setter
+@AllArgsConstructor
+@NoArgsConstructor
+@ToString
+public class GalleryVO extends Criteria {
+
+//	UUID	VARCHAR2(1000 BYTE)
+//	GALLERY_TITLE	VARCHAR2(1000 BYTE)
+//	GALLERY_DATA	BLOB
+//	GALLERY_FILE_URL	VARCHAR2(1000 BYTE)
+//	DELETE_YN	VARCHAR2(1 BYTE)
+	
+	
+	private String uuid; 
+	private String galleryTitle; 
+	private String gallerydata; 
+	private String galleryFileUrl; 
+	private String galleryDeleteYn; 
+	
+	
+}

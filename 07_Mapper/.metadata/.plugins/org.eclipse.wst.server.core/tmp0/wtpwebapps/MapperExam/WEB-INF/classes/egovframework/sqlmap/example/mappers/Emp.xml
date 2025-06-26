@@ -52,19 +52,18 @@
      
      
      <update id="update"
-            parameterType="EmpVO">
-	UPDATE TB_EMP
-	SET ENAME =#{ename},
-	JOB=#{job},
-	MANAGER=#{manager},
-	HIRE_DATE=#{hiredate},
-	SALARY=#{salary},
-	COMMISSION=#{commission},
-	DNO=#{dno},
-	UPDATE_TIME=TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS')
-	WHERE ENO =#{eno}
-     
-     </update>
+         parameterType="EmpVO">
+      UPDATE TB_EMP
+      SET ENAME=#{ename},
+          JOB=#{job},
+            MANAGER=#{manager},
+            HIREDATE=#{hiredate},
+            SALARY=#{salary},
+            COMMISSION=#{commission},
+            DNO=#{dno},
+          UPDATE_TIME=TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS')
+      WHERE ENO=#{eno}
+   </update>
      
      
      <delete id="delete"

@@ -14,9 +14,7 @@
 </head>
 <body>
 <jsp:include page="/common/header.jsp"></jsp:include>
-${paginationInfo.totalPageCount}:총 페이지수<br>
-${paginationInfo.currentPageNo} : 현재페이지<br>
-${paginationInfo.recordCountPerPage} : 보일 갯수<br>
+
 <div class="page mt3">
    <form id="listForm" name="listForm" method="get">
        
@@ -68,7 +66,9 @@ ${paginationInfo.recordCountPerPage} : 보일 갯수<br>
         </tbody>
       </table>
       <!--페이지 번호  -->
+        <div class="flex-center">
       <ul class="pagination" id="pagination"></ul>
+      </div>
    </form>
 
 </div>

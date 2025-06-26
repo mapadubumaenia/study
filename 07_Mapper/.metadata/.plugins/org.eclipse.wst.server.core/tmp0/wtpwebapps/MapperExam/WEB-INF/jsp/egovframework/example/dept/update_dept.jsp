@@ -40,7 +40,7 @@
         <div class="mb3">
             <button class="btn btn-warning" onclick="fn_save()">수정</button>
                         
-            <button class="btn btn-danger">삭제</button>
+            <button class="btn btn-danger" onclick="fn_delete()">삭제</button>
         </div>
     </form>
 </div>
@@ -52,6 +52,11 @@
 <script type="text/javascript">
     function fn_save() {
     	$("#addForm").attr("action",'<c:out value="/dept/edit.do"/>')
+	    .submit();
+	}
+    
+    function fn_delete() {
+    	$("#addForm").attr("action",'<c:out value="/dept/delete.do"/>')
 	    .submit();
 	}
 </script>

@@ -2,21 +2,27 @@
 <qualifiedTypeNameHistroy>
     <fullyQualifiedTypeName name="antlr.collections.List"/>
     <fullyQualifiedTypeName name="lombok.extern.java.Log"/>
-    <fullyQualifiedTypeName name="org.egovframe.rte.psl.dataaccess.mapper.Mapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="egovframework.example.emp.service.EmpService"/>
     <fullyQualifiedTypeName name="egovframework.example.emp.service.impl.EmpMapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
-    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j2"/>
     <fullyQualifiedTypeName name="egovframework.example.dept.service.DeptService"/>
-    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
-    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="javax.enterprise.inject.Model"/>
     <fullyQualifiedTypeName name="java.util.List"/>
-    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo"/>
-    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
-    <fullyQualifiedTypeName name="egovframework.example.dept.service.DeptVO"/>
+    <fullyQualifiedTypeName name="org.springframework.ui.Model"/>
     <fullyQualifiedTypeName name="egovframework.example.emp.service.EmpVO"/>
+    <fullyQualifiedTypeName name="egovframework.example.dept.service.DeptVO"/>
+    <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
+    <fullyQualifiedTypeName name="egovframework.example.fileDb.service.impl.FileDbMapper"/>
+    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
+    <fullyQualifiedTypeName name="org.egovframe.rte.psl.dataaccess.mapper.Mapper"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
+    <fullyQualifiedTypeName name="egovframework.example.gallery.service.impl.GalleryMapper"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j2"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
+    <fullyQualifiedTypeName name="egovframework.example.fileDb.service.FileDbService"/>
+    <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
+    <fullyQualifiedTypeName name="egovframework.example.gallery.service.GalleryService"/>
+    <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
 </qualifiedTypeNameHistroy>

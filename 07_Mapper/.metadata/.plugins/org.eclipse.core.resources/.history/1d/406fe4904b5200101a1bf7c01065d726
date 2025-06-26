@@ -1,0 +1,26 @@
+package egovframework.example.fileDb.web;
+/*
+ * 
+ */
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.GetMapping;
+
+import egovframework.example.fileDb.service.FileDbService;
+import lombok.extern.log4j.Log4j2;
+
+@Controller
+@Log4j2
+public class FileDbController {
+
+	private FileDbService fileDbService;
+	
+	
+	
+	@GetMapping
+	public String selectFileDbList() {
+		
+	}
+	
+	
+}
