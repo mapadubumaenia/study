@@ -1,0 +1,42 @@
+package egovframework.example.gallery.service.impl;
+
+import java.util.List;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import egovframework.example.common.Criteria;
+import egovframework.example.gallery.service.GalleryService;
+
+@Service
+public class GalleryServiceImpl implements GalleryService{
+
+	@Autowired
+	GalleryMapper galleryMapper;
+	
+	
+	
+	@Override
+	public List<?> selectGalleryList(Criteria criteria) {
+		
+		return galleryMapper.selectGalleryList(criteria); //전체조회
+	}
+
+
+     //총갯수 구하기
+	@Override
+	public int selectGalleryListTotCnt(Criteria criteria) {
+		
+		return galleryMapper.selectGalleryListTotCnt(criteria);
+	}
+
+	
+	
+	
+	
+	
+	
+	
+	
+	
+}

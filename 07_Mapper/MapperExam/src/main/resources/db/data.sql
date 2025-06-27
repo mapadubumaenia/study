@@ -87,4 +87,11 @@ VALUES (12345673, '제목3',NULL, 'https://placehold.co/600x400', TO_CHAR(SYSDAT
 INSERT INTO TB_GALLERY(UUID, GALLERY_TITLE, GALLERY_DATA, GALLERY_FILE_URL, INSERT_TIME)
 VALUES (12345674, '제목4',NULL, 'https://placehold.co/600x400', TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'));
 
+-- admin user 1명 최초 생성
+-- id : forbob
+-- password : 123456
+-- email : forbob@naver.com
+-- roles : ROLE_ADMIN
+INSERT INTO TB_MEMBER VALUES('forbob@naver.com','$2a$10$TG1a5ywSrGNgf7/fFH.m0.EdTzHax8AGYNeAr8aIseF3DKyO0lDti','forbob','ROLE_ADMIN', 'N', TO_CHAR(SYSDATE, 'YYYY-MM-DD HH24:MI:SS'),NULL, NULL);
+
 COMMIT;

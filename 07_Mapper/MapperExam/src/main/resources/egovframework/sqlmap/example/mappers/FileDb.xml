@@ -21,7 +21,29 @@
      </select>
 
 
+   <insert id="insert"
+            parameterType="FileDbVO">
+   INSERT INTO TB_FILE_DB(UUID,FILE_TITLE,FILE_CONTENT,FILE_DATA,FILE_URL,INSERT_TIME)
+	VALUES(#{uuid},#{fileTitle},#{fileContent},#{fileData},#{fileUrl},
+    TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS'))
+   
+   </insert>
 
+<!--상세조회  -->
+<select id="selectFileDb"
+            parameterType="String"
+            resultType="FileDbVO" >
+
+	SELECT * FROM TB_FILE_DB
+	WHERE UUID=#{uuid}
+    </select>
+    
+    <delete id="delete"
+            parameterType="DeptVO">
+	DELETE TB_FILE_DB
+	WHERE UUID=#{uuid}
+    
+    </delete>
 
 
 

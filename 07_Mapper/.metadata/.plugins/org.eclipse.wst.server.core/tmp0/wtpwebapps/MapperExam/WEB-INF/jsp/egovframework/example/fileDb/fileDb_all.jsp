@@ -41,7 +41,7 @@
                <div class="card-body">
                   <h5 class="card-title">${data.fileTitle}</h5>
                   <p class="card-text">${data.fileContent}</p>
-                  <a href="#" class="btn btn-danger">삭제</a>
+                  <a href="#" class="btn btn-danger" onclick="fn_delete('${data.uuid}')">삭제</a>
                </div>
             </div>
          </div>
@@ -80,6 +80,16 @@ function fn_egov_selectList() {
 		$("#listForm").attr("action", '<c:out value="/fileDb/fileDb.do" />')
 				.submit();
 	}
+    /* 삭제 */
+   function fn_delete(uuid) {
+    	/*전체조회: mrthod="get"이다, 하지만 삭제는 post로 보내랴함.변경해서 전달  */
+    	$("#uuid").val(uuid);
+    	$("#listForm").attr("action",'<c:out value="/fileDb/delete.do"/>')
+    	     .attr("method","post")
+	    .submit();
+	
+    }
+    
 </script>
 
 <script type="text/javascript">
@@ -96,12 +106,7 @@ $('#pagination').twbsPagination({
     }
 });
 
-
 </script>
-
-
-
-
 
 </body>
 </html>

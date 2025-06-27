@@ -10,6 +10,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.gallery.service.GalleryService;
+import egovframework.example.gallery.service.GalleryVO;
 import lombok.extern.log4j.Log4j2;
 
 @ExtendWith(SpringExtension.class)
@@ -65,6 +66,19 @@ class GalleryServiceImplTest {
 		log.info(count);
 	}
 
+	
+	@Test
+	void testSelectGallery() {
+		//여기서 각 메소드별 테스트하면됨
+		//1)테스트 조건:(given)
+		String uuid="12345671";
+		
+	    //2)실제 메소드 실행 (when)
+		GalleryVO galleryVO=galleryService.selectGallery(uuid);
+	    //3)검증(확인): 로그,아니면 DB에서확인, (then)
+		log.info(galleryVO);
+		
+	}
 	
 	
 	

@@ -10,6 +10,7 @@ import org.springframework.test.context.junit.jupiter.SpringExtension;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.fileDb.service.FileDbService;
+import egovframework.example.fileDb.service.FileDbVO;
 import lombok.extern.log4j.Log4j2;
 
 @ExtendWith(SpringExtension.class)
@@ -63,7 +64,34 @@ class FileDbServiceImplTest {
 				log.info(count);
 	}
 	
+	//상세조회 단위 테스트
+	@Test
+	void testSelectFileDb() {
+		//여기서 각 메소드별 테스트하면됨
+				//1)테스트 조건:(given)
+				String uuid="12345672";
+				
+			    //2)실제 메소드 실행 (when)
+				FileDbVO fileDbVO=fileDbService.selectFileDb(uuid);
+			    //3)검증(확인): 로그,아니면 DB에서확인, (then)
+				log.info(fileDbVO);
+	}
 	
 	
+	//삭제
+	@Test
+	void testDelete() {
+		//여기서 각 메소드별 테스트하면됨
+		//1)테스트 조건: 
+	    String uuid="f38571e1-a5cf-4d83-bebb-c2944dcff042";
 
+		// 2)실제 메소드 실행
+		fileDbService.delete(uuid);
+		// 3)검증(확인): 로그,아니면 DB에서확인,
+	}
+
+	
+	
+	
+	
 }

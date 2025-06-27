@@ -7,13 +7,22 @@ import java.util.List;
 
 import org.egovframe.rte.ptl.mvc.tags.ui.pagination.PaginationInfo;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.http.HttpHeaders;
+import org.springframework.http.HttpStatus;
+import org.springframework.http.MediaType;
+import org.springframework.http.ResponseEntity;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RequestParam;
+import org.springframework.web.bind.annotation.ResponseBody;
+import org.springframework.web.multipart.MultipartFile;
 
 import egovframework.example.common.Criteria;
 import egovframework.example.fileDb.service.FileDbService;
+import egovframework.example.fileDb.service.FileDbVO;
 import lombok.extern.log4j.Log4j2;
 
 
@@ -55,15 +64,64 @@ public class FileDbController {
 }
 	
 	
+	    //추가페이지 열기
+	@GetMapping("/fileDb/addition.do")
+	   public String createFileDbView(Model model) {
+		model.addAttribute("fileDbVO",new FileDbVO());
+		return "fileDb/add_fileDb";
+	}
+	
+	    //insert:업로드
+	// @RequestParam(required = false: 첨부파일 없어도 에러 발생 안하게 하는 옵션
+	//  파일 처리를 한다면 예외처리를 해야한다(try catch or throw)
+    //  첨부파일 다루기: (필수) 예외처리 필수
+	//  image.getBytes() :byte 배열로 변경
+	   @PostMapping("/fileDb/add.do")
+	  public String insert(@RequestParam(defaultValue = "") String fileTitle,
+			  @RequestParam(defaultValue = "") String fileContent,
+			  @RequestParam(required = false) MultipartFile image) throws Exception {
+		FileDbVO fileDbVO=new FileDbVO(fileTitle,fileContent,image.getBytes());
+		
+		fileDbService.insert(fileDbVO);
+		return  "redirect:/fileDb/fileDb.do";
+	}
+	
+	
+	// 다운로드 메소드: 사용자가 다운로드 URL을 웹브라우저에서 실행하면 이 메소드가 첨부파일을 전달해줌
+	   //@ResponseBody: json(js객체)으로 데이터를 jsp로 전달해줌
+	   //JSON :예)[{속성: 값}]
+	   @GetMapping("/fileDb/download.do")
+	   @ResponseBody
+	public ResponseEntity<byte[]> findDownload(@RequestParam(defaultValue = "") String uuid) {
+		//1) 상세조회: 첨부파일을 가져 오려고
+		FileDbVO fileDbVO=fileDbService.selectFileDb(uuid);
+		//2) 첨부파일을 보낼때(통신규칙)  (1) 첨부파일 보내요! 라고 알려줘야함 (2)첨부파일 문서형식 지정해야함
+		//  =>html 문서: 헤더(문서혁식,암호화등)+바디(실제 데이터)
+		HttpHeaders headers=new HttpHeaders();
+		
+		//첨부파일 보낸다는 의미 1)attachment(첨부파일) 2)fileDbVO.getUuid()(첨부파일명)
+		headers.setContentDispositionFormData("attachment", fileDbVO.getUuid()); 
+		
+		//첨부파일 문서 형식(이진파일)
+		headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
+		
+		//사용법: new ResponseEntity<byte[]>(데이터,헤더(생략가능),신호);
+		//ResponseEntity: 데이터와 함께 신호도 같이 전송가능합니다.
+		//신호 예)HttpStatus.OK(200), NOT_FOUND(404) 등
+		return new ResponseEntity<byte[]>(fileDbVO.getFileData(), 
+				headers, HttpStatus.OK);
+	}
 	
 	
 	
 	
-	
-	
-	
-	
-	
+	//삭제
+	@PostMapping("/fileDb/delete.do")
+	public String delete(@RequestParam(defaultValue = "") String uuid) {
+		
+		fileDbService.delete(uuid);
+		return "redirect:/fileDb/fileDb.do";
+	}
 	
 	
 	

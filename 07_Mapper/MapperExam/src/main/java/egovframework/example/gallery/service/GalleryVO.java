@@ -26,8 +26,8 @@ public class GalleryVO extends Criteria {
 	private String uuid;                   //기본키
 	private String galleryTitle;           //제목
 	private byte[] galleryData;            //첨부파일
-	private String galleryFileUrl;         //이미지 다운로드를 위한 URL
 	private MultipartFile image;           //내부 목적 사용
+	private String galleryFileUrl;         //이미지 다운로드를 위한 URL
 	
 	// 2개 세트
 	public GalleryVO(String galleryTitle, byte[] galleryData) {

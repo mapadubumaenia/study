@@ -175,6 +175,20 @@
           <scope>test</scope>
       </dependency>
        
+       
+       <!-- TODO: bcryt 해싱 : 암호화  -->
+      <dependency>
+         <groupId>org.mindrot</groupId>
+         <artifactId>jbcrypt</artifactId>
+         <version>0.3m</version>
+      </dependency>
+      
+      <!-- ok http -->
+      <dependency>
+        <groupId>com.squareup.okhttp3</groupId>
+        <artifactId>okhttp</artifactId>
+        <version>4.12.0</version>
+      </dependency>
         
 	</dependencies>
 

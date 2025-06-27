@@ -19,6 +19,7 @@
         <typeAlias type="egovframework.example.emp.service.EmpVO" alias="EmpVO"/>
         <typeAlias type="egovframework.example.fileDb.service.FileDbVO" alias="FileDbVO"/>
         <typeAlias type="egovframework.example.gallery.service.GalleryVO" alias="GalleryVO"/>
+        <typeAlias type="egovframework.example.auth.service.MemberVO" alias="MemberVO"/>
         
         
 		<typeAlias alias="egovMap" type="org.egovframe.rte.psl.dataaccess.util.EgovMap"/>

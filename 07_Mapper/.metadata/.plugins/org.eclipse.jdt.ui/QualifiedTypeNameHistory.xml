@@ -13,16 +13,21 @@
     <fullyQualifiedTypeName name="egovframework.example.dept.service.DeptVO"/>
     <fullyQualifiedTypeName name="org.springframework.web.multipart.MultipartFile"/>
     <fullyQualifiedTypeName name="egovframework.example.fileDb.service.impl.FileDbMapper"/>
-    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
-    <fullyQualifiedTypeName name="org.egovframe.rte.psl.dataaccess.mapper.Mapper"/>
-    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
     <fullyQualifiedTypeName name="egovframework.example.gallery.service.impl.GalleryMapper"/>
-    <fullyQualifiedTypeName name="java.lang.String"/>
     <fullyQualifiedTypeName name="lombok.extern.log4j.Log4j2"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.GetMapping"/>
     <fullyQualifiedTypeName name="egovframework.example.fileDb.service.FileDbService"/>
     <fullyQualifiedTypeName name="org.springframework.web.bind.annotation.ModelAttribute"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Controller"/>
     <fullyQualifiedTypeName name="egovframework.example.gallery.service.GalleryService"/>
+    <fullyQualifiedTypeName name="java.lang.String"/>
+    <fullyQualifiedTypeName name="egovframework.example.common.Criteria"/>
+    <fullyQualifiedTypeName name="org.egovframe.rte.psl.dataaccess.mapper.Mapper"/>
+    <fullyQualifiedTypeName name="java.lang.Exception"/>
+    <fullyQualifiedTypeName name="egovframework.example.auth.service.MemberService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
+    <fullyQualifiedTypeName name="egovframework.example.auth.service.impl.MemberMapper"/>
+    <fullyQualifiedTypeName name="egovframework.example.auth.service.MemberVO"/>
+    <fullyQualifiedTypeName name="org.antlr.grammar.v3.ANTLRParser.throwsSpec_return"/>
+    <fullyQualifiedTypeName name="org.springframework.stereotype.Service"/>
 </qualifiedTypeNameHistroy>

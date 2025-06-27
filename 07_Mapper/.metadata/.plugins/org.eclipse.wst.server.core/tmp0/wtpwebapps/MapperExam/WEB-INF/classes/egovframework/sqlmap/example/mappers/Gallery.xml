@@ -25,14 +25,21 @@
 	WHERE GALLERY_TITLE LIKE '%' ||#{searchKeyword}|| '%'
      </select>
 
+ <insert id="insert"
+            parameterType="GalleryVO">
+  INSERT INTO TB_GALLERY(UUID,GALLERY_TITLE,GALLERY_DATA,GALLERY_FILE_URL,INSERT_TIME)
+	VALUES(#{uuid},#{GALLERY_TITLE},#{GALLERY_DATA},#{GALLERY_FILE_URL},
+    TO_CHAR(SYSDATE,'YYYY-MM-DD HH24:MI:SS'))
+   
+   </insert>
 
+<!--상세조회  -->
+<select id="selectGallery"
+            parameterType="String"
+            resultType="GalleryVO" >
 
-
-
-
-
-
-
-
+	SELECT * FROM TB_Gallery
+	WHERE UUID=#{uuid}
+    </select>
 
 </mapper>

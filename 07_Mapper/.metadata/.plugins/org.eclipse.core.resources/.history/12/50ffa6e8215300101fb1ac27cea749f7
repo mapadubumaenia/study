@@ -1,0 +1,19 @@
+package egovframework.example.auth.service;
+
+import egovframework.example.common.Criteria;
+
+/*
+ *  VO=테이블과 같다
+ */
+public class MemberVO extends Criteria{
+
+//	EMAIL	VARCHAR2(1000 BYTE)
+//	PASSWORD	VARCHAR2(1000 BYTE)
+//	NAME	VARCHAR2(1000 BYTE)
+	
+	private String email;
+	private String password;
+	private String name;
+	
+	
+}

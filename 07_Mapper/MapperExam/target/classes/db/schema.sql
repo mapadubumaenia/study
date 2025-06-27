@@ -86,3 +86,20 @@ CREATE TABLE TB_GALLERY
     UPDATE_TIME       VARCHAR2(255),
     DELETE_TIME       VARCHAR2(255)
 );
+
+-- TODO: 인증관련 테이블 정의
+-- 유저 테이블
+-- login table ddl
+DROP TABLE TB_MEMBER CASCADE CONSTRAINTS;
+
+CREATE TABLE TB_MEMBER
+(
+    EMAIL       VARCHAR2(1000) NOT NULL PRIMARY KEY, -- id (email)
+    PASSWORD    VARCHAR2(1000),                      -- 암호
+    NAME        VARCHAR2(1000),                      -- 유저명
+    CODE_NAME   VARCHAR2(1000),                      -- 권한코드명(ROLE_USER, ROLE_ADMIN)
+    DELETE_YN   VARCHAR2(1) DEFAULT 'N',
+    INSERT_TIME VARCHAR2(255),
+    UPDATE_TIME VARCHAR2(255),
+    DELETE_TIME VARCHAR2(255)
+);
