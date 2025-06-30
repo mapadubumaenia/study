@@ -1,5 +1,12 @@
 package egovframework.example.common;
 
+/*
+ * @ControllerAdvice :컨트롤러에서 에러가 발생하면 무조건 여기로 오게하는 어노테이션(클래스)
+ * 전역 에러처리
+ * @ExceptionHandler(특정 예외클래스):  특정 예외클래스에 해당하는 에러가 발생하면 밑에 메소드가 실행됨
+ * 
+ * Exception => 모든에러
+ */
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.ControllerAdvice;
 import org.springframework.web.bind.annotation.ExceptionHandler;
@@ -15,10 +22,10 @@ public class CommonException {
     public String internalServerErrorException(Exception e
     		, Model model
     		) {
-        String errors = e.getMessage();
+        String errors = e.getMessage();   //에러 내용
         log.info("에러: " + errors);
-        model.addAttribute("errors", errors);
+        model.addAttribute("errors", errors);   //에러를 모델에 담기
         
-        return "errors";
+        return "errors";          //jsp errors로 이동
     }
 }

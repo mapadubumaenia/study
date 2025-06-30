@@ -15,6 +15,7 @@
 <jsp:include page="/common/header.jsp"/>
 <div class="page mt3">
    <form id="addForm" name="addForm" method="post">
+   <input type="hidden" name="csrf" value="${sessionScope.CSRF_TOKEN}">
         <div class="mb3">
             <label for="dname" class="form-label">dname</label>
             <input  

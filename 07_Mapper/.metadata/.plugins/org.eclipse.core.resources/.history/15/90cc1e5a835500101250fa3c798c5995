@@ -1,0 +1,19 @@
+package egovframework.example.job.service;
+/*
+ * 스케쥴러 클래스: 특정시간에 반복적으로 실행되는 클래스
+ * => 공공데이터포털에서 10초마다 데이터를 받아서 파일에 내용 쓰기
+ * 참고) AI/빅데이터 처리:  1)수집 2)가공 3) 적재(DB,파일 등)
+ */
+
+import org.springframework.stereotype.Component;
+
+import lombok.extern.log4j.Log4j2;
+
+@Log4j2
+@Component
+public class PublicApiJob {
+
+	//상수정의
+	final String serviceKey ="nbDIjISLbIXSdabMCuJb9SWybZ5HWeEGp0W7AmeIixCHyGNIYlMxp14iXudn0qG55M%2FDyGRp4jb132d%2FJ%2BfVyg%3D%3D";   //공공데이터 api인증 키
+	final String url="https://api.odcloud.kr/api/15096711/v1/uddi:aa5a69ca-a427-4b7f-b5cd-d39d347f1327?page=1&perPage=10&serviceKey="+serviceKey;
+}

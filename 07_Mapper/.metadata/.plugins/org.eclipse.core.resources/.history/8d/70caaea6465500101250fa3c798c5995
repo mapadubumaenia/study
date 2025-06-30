@@ -1,0 +1,22 @@
+package egovframework.example.auth.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import egovframework.example.auth.service.MemberService;
+import lombok.extern.log4j.Log4j2;
+
+
+@Log4j2
+@Controller
+public class MemberController {
+
+	@Autowired
+	private MemberService memberService;
+	
+	
+	
+	
+	
+	
+}

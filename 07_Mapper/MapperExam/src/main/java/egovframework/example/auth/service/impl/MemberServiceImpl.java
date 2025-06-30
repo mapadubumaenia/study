@@ -34,6 +34,31 @@ public class MemberServiceImpl extends EgovAbstractServiceImpl   implements Memb
 		  // 4)모두 통과하면 마지막에 memberVO 리턴 
 		return memberVO;
 	}
+
+
+	//회원가입
+	@Override
+	public void register(MemberVO memberVO) throws Exception {
+		// 1)DB에 회원이 있는지 확인: 
+		MemberVO cmemberVO=memberMapper.authenticate(memberVO);
+		// 2) 있음(예외처리)
+		if(cmemberVO!=null) throw processException("errors.register");
+		// 3) 입력된 암호를 -> 해싱암호화 처리합니다.
+		// 사용법: BCrypt.hashpw(암호,옵션);
+		String hashedPassword = BCrypt.hashpw(memberVO.getPassword(), 
+				            BCrypt.gensalt());
+		// 4) 암호를 memberVO에 저장(setter)
+		memberVO.setPassword(hashedPassword);
+		// 5) DB저장
+		memberMapper.register(memberVO);
+		
+	}
+
+
+	
+	
+	
+	
 	
 	
 	

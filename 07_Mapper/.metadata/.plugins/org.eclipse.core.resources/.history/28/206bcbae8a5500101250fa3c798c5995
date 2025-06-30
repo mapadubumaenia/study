@@ -1,0 +1,5 @@
+package egovframework.example.faq.service;
+
+public interface FaqService {
+
+}

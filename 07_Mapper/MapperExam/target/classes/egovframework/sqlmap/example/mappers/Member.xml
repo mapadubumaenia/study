@@ -7,4 +7,19 @@
          SELECT * FROM TB_MEMBER
       WHERE EMAIL=#{email}   
    </select>   
+   
+  <insert id="register"
+            parameterType="MemberVO"
+           >
+	INSERT INTO TB_MEMBER(EMAIL,PASSWORD,NAME,INSERT_TIME)
+	VALUES(#{email},#{password},#{name},TO_CHAR(SYSDATE,'YYYY-MM-DD
+	HH24:MI:SS'))
+    
+    </insert>
+   
+   
+   
+   
+   
+   
 </mapper>

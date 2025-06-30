@@ -1,0 +1,16 @@
+package egovframework.example.faq.service.impl;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import egovframework.example.faq.service.FaqService;
+
+@Service
+public class FaqServiceImpl implements FaqService{
+
+	@Autowired
+	private FaqMapper faqMapper;
+	
+	
+	
+}

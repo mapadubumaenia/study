@@ -68,29 +68,40 @@ a {text-decoration: none;color: var(--black);}
 .pl3 {padding-left:1rem !important;}
 .pl4 {padding-left:1.25rem !important;}
 .pl5 {padding-left:1.5rem !important;}
+/* 가로 크기(%) 4개 */
+.w100 {width:100% !important;}
+.w75 {width:75% !important;}
+.w50 {width:50% !important;}
+.w25 {width:25% !important;}
+
 
 /* 글자 중앙정렬 */
-.tcenter{text-align: center !important;}
+.tcenter{text-align:center !important;}
 /* 박스 중앙정렬 */
-.flex-center{display:flex !important; justify-content: center !important;}
+.flex-center{display:block;}
+.flex-vcenter{display:block;}
 /* float 해제 */
-.clear {clear: both;}
+.clear {clear:both;}
 
-.page {width: 99vw !important; margin: 0 auto !important;}
+.flex-center {clear:both;}
+
+.page {width:99vw; margin: 0 auto;}
 /* 박스 3개 배치: 핸드폰(1개) */
-.col2,.col3 {width: 99% !important; padding:1% !important; display:inline-block !important;}
-
+.col2,.col3 {width: 99% !important; padding:1% !important; float:left !important;}
 /* TODO: 태블릿 */
 @media screen and (min-width: 768px){
-    .page {width: 90vw !important;}
+   /* 박스 중앙정렬 */
+   .flex-center{display:flex; justify-content: center;}
+   .flex-vcenter{display:flex; align-items: center;}
+    .page {width: 90vw;}
     /* 박스 2개 배치 */
- 	.col2 {width:49% !important;}
+    .col2 {width:49% !important;}
     /* 박스 3개 배치 */
- 	.col3 {width:32% !important;}
+    .col3 {width:32% !important;}
 }
 /* TODO: pc */
 @media screen and (min-width: 1024px){
-    .page {width: 60vw !important;}
+    .page {width: 60vw;}
 }
 
 

@@ -3,8 +3,8 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-		<img src="<c:url value='/images/simple-coding.png'/>" width="20" height="20" />
-    	simple-coding 
+      <img src="<c:url value='/images/simple-coding.png'/>" width="20" height="20" />
+       simple-coding 
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -12,7 +12,7 @@
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
       <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         <li class="nav-item">
-          <a class="nav-link active" aria-current="page" href="#">Home</a>
+          <a class="nav-link active" aria-current="page" href="/">Home</a>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
@@ -59,6 +59,32 @@
             <li><a class="dropdown-item" href="<c:url value='/gallery/addition.do'/>">Add gallery</a></li>
           </ul>
         </li>
+      </ul>
+
+      <!-- 메뉴(오른쪽) -->
+      <ul class="navbar-nav">
+        <!-- {/* TODO: 로그인 시작 */} -->
+        <!-- memberVO 가 세션에 없으면 메뉴을 보이고, 있으면 안보임 -->
+        <c:if test="${sessionScope.memberVO == null}">
+           <li class="nav-item">
+             <a class="nav-link active" href="/register.do"> 회원가입 </a>
+           </li>
+           <li class="nav-item">
+              <a class="nav-link active" href="/login.do"> 로그인 </a>
+           </li>
+      </c:if>
+
+        <!-- {/* 로그인 끝 */} -->
+
+        <!-- {/* 로그아웃 시작 */} -->
+        <!-- memberVO 가 세션에 있으면 메뉴을 보이고, 없으면 안보임 -->
+         <c:if test="${sessionScope.memberVO != null}">
+            <li class="nav-item">
+              <a href="/logout.do" class="nav-link active"> 로그아웃
+              </a>
+            </li>
+       </c:if>
+        <!-- {/* 로그아웃 끝 */} -->
       </ul>
     </div>
   </div>

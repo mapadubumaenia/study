@@ -1,4 +1,4 @@
-!SESSION 2025-06-27 17:09:05.438 -----------------------------------------------
+!SESSION 2025-06-30 08:39:35.846 -----------------------------------------------
 eclipse.buildId=4.19.0.I20210303-1800
 java.version=11.0.27
 java.vendor=Azul Systems, Inc.
@@ -6,15 +6,18 @@ BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
 Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-This is a continuation of log file C:\Work\07_Mapper\.metadata\.bak_0.log
-Created Time: 2025-06-27 17:50:35.434
+This is a continuation of log file C:\Work\07_Mapper\.metadata\.bak_9.log
+Created Time: 2025-06-30 17:28:12.308
 
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:35.434
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:28:12.308
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.jWEFlQFr => OK
+
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-30 17:28:12.905
+!MESSAGE 
 !STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
 	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
 	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
@@ -23,716 +26,288 @@ java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcExcept
 	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
 	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
 	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:35.435
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4dac863d[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-30 17:28:12.920
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:35.436
-!MESSAGE SpringBootLanguageServer exists!
+!ENTRY org.eclipse.lsp4e 4 0 2025-06-30 17:28:12.937
+!MESSAGE 
+!STACK 0
+java.util.concurrent.TimeoutException
+	at java.base/java.util.concurrent.CompletableFuture.timedGet(CompletableFuture.java:1892)
+	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2027)
+	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
+	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
+	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
+	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
+	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
+	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
+	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
+!SESSION 2025-06-30 17:28:32.069 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.27
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:35.439
+!ENTRY org.eclipse.jface 2 0 2025-06-30 17:28:41.086
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:28:41.086
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6d224921,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f7e5e11,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:28:41.086
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@7bb996e0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@da2303c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:28:41.086
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72b60be8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f254d79,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.eclipse.ui.navigator 2 0 2025-06-30 17:28:49.579
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2025-06-30 17:28:49.581
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-06-30 17:28:49.624
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:28:50.478
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:28:50.480
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:53.602
 !MESSAGE Entering DelegatingStreamConnectionProvider()
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:35.439
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4dac863d[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:53.603
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@32200389[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:35.439
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:53.612
 !MESSAGE SpringBootLanguageServer exists!
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.442
-!MESSAGE Boot LS startup time from start to initialized: 1003ms
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:53.848
+!MESSAGE Instantiating ReusableClasspathListenerHandler
 
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:36.474
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:54.910
+!MESSAGE Boot LS startup time from start to initialized: 1285ms
 
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:36.474
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:55.576
+!MESSAGE Entering DelegatingStreamConnectionProvider()
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.498
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.vsSxUiUIisBatched = true
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:55.576
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@32200389[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.499
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:55.577
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:29:56.717
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:29:56.726
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.751
+!MESSAGE Boot LS startup time from start to initialized: 1174ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.825
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qpbnTGHvisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.828
 !MESSAGE Setting up ClasspathListenerManager
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.499
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.830
 !MESSAGE Scheduling initial event for all projects ...
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.499
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.831
 !MESSAGE Scheduling initial event for all projects DONE
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.499
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.832
 !MESSAGE exists = true open = true => deleted = false
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.499
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.vsSxUiUI => OK
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.832
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.qpbnTGHv => OK
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.500
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.836
 !MESSAGE classpath=88 entries
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.501
-!MESSAGE buffering callback sts4.classpath.vsSxUiUI MapperExam false 88
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.837
+!MESSAGE buffering callback sts4.classpath.qpbnTGHv MapperExam false 88
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.502
-!MESSAGE executing callback sts4.classpath.vsSxUiUI 1 batched events
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:56.838
+!MESSAGE executing callback sts4.classpath.qpbnTGHv 1 batched events
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.702
-!MESSAGE executing callback sts4.classpath.vsSxUiUI SUCCESS [done]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:29:57.071
+!MESSAGE executing callback sts4.classpath.qpbnTGHv SUCCESS [done]
 
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:36.703
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:30:10.355
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qpbnTGHv
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.703
-!MESSAGE Entering DelegatingStreamConnectionProvider()
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:30:10.355
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.qpbnTGHv
 
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:36.703
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:30:10.355
+!MESSAGE subsribers = {}
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.703
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4dac863d[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:30:10.355
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.qpbnTGHv => OK
 
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.704
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.708
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:36.708
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
-
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:36.709
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.709
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4dac863d[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:36.709
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.697
-!MESSAGE Boot LS startup time from start to initialized: 988ms
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.757
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jzzfsAdaisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.757
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.757
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.759
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.759
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.jzzfsAda => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.759
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.760
-!MESSAGE classpath=88 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.761
-!MESSAGE buffering callback sts4.classpath.jzzfsAda MapperExam false 88
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.761
-!MESSAGE executing callback sts4.classpath.jzzfsAda 1 batched events
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.966
-!MESSAGE executing callback sts4.classpath.jzzfsAda SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.967
-!MESSAGE Entering DelegatingStreamConnectionProvider()
-
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:37.967
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.967
-!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@4dac863d[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:37.968
-!MESSAGE SpringBootLanguageServer exists!
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:38.972
-!MESSAGE Boot LS startup time from start to initialized: 1002ms
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.003
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.003
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.004
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.004
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.004
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.005
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.eclipse.jface.text 4 0 2025-06-27 17:50:39.005
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.CompletionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.encodeThrowable(CompletableFuture.java:331)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptNow(CompletableFuture.java:743)
-	at java.base/java.util.concurrent.CompletableFuture.uniAcceptStage(CompletableFuture.java:731)
-	at java.base/java.util.concurrent.CompletableFuture.thenAcceptAsync(CompletableFuture.java:2118)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:44)
-	at java.base/java.util.stream.ReferencePipeline$3$1.accept(ReferencePipeline.java:195)
-	at java.base/java.util.ArrayList$ArrayListSpliterator.forEachRemaining(ArrayList.java:1655)
-	at java.base/java.util.stream.AbstractPipeline.copyInto(AbstractPipeline.java:484)
-	at java.base/java.util.stream.AbstractPipeline.wrapAndCopyInto(AbstractPipeline.java:474)
-	at java.base/java.util.stream.AbstractPipeline.evaluate(AbstractPipeline.java:550)
-	at java.base/java.util.stream.AbstractPipeline.evaluateToArrayNode(AbstractPipeline.java:260)
-	at java.base/java.util.stream.ReferencePipeline.toArray(ReferencePipeline.java:517)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$1(CodeLensProvider.java:52)
-	at java.base/java.util.concurrent.CompletableFuture$UniCompose.tryFire(CompletableFuture.java:1072)
-	at java.base/java.util.concurrent.CompletableFuture$Completion.exec(CompletableFuture.java:479)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy66.codeLens(Unknown Source)
-	at org.eclipse.lsp4e.operations.codelens.CodeLensProvider.lambda$2(CodeLensProvider.java:43)
-	... 15 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 20 more
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.034
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sqfTlhbLisBatched = true
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.034
-!MESSAGE Setting up ClasspathListenerManager
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.034
-!MESSAGE Scheduling initial event for all projects ...
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.035
-!MESSAGE Scheduling initial event for all projects DONE
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.035
-!MESSAGE exists = true open = true => deleted = false
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.035
-!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.sqfTlhbL => OK
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.036
-!MESSAGE classpath=88 entries
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.037
-!MESSAGE buffering callback sts4.classpath.sqfTlhbL MapperExam false 88
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.037
-!MESSAGE executing callback sts4.classpath.sqfTlhbL 1 batched events
-
-!ENTRY org.eclipse.lsp4e 4 0 2025-06-27 17:50:39.210
-!MESSAGE org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-!STACK 0
-java.util.concurrent.ExecutionException: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.util.concurrent.CompletableFuture.reportGet(CompletableFuture.java:395)
-	at java.base/java.util.concurrent.CompletableFuture.get(CompletableFuture.java:2028)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:425)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.run(CompletableFuture.java:1736)
-	at java.base/java.util.concurrent.CompletableFuture$AsyncRun.exec(CompletableFuture.java:1728)
-	at java.base/java.util.concurrent.ForkJoinTask.doExec(ForkJoinTask.java:290)
-	at java.base/java.util.concurrent.ForkJoinPool$WorkQueue.topLevelExec(ForkJoinPool.java:1020)
-	at java.base/java.util.concurrent.ForkJoinPool.scan(ForkJoinPool.java:1656)
-	at java.base/java.util.concurrent.ForkJoinPool.runWorker(ForkJoinPool.java:1594)
-	at java.base/java.util.concurrent.ForkJoinWorkerThread.run(ForkJoinWorkerThread.java:183)
-Caused by: org.eclipse.lsp4j.jsonrpc.JsonRpcException: java.io.IOException: 파이프가 닫히는 중입니다
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:72)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$4(LanguageServerWrapper.java:260)
-	at org.eclipse.lsp4j.jsonrpc.RemoteEndpoint.request(RemoteEndpoint.java:161)
-	at org.eclipse.lsp4j.jsonrpc.services.EndpointProxy.invoke(EndpointProxy.java:91)
-	at com.sun.proxy.$Proxy68.shutdown(Unknown Source)
-	at org.eclipse.lsp4e.LanguageServerWrapper.lambda$13(LanguageServerWrapper.java:423)
-	... 7 more
-Caused by: java.io.IOException: 파이프가 닫히는 중입니다
-	at java.base/java.io.FileOutputStream.writeBytes(Native Method)
-	at java.base/java.io.FileOutputStream.write(FileOutputStream.java:354)
-	at java.base/java.io.BufferedOutputStream.flushBuffer(BufferedOutputStream.java:81)
-	at java.base/java.io.BufferedOutputStream.flush(BufferedOutputStream.java:142)
-	at org.eclipse.lsp4j.jsonrpc.json.StreamMessageConsumer.consume(StreamMessageConsumer.java:69)
-	... 12 more
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.261
-!MESSAGE executing callback sts4.classpath.sqfTlhbL SUCCESS [done]
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.262
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.sqfTlhbL
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.262
-!MESSAGE unsubscribing from classpath changes: sts4.classpath.sqfTlhbL
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.263
-!MESSAGE subsribers = {sts4.classpath.NhFtbmXT=Send Classpath Notifications(17539), sts4.classpath.bKlaxWfP=Send Classpath Notifications(16818), sts4.classpath.alSHZivB=Send Classpath Notifications(14529), sts4.classpath.QCEtRePM=Send Classpath Notifications(13934), sts4.classpath.VQFdDEmi=Send Classpath Notifications(13820), sts4.classpath.kkAcnIyj=Send Classpath Notifications(16729), sts4.classpath.ktlKBLAy=Send Classpath Notifications(14532), sts4.classpath.NNFRbXAd=Send Classpath Notifications(16677), sts4.classpath.HHLJRyDP=Send Classpath Notifications(16686), sts4.classpath.GfZoaHgR=Send Classpath Notifications(14123), sts4.classpath.AZXZFlat=Send Classpath Notifications(14331), sts4.classpath.CLSCidqc=Send Classpath Notifications(14487), sts4.classpath.OdsxKMyz=Send Classpath Notifications(14186), sts4.classpath.pPimehmI=Send Classpath Notifications(17104), sts4.classpath.kPABwJjw=Send Classpath Notifications(14252), sts4.classpath.WHmczRwg=Send Classpath Notifications(16916), sts4.classpath.LdWTPGdv=Send Classpath Notifications(13853), sts4.classpath.lcLhIYjQ=Send Classpath Notifications(13971), sts4.classpath.trTBWBwm=Send Classpath Notifications(17365), sts4.classpath.BiLCpfJP=Send Classpath Notifications(17233), sts4.classpath.ALkSrWBQ=Send Classpath Notifications(14502), sts4.classpath.ocWMQOqX=Send Classpath Notifications(14021), sts4.classpath.rzGKWTjT=Send Classpath Notifications(16554), sts4.classpath.alxOYMAT=Send Classpath Notifications(14387), sts4.classpath.NhksiMAj=Send Classpath Notifications(17398), sts4.classpath.eHlierxe=Send Classpath Notifications(17164), sts4.classpath.yLBUQkxD=Send Classpath Notifications(17245), sts4.classpath.SyfQFvpH=Send Classpath Notifications(17221), sts4.classpath.kxdeLtTk=Send Classpath Notifications(16790), sts4.classpath.XWriHAMT=Send Classpath Notifications(16984), sts4.classpath.fcbMVIZl=Send Classpath Notifications(13865), sts4.classpath.oBbNRtEf=Send Classpath Notifications(14454), sts4.classpath.kGRSxilf=Send Classpath Notifications(17729), sts4.classpath.TrnqSuWh=Send Classpath Notifications(17438), sts4.classpath.TpVBnADN=Send Classpath Notifications(14111), sts4.classpath.ISkjbahE=Send Classpath Notifications(17242), sts4.classpath.uPDWgewf=Send Classpath Notifications(17311), sts4.classpath.chPEQmlc=Send Classpath Notifications(16966), sts4.classpath.efDeitLa=Send Classpath Notifications(14247), sts4.classpath.PQSEtduT=Send Classpath Notifications(14009), sts4.classpath.rYBKlzZv=Send Classpath Notifications(17567), sts4.classpath.ncHYwnUC=Send Classpath Notifications(16741), sts4.classpath.RHErejUI=Send Classpath Notifications(13908), sts4.classpath.dPTrAmAX=Send Classpath Notifications(16904), sts4.classpath.IqywFxiZ=Send Classpath Notifications(16674), sts4.classpath.iaTjaUDV=Send Classpath Notifications(16910), sts4.classpath.kppzZIPi=Send Classpath Notifications(14057), sts4.classpath.NeXPLOUg=Send Classpath Notifications(16735), sts4.classpath.hjlukKSV=Send Classpath Notifications(17134), sts4.classpath.dfoUitbF=Send Classpath Notifications(16655), sts4.classpath.McIEZdMQ=Send Classpath Notifications(14120), sts4.classpath.coWjuWPP=Send Classpath Notifications(17672), sts4.classpath.CySoGytj=Send Classpath Notifications(16547), sts4.classpath.ayzprpJd=Send Classpath Notifications(14508), sts4.classpath.AtPYQKNB=Send Classpath Notifications(16606), sts4.classpath.LcwNVjCb=Send Classpath Notifications(16907), sts4.classpath.FhgOzqQU=Send Classpath Notifications(14505), sts4.classpath.hIwYvStb=Send Classpath Notifications(16756), sts4.classpath.yoDyVNmg=Send Classpath Notifications(17011), sts4.classpath.YjLveYjy=Send Classpath Notifications(17047), sts4.classpath.dfxclCIG=Send Classpath Notifications(14717), sts4.classpath.vbljZsng=Send Classpath Notifications(14081), sts4.classpath.liXgxjOo=Send Classpath Notifications(17185), sts4.classpath.numzBouU=Send Classpath Notifications(17077), sts4.classpath.KCjIlcsF=Send Classpath Notifications(17374), sts4.classpath.usKtLZyy=Send Classpath Notifications(16957), sts4.classpath.JhfSoMSS=Send Classpath Notifications(13838), sts4.classpath.KqfTGPBf=Send Classpath Notifications(17137), sts4.classpath.fBuvogPc=Send Classpath Notifications(16705), sts4.classpath.NHIzDVrw=Send Classpath Notifications(17098), sts4.classpath.zWAUxeTS=Send Classpath Notifications(14381), sts4.classpath.xeDQXzQm=Send Classpath Notifications(17035), sts4.classpath.FipOZlfO=Send Classpath Notifications(17299), sts4.classpath.dhovfTuz=Send Classpath Notifications(16772), sts4.classpath.AiaksBmK=Send Classpath Notifications(16643), sts4.classpath.IcKmuXMD=Send Classpath Notifications(17092), sts4.classpath.IsteACPc=Send Classpath Notifications(13997), sts4.classpath.fEGLJklx=Send Classpath Notifications(14400), sts4.classpath.oPUmLLvb=Send Classpath Notifications(13896), sts4.classpath.AnXZXLzG=Send Classpath Notifications(17302), sts4.classpath.GBZHYpBi=Send Classpath Notifications(17708), sts4.classpath.KwUPIUpU=Send Classpath Notifications(17546), sts4.classpath.RJOaDwqN=Send Classpath Notifications(14792), sts4.classpath.AxygZqVy=Send Classpath Notifications(14244), sts4.classpath.AQfXnOrI=Send Classpath Notifications(14724), sts4.classpath.mXCCuUZe=Send Classpath Notifications(16693), sts4.classpath.gdDGLXzk=Send Classpath Notifications(13826), sts4.classpath.azXltNZO=Send Classpath Notifications(17380), sts4.classpath.pmGWUWJg=Send Classpath Notifications(14075), sts4.classpath.RYibhYTx=Send Classpath Notifications(17338), sts4.classpath.UuVwMwzG=Send Classpath Notifications(13832), sts4.classpath.rEKBiZER=Send Classpath Notifications(13784), sts4.classpath.MVLzxRFL=Send Classpath Notifications(13880), sts4.classpath.ExhkbtAd=Send Classpath Notifications(14220), sts4.classpath.vIfkirCA=Send Classpath Notifications(14683), sts4.classpath.FmMTZckB=Send Classpath Notifications(14180), sts4.classpath.gtjAkMlG=Send Classpath Notifications(17122), sts4.classpath.EQpAoxpJ=Send Classpath Notifications(17651), sts4.classpath.tJDFcZVO=Send Classpath Notifications(17188), sts4.classpath.wsHIgPsT=Send Classpath Notifications(16975), sts4.classpath.iTCEBYJp=Send Classpath Notifications(14039), sts4.classpath.NnIqmKmp=Send Classpath Notifications(17032), sts4.classpath.GBnuhlJa=Send Classpath Notifications(14027), sts4.classpath.cRXHggsr=Send Classpath Notifications(17269), sts4.classpath.ExIYEQUx=Send Classpath Notifications(16572), sts4.classpath.cnnNPRWf=Send Classpath Notifications(17642), sts4.classpath.vhQOcJuB=Send Classpath Notifications(17386), sts4.classpath.ecKWtxFu=Send Classpath Notifications(13796), sts4.classpath.JOcNSYfH=Send Classpath Notifications(14451), sts4.classpath.gMKoEGRr=Send Classpath Notifications(17023), sts4.classpath.eyRyqSBN=Send Classpath Notifications(16747), sts4.classpath.EMeEtswB=Send Classpath Notifications(17020), sts4.classpath.QkyPANkP=Send Classpath Notifications(17284), sts4.classpath.EJEHFMdR=Send Classpath Notifications(13814), sts4.classpath.lPBpEQQy=Send Classpath Notifications(16769), sts4.classpath.nyJugkPU=Send Classpath Notifications(17203), sts4.classpath.HiLVEADs=Send Classpath Notifications(13944), sts4.classpath.xzuaZSBS=Send Classpath Notifications(17457), sts4.classpath.VGQOzRhj=Send Classpath Notifications(17167), sts4.classpath.AUBguiNm=Send Classpath Notifications(17215), sts4.classpath.ByyNnHxf=Send Classpath Notifications(17560), sts4.classpath.FAPxjNJw=Send Classpath Notifications(17609), sts4.classpath.VZXMSalO=Send Classpath Notifications(17116), sts4.classpath.fHBMBnhZ=Send Classpath Notifications(14463), sts4.classpath.QvCCRffo=Send Classpath Notifications(16609), sts4.classpath.XJMBujDm=Send Classpath Notifications(14000), sts4.classpath.OsqReuHW=Send Classpath Notifications(14517), sts4.classpath.yzzFukOK=Send Classpath Notifications(17323), sts4.classpath.NtRpvLST=Send Classpath Notifications(13981), sts4.classpath.hDdswGaT=Send Classpath Notifications(16689), sts4.classpath.XsyJicrf=Send Classpath Notifications(17371), sts4.classpath.NHGOIrtP=Send Classpath Notifications(16619), sts4.classpath.mrYScemw=Send Classpath Notifications(14375), sts4.classpath.vEyDceer=Send Classpath Notifications(17332), sts4.classpath.nKLbToOV=Send Classpath Notifications(14069), sts4.classpath.EIUOwyyy=Send Classpath Notifications(13799), sts4.classpath.zQQKUhqZ=Send Classpath Notifications(16702), sts4.classpath.uNhOxmVY=Send Classpath Notifications(14060), sts4.classpath.bftmhANW=Send Classpath Notifications(17278), sts4.classpath.GxmKWobA=Send Classpath Notifications(17630), sts4.classpath.clivlKdt=Send Classpath Notifications(14006), sts4.classpath.QFpJiBIS=Send Classpath Notifications(17705), sts4.classpath.QEtCuTFd=Send Classpath Notifications(17377), sts4.classpath.agRcynNQ=Send Classpath Notifications(14183), sts4.classpath.BGZUalMH=Send Classpath Notifications(14593), sts4.classpath.QiFsilkU=Send Classpath Notifications(16738), sts4.classpath.aoOiHTpE=Send Classpath Notifications(17407), sts4.classpath.eCsWTTbR=Send Classpath Notifications(17666), sts4.classpath.xNryOtwa=Send Classpath Notifications(14030), sts4.classpath.vsSxUiUI=Send Classpath Notifications(17735), sts4.classpath.iwlRNskG=Send Classpath Notifications(14586), sts4.classpath.HcZPRado=Send Classpath Notifications(13974), sts4.classpath.GFoloIJd=Send Classpath Notifications(16683), sts4.classpath.NJkBJXXX=Send Classpath Notifications(14090), sts4.classpath.sgyZlSUP=Send Classpath Notifications(16541), sts4.classpath.lMbJXlci=Send Classpath Notifications(16720), sts4.classpath.YybFhPFU=Send Classpath Notifications(17248), sts4.classpath.NJjdQRCW=Send Classpath Notifications(17008), sts4.classpath.ctmoOkVw=Send Classpath Notifications(14078), sts4.classpath.pMIzGGgr=Send Classpath Notifications(13902), sts4.classpath.WhIwByhK=Send Classpath Notifications(17266), sts4.classpath.BeKaggcp=Send Classpath Notifications(16936), sts4.classpath.CIkglPab=Send Classpath Notifications(17618), sts4.classpath.gzZmqAsu=Send Classpath Notifications(14223), sts4.classpath.lOqidTgt=Send Classpath Notifications(17395), sts4.classpath.RqYtLzEE=Send Classpath Notifications(14230), sts4.classpath.WcZKGLMR=Send Classpath Notifications(16726), sts4.classpath.FPSwTKHV=Send Classpath Notifications(17227), sts4.classpath.TdUXpXNt=Send Classpath Notifications(14129), sts4.classpath.xutwNltX=Send Classpath Notifications(16892), sts4.classpath.nAxWDZwN=Send Classpath Notifications(17158), sts4.classpath.dHnMJkou=Send Classpath Notifications(13883), sts4.classpath.pJYeOlpn=Send Classpath Notifications(17675), sts4.classpath.tjEybbck=Send Classpath Notifications(14276), sts4.classpath.rrVYXtuq=Send Classpath Notifications(16847), sts4.classpath.jsVnmqiq=Send Classpath Notifications(17206), sts4.classpath.HQYXcsTD=Send Classpath Notifications(17275), sts4.classpath.dUxwVbdc=Send Classpath Notifications(14042), sts4.classpath.bHpvNgOQ=Send Classpath Notifications(14583), sts4.classpath.kiCopVol=Send Classpath Notifications(16821), sts4.classpath.vpwVVBnk=Send Classpath Notifications(14117), sts4.classpath.svopCRIP=Send Classpath Notifications(14108), sts4.classpath.UKoiWrZq=Send Classpath Notifications(16963), sts4.classpath.DwYwEjvK=Send Classpath Notifications(17038), sts4.classpath.VSSXGXVa=Send Classpath Notifications(16993), sts4.classpath.YfsdXHqi=Send Classpath Notifications(14713), sts4.classpath.RxEFhtyv=Send Classpath Notifications(16990), sts4.classpath.avoFeMqp=Send Classpath Notifications(13769), sts4.classpath.pEcIbOJG=Send Classpath Notifications(16895), sts4.classpath.DUDozYQw=Send Classpath Notifications(17290), sts4.classpath.tabADeAz=Send Classpath Notifications(16575), sts4.classpath.lTKGzTjd=Send Classpath Notifications(14520), sts4.classpath.dnlmxBTV=Send Classpath Notifications(17624), sts4.classpath.xtclYnSL=Send Classpath Notifications(14036), sts4.classpath.eNVMOrTt=Send Classpath Notifications(14301), sts4.classpath.QOzkNCFG=Send Classpath Notifications(17320), sts4.classpath.sITIKdqE=Send Classpath Notifications(17401), sts4.classpath.NMrCEuYO=Send Classpath Notifications(17699), sts4.classpath.LPoVdrYN=Send Classpath Notifications(14054), sts4.classpath.aFycBnzM=Send Classpath Notifications(17161), sts4.classpath.aZGjDfez=Send Classpath Notifications(17146), sts4.classpath.RczXPuZW=Send Classpath Notifications(17669), sts4.classpath.CwPSlfEo=Send Classpath Notifications(17714), sts4.classpath.wLuYQBzY=Send Classpath Notifications(16628), sts4.classpath.TWcVGWjU=Send Classpath Notifications(17062), sts4.classpath.mnUXwcKQ=Send Classpath Notifications(14024), sts4.classpath.tSRntfUL=Send Classpath Notifications(13914), sts4.classpath.CbXHRUxG=Send Classpath Notifications(17549), sts4.classpath.GXVYicDW=Send Classpath Notifications(16807), sts4.classpath.tvHQlFtn=Send Classpath Notifications(16532), sts4.classpath.HWJxAyim=Send Classpath Notifications(14310), sts4.classpath.TSyvtZaQ=Send Classpath Notifications(17170), sts4.classpath.JHHpRLnM=Send Classpath Notifications(17143), sts4.classpath.qmgMcaox=Send Classpath Notifications(17353), sts4.classpath.IelKfcBC=Send Classpath Notifications(17648), sts4.classpath.sRPlLDis=Send Classpath Notifications(14202), sts4.classpath.cApYVKZE=Send Classpath Notifications(16550), sts4.classpath.XAmPMkOt=Send Classpath Notifications(17582), sts4.classpath.jtGVwDPW=Send Classpath Notifications(17597), sts4.classpath.HWHZORMq=Send Classpath Notifications(14602), sts4.classpath.aHQtWpFX=Send Classpath Notifications(16784), sts4.classpath.GpdSpuVl=Send Classpath Notifications(17152), sts4.classpath.tDXjNcUW=Send Classpath Notifications(17260), sts4.classpath.pAzndkTE=Send Classpath Notifications(14394), sts4.classpath.DKuHOFXi=Send Classpath Notifications(12009), sts4.classpath.vqBbZLYw=Send Classpath Notifications(13887), sts4.classpath.tHqprYqP=Send Classpath Notifications(14048), sts4.classpath.ffUHgROQ=Send Classpath Notifications(14196), sts4.classpath.RHrRurGg=Send Classpath Notifications(17720), sts4.classpath.iRSLTBBC=Send Classpath Notifications(17341), sts4.classpath.IAmuQEVa=Send Classpath Notifications(14538), sts4.classpath.NeUjryeL=Send Classpath Notifications(17636), sts4.classpath.ahuIGkKF=Send Classpath Notifications(17335), sts4.classpath.ieYCQsGv=Send Classpath Notifications(16696), sts4.classpath.njtamxkq=Send Classpath Notifications(16563), sts4.classpath.YeqChgke=Send Classpath Notifications(13890), sts4.classpath.RkbDJEbG=Send Classpath Notifications(17191), sts4.classpath.qTXemufv=Send Classpath Notifications(13772), sts4.classpath.dcNjgHGT=Send Classpath Notifications(17041), sts4.classpath.UtlNbdbF=Send Classpath Notifications(17179), sts4.classpath.keNmGlLf=Send Classpath Notifications(16762), sts4.classpath.vTeNIqjC=Send Classpath Notifications(16844), sts4.classpath.lyzzDIJv=Send Classpath Notifications(17660), sts4.classpath.jruQczqT=Send Classpath Notifications(14096), sts4.classpath.uOmWkMvK=Send Classpath Notifications(16557), sts4.classpath.ilYPISfc=Send Classpath Notifications(16793), sts4.classpath.RxCkmWWK=Send Classpath Notifications(16603), sts4.classpath.WLsKXKhH=Send Classpath Notifications(14721), sts4.classpath.FJWucVAQ=Send Classpath Notifications(14475), sts4.classpath.NMtSAQuC=Send Classpath Notifications(14260), sts4.classpath.QjgnwCUJ=Send Classpath Notifications(16853), sts4.classpath.kzZNhgYo=Send Classpath Notifications(16901), sts4.classpath.sLjGqVAD=Send Classpath Notifications(17603), sts4.classpath.igCiGmup=Send Classpath Notifications(13802), sts4.classpath.QZvCsVIg=Send Classpath Notifications(16972), sts4.classpath.GTjfjjkU=Send Classpath Notifications(14644), sts4.classpath.GWebMnvG=Send Classpath Notifications(14003), sts4.classpath.KmzgQRhh=Send Classpath Notifications(17362), sts4.classpath.FBxyNHvQ=Send Classpath Notifications(17344), sts4.classpath.waNlrOkl=Send Classpath Notifications(13917), sts4.classpath.fHPByobP=Send Classpath Notifications(17445), sts4.classpath.YMZuTptX=Send Classpath Notifications(14484), sts4.classpath.wHHDUyUi=Send Classpath Notifications(13850), sts4.classpath.wMulCvFh=Send Classpath Notifications(14266), sts4.classpath.kGzwUtEl=Send Classpath Notifications(17263), sts4.classpath.yITfbEHA=Send Classpath Notifications(14511), sts4.classpath.UIjgVFoV=Send Classpath Notifications(16753), sts4.classpath.PnSTkAZH=Send Classpath Notifications(14217), sts4.classpath.MEEctJvd=Send Classpath Notifications(16750), sts4.classpath.yXdZVtce=Send Classpath Notifications(14478), sts4.classpath.VfeJrgGM=Send Classpath Notifications(14472), sts4.classpath.DxWHnmye=Send Classpath Notifications(14460), sts4.classpath.UGvSndXd=Send Classpath Notifications(16815), sts4.classpath.qXENAoUS=Send Classpath Notifications(17702), sts4.classpath.fdaOQFAC=Send Classpath Notifications(17083), sts4.classpath.HTGLCbnk=Send Classpath Notifications(16732), sts4.classpath.ItyWfiwA=Send Classpath Notifications(17317), sts4.classpath.RCQJGHnf=Send Classpath Notifications(13823), sts4.classpath.BGplziNc=Send Classpath Notifications(13874), sts4.classpath.cEezuNGT=Send Classpath Notifications(16652), sts4.classpath.IqfdYVcI=Send Classpath Notifications(13937), sts4.classpath.oxhGksgl=Send Classpath Notifications(14290), sts4.classpath.jNlgcNeU=Send Classpath Notifications(16671), sts4.classpath.sBLwtvkw=Send Classpath Notifications(14175), sts4.classpath.EmdBtnDl=Send Classpath Notifications(17576), sts4.classpath.RhbKWQOK=Send Classpath Notifications(14589), sts4.classpath.pWEkLpQr=Send Classpath Notifications(16978), sts4.classpath.RidbQgQp=Send Classpath Notifications(13899), sts4.classpath.nAYRVTlQ=Send Classpath Notifications(16708), sts4.classpath.KUyTklUb=Send Classpath Notifications(17543), sts4.classpath.bMPEOdtD=Send Classpath Notifications(13856), sts4.classpath.ddiFVQWY=Send Classpath Notifications(13817), sts4.classpath.TSescZBh=Send Classpath Notifications(17080), sts4.classpath.OlvkvilW=Send Classpath Notifications(14208), sts4.classpath.vgfwnfoA=Send Classpath Notifications(17448), sts4.classpath.uJNUKIAH=Send Classpath Notifications(16665), sts4.classpath.tZgAgdAE=Send Classpath Notifications(14372), sts4.classpath.OlfRbTCJ=Send Classpath Notifications(16787), sts4.classpath.OEGYqkwD=Send Classpath Notifications(17209), sts4.classpath.vxXhLDWM=Send Classpath Notifications(14490), sts4.classpath.YFHIWhzj=Send Classpath Notifications(14012), sts4.classpath.hyVvdsUW=Send Classpath Notifications(17014), sts4.classpath.bjVeuzPI=Send Classpath Notifications(14102), sts4.classpath.MeQqcJUI=Send Classpath Notifications(14255), sts4.classpath.MFLvlVeX=Send Classpath Notifications(16711), sts4.classpath.sdPjVDnJ=Send Classpath Notifications(17113), sts4.classpath.hYQPKWJs=Send Classpath Notifications(17254), sts4.classpath.ntFpfvZq=Send Classpath Notifications(17359), sts4.classpath.dvmFUGxM=Send Classpath Notifications(14263), sts4.classpath.gXSMPRrz=Send Classpath Notifications(14403), sts4.classpath.FEKTGaOd=Send Classpath Notifications(13808), sts4.classpath.wtpEQFfC=Send Classpath Notifications(17068), sts4.classpath.EaZUxEhE=Send Classpath Notifications(17095), sts4.classpath.kAzKlEdv=Send Classpath Notifications(14087), sts4.classpath.EcXblSmW=Send Classpath Notifications(16544), sts4.classpath.XdHPcmQn=Send Classpath Notifications(16759), sts4.classpath.avVPttKb=Send Classpath Notifications(17065), sts4.classpath.PCHiKnvv=Send Classpath Notifications(14760), sts4.classpath.qsUZMXeX=Send Classpath Notifications(13940), sts4.classpath.ejPYKNSi=Send Classpath Notifications(14099), sts4.classpath.iXyLBrps=Send Classpath Notifications(14045), sts4.classpath.LoSofOJa=Send Classpath Notifications(14526), sts4.classpath.OShButic=Send Classpath Notifications(16766), sts4.classpath.WWjafLZR=Send Classpath Notifications(16945), sts4.classpath.oVsxCLef=Send Classpath Notifications(14321), sts4.classpath.LdNtIwcc=Send Classpath Notifications(16569), sts4.classpath.CdWIqEiY=Send Classpath Notifications(17392), sts4.classpath.HreeXAJS=Send Classpath Notifications(13877), sts4.classpath.QTkMMTIm=Send Classpath Notifications(17176), sts4.classpath.aZojqEWI=Send Classpath Notifications(14756), sts4.classpath.JVooxOoL=Send Classpath Notifications(17639), sts4.classpath.bFRcQpaL=Send Classpath Notifications(17591), sts4.classpath.KmhWXVxK=Send Classpath Notifications(16658), sts4.classpath.aqAYdySY=Send Classpath Notifications(17029), sts4.classpath.nUhYOrAk=Send Classpath Notifications(17224), sts4.classpath.GhHiUSSI=Send Classpath Notifications(16960), sts4.classpath.GMgCyOFs=Send Classpath Notifications(14226), sts4.classpath.bYxmBZSx=Send Classpath Notifications(14214), sts4.classpath.ffJALlSt=Send Classpath Notifications(16812), sts4.classpath.mLhNSvch=Send Classpath Notifications(17101), sts4.classpath.LRehbHAO=Send Classpath Notifications(14189), sts4.classpath.iEfjaXKo=Send Classpath Notifications(16529), sts4.classpath.GBDdixqR=Send Classpath Notifications(17350), sts4.classpath.BOBNWYPs=Send Classpath Notifications(14015), sts4.classpath.OKMMqGxi=Send Classpath Notifications(16625), sts4.classpath.bRvHddtH=Send Classpath Notifications(17053), sts4.classpath.EeancJSc=Send Classpath Notifications(17296), sts4.classpath.rwnNDPFv=Send Classpath Notifications(14433), sts4.classpath.eYXRbiGE=Send Classpath Notifications(17131), sts4.classpath.CxBLPmov=Send Classpath Notifications(13829), sts4.classpath.BFtFIUBC=Send Classpath Notifications(16744), sts4.classpath.IaXjHrVS=Send Classpath Notifications(14496), sts4.classpath.qkHWuZju=Send Classpath Notifications(17272), sts4.classpath.dGVDvBkc=Send Classpath Notifications(17071), sts4.classpath.fVdTMddV=Send Classpath Notifications(13931), sts4.classpath.FNcCSpBy=Send Classpath Notifications(17410), sts4.classpath.aLRjbUHW=Send Classpath Notifications(14211), sts4.classpath.OsDJRIrg=Send Classpath Notifications(14752), sts4.classpath.VwCKBgVk=Send Classpath Notifications(14236), sts4.classpath.hLPsIrlv=Send Classpath Notifications(16987), sts4.classpath.kTrRSsUs=Send Classpath Notifications(13847), sts4.classpath.EHpxIvih=Send Classpath Notifications(17585), sts4.classpath.ikCDVSyy=Send Classpath Notifications(16856), sts4.classpath.wbkMGzOU=Send Classpath Notifications(17050), sts4.classpath.aFOcVnVF=Send Classpath Notifications(17454), sts4.classpath.iCfzXMVs=Send Classpath Notifications(16649), sts4.classpath.EdPdWzap=Send Classpath Notifications(17696), sts4.classpath.njPwcCWc=Send Classpath Notifications(17389), sts4.classpath.xUddDWQU=Send Classpath Notifications(14233), sts4.classpath.eCcyVTlC=Send Classpath Notifications(17621), sts4.classpath.DwICwsqu=Send Classpath Notifications(17230), sts4.classpath.uznHSMiV=Send Classpath Notifications(17460), sts4.classpath.kAGcdUmj=Send Classpath Notifications(14641), sts4.classpath.fvEqstnH=Send Classpath Notifications(13928), sts4.classpath.gmWSYSHy=Send Classpath Notifications(16535), sts4.classpath.qGEgebYd=Send Classpath Notifications(14199), sts4.classpath.uWMoBLrT=Send Classpath Notifications(17197), sts4.classpath.AqhESihe=Send Classpath Notifications(17305), sts4.classpath.VLvDXUTz=Send Classpath Notifications(16538), sts4.classpath.xeVDRFtV=Send Classpath Notifications(17326), sts4.classpath.hasEDexu=Send Classpath Notifications(17678), sts4.classpath.PGznxpQf=Send Classpath Notifications(14544), sts4.classpath.GmqKokvl=Send Classpath Notifications(17218), sts4.classpath.hysNbDNR=Send Classpath Notifications(17451), sts4.classpath.iqqvPHTe=Send Classpath Notifications(13778), sts4.classpath.hlaUBMkD=Send Classpath Notifications(16889), sts4.classpath.BKLjenPZ=Send Classpath Notifications(17173), sts4.classpath.JlbzyQqt=Send Classpath Notifications(17293), sts4.classpath.lunAKOgi=Send Classpath Notifications(17555), sts4.classpath.fiLqvmDZ=Send Classpath Notifications(17663), sts4.classpath.jsNQJPWA=Send Classpath Notifications(16631), sts4.classpath.uCOiRDBB=Send Classpath Notifications(16954), sts4.classpath.UsdCptoq=Send Classpath Notifications(13923), sts4.classpath.yBVHyFtl=Send Classpath Notifications(16942), sts4.classpath.UtbKOmcx=Send Classpath Notifications(17287), sts4.classpath.WaXhrMwk=Send Classpath Notifications(14205), sts4.classpath.ocEqNzYw=Send Classpath Notifications(14084), sts4.classpath.HanJckVC=Send Classpath Notifications(14384), sts4.classpath.muiLwVNa=Send Classpath Notifications(16969), sts4.classpath.jUjGiPQF=Send Classpath Notifications(13793), sts4.classpath.mpecnRCR=Send Classpath Notifications(17570), sts4.classpath.WEQZdwFz=Send Classpath Notifications(17654), sts4.classpath.RLWfbLjH=Send Classpath Notifications(17356), sts4.classpath.TVeAYjoe=Send Classpath Notifications(16560), sts4.classpath.gjlHQSeu=Send Classpath Notifications(16634), sts4.classpath.aMQVrUgJ=Send Classpath Notifications(17110), sts4.classpath.QRSbvcea=Send Classpath Notifications(14126), sts4.classpath.IYrEZdZl=Send Classpath Notifications(13956), sts4.classpath.loWUwrra=Send Classpath Notifications(14448), sts4.classpath.vVDRLjKf=Send Classpath Notifications(14466), sts4.classpath.XTQOUKNM=Send Classpath Notifications(13947), sts4.classpath.rbdgWFtm=Send Classpath Notifications(17128), sts4.classpath.ifYDjJCh=Send Classpath Notifications(17684), sts4.classpath.esAmTThl=Send Classpath Notifications(16939), sts4.classpath.pNhWBqYq=Send Classpath Notifications(16951), sts4.classpath.zNeqJDcX=Send Classpath Notifications(17464), sts4.classpath.isnvPamN=Send Classpath Notifications(14063), sts4.classpath.MrVtEOqu=Send Classpath Notifications(16775), sts4.classpath.PXJoeSoG=Send Classpath Notifications(14193), sts4.classpath.dtzltYsw=Send Classpath Notifications(13868), sts4.classpath.YFARAlVs=Send Classpath Notifications(17588), sts4.classpath.KpLlMhwG=Send Classpath Notifications(16622), sts4.classpath.QWAmWpTS=Send Classpath Notifications(13805), sts4.classpath.gKUjAilN=Send Classpath Notifications(14407), sts4.classpath.GxuBbFye=Send Classpath Notifications(17627), sts4.classpath.REIWaSML=Send Classpath Notifications(17119), sts4.classpath.gdjFjKyQ=Send Classpath Notifications(16614), sts4.classpath.fkLyiywv=Send Classpath Notifications(13871), sts4.classpath.gtIJFcwe=Send Classpath Notifications(17657), sts4.classpath.dAAQVAfg=Send Classpath Notifications(17182), sts4.classpath.iFFxeJpV=Send Classpath Notifications(17314), sts4.classpath.qlZPFZIh=Send Classpath Notifications(17404), sts4.classpath.bHVQnAsJ=Send Classpath Notifications(13968), sts4.classpath.pubKSYrn=Send Classpath Notifications(17711), sts4.classpath.OQrJRWSM=Send Classpath Notifications(17615), sts4.classpath.miQMBJuD=Send Classpath Notifications(16637), sts4.classpath.QwEQEaza=Send Classpath Notifications(16723), sts4.classpath.EXnYmlEO=Send Classpath Notifications(17579), sts4.classpath.aBiSIYGK=Send Classpath Notifications(14541), sts4.classpath.oLTRlcma=Send Classpath Notifications(13841), sts4.classpath.WuNClPmH=Send Classpath Notifications(17612), sts4.classpath.LYodgqcN=Send Classpath Notifications(17089), sts4.classpath.zZAzkxTy=Send Classpath Notifications(14132), sts4.classpath.lXYLcxEh=Send Classpath Notifications(17002), sts4.classpath.vaiIjCMi=Send Classpath Notifications(17056), sts4.classpath.XgSmDCKi=Send Classpath Notifications(17308), sts4.classpath.liAxtywv=Send Classpath Notifications(14686), sts4.classpath.jyElkNnF=Send Classpath Notifications(16640), sts4.classpath.IJGAlBQQ=Send Classpath Notifications(16886), sts4.classpath.ivWlMJnB=Send Classpath Notifications(17573), sts4.classpath.GJyYGpWh=Send Classpath Notifications(17368), sts4.classpath.rVDsRXeg=Send Classpath Notifications(14457), sts4.classpath.zmSSpfZv=Send Classpath Notifications(17687), sts4.classpath.HgHsFiiK=Send Classpath Notifications(16668), sts4.classpath.eprkTMDy=Send Classpath Notifications(13775), sts4.classpath.znIZWTVn=Send Classpath Notifications(16781), sts4.classpath.fjNdzUsm=Send Classpath Notifications(17074), sts4.classpath.efQklmxk=Send Classpath Notifications(16898), sts4.classpath.EbzQBMAu=Send Classpath Notifications(14072), sts4.classpath.xCZtnrmx=Send Classpath Notifications(14286), sts4.classpath.aSYffPyw=Send Classpath Notifications(16646), sts4.classpath.kgooEtmd=Send Classpath Notifications(14599), sts4.classpath.ilQFmzjz=Send Classpath Notifications(17693), sts4.classpath.ZkdIoEzA=Send Classpath Notifications(14171), sts4.classpath.nILARVLj=Send Classpath Notifications(17606), sts4.classpath.bObxhtFk=Send Classpath Notifications(14066), sts4.classpath.nCJDZWGh=Send Classpath Notifications(17552), sts4.classpath.QErZqRHL=Send Classpath Notifications(16566), sts4.classpath.IKieRBCf=Send Classpath Notifications(14481), sts4.classpath.dFnIwxfj=Send Classpath Notifications(13920), sts4.classpath.lrBvjfSe=Send Classpath Notifications(17600), sts4.classpath.tnBpzMtx=Send Classpath Notifications(17149), sts4.classpath.BExIVaDx=Send Classpath Notifications(17257), sts4.classpath.HjkGwPZm=Send Classpath Notifications(17281), sts4.classpath.XGwvpVLi=Send Classpath Notifications(17005), sts4.classpath.aXawOxnQ=Send Classpath Notifications(14499), sts4.classpath.lByatPtk=Send Classpath Notifications(14033), sts4.classpath.FUHcbXDv=Send Classpath Notifications(17645), sts4.classpath.INsXKEuf=Send Classpath Notifications(17564), sts4.classpath.zrFbxgGM=Send Classpath Notifications(16913), sts4.classpath.ZnkqDLNU=Send Classpath Notifications(17200), sts4.classpath.whYAEDcP=Send Classpath Notifications(14281), sts4.classpath.EpOZgZUa=Send Classpath Notifications(16778), sts4.classpath.VkFYobrZ=Send Classpath Notifications(13905), sts4.classpath.hTyiQmSa=Send Classpath Notifications(14105), sts4.classpath.zCCqRSqT=Send Classpath Notifications(17251), sts4.classpath.WHrJLoQA=Send Classpath Notifications(14018), sts4.classpath.JoKRetjA=Send Classpath Notifications(17125), sts4.classpath.ltUyYCaN=Send Classpath Notifications(14469), sts4.classpath.VEONIAjm=Send Classpath Notifications(16662), sts4.classpath.GsUOSkKy=Send Classpath Notifications(16850), sts4.classpath.BINmFfNy=Send Classpath Notifications(17017), sts4.classpath.aIXEauRj=Send Classpath Notifications(17026), sts4.classpath.VmdObBkh=Send Classpath Notifications(17442), sts4.classpath.GnuSeyxg=Send Classpath Notifications(14378), sts4.classpath.rZfauFdQ=Send Classpath Notifications(14523), sts4.classpath.uoydGBav=Send Classpath Notifications(13844), sts4.classpath.fgnYWJGy=Send Classpath Notifications(16919), sts4.classpath.RhYeDJkS=Send Classpath Notifications(17732), sts4.classpath.ZDCszFGd=Send Classpath Notifications(16996), sts4.classpath.ZuVwHfNW=Send Classpath Notifications(17086), sts4.classpath.tSbAEuAn=Send Classpath Notifications(17059), sts4.classpath.fXXaFVZU=Send Classpath Notifications(14596), sts4.classpath.eKbBSnVJ=Send Classpath Notifications(14397), sts4.classpath.LuHrpJiI=Send Classpath Notifications(13893), sts4.classpath.pffSraIy=Send Classpath Notifications(13766), sts4.classpath.iHHzHYBS=Send Classpath Notifications(14436), sts4.classpath.CMdMCycO=Send Classpath Notifications(17633), sts4.classpath.oflTxaPx=Send Classpath Notifications(16948), sts4.classpath.yXAzNRrm=Send Classpath Notifications(14114), sts4.classpath.IPgeGxia=Send Classpath Notifications(17690), sts4.classpath.RllKasdg=Send Classpath Notifications(14239), sts4.classpath.jtDMSLsx=Send Classpath Notifications(14514), sts4.classpath.JeouoDTQ=Send Classpath Notifications(16717), sts4.classpath.mwuaMrrX=Send Classpath Notifications(17347), sts4.classpath.QXvCgswk=Send Classpath Notifications(13790), sts4.classpath.OpQyglku=Send Classpath Notifications(16714), sts4.classpath.nTpSuuOo=Send Classpath Notifications(16981), sts4.classpath.wZEGTjzq=Send Classpath Notifications(17236), sts4.classpath.BNkPVHyW=Send Classpath Notifications(16999), sts4.classpath.USdoznNz=Send Classpath Notifications(16841), sts4.classpath.SaDQQoqf=Send Classpath Notifications(13811), sts4.classpath.eKUZsKTT=Send Classpath Notifications(13859), sts4.classpath.HZQKgNpv=Send Classpath Notifications(14051), sts4.classpath.KfQIpGah=Send Classpath Notifications(16699), sts4.classpath.NGHgfxDw=Send Classpath Notifications(14535), sts4.classpath.ROCMGnLp=Send Classpath Notifications(13911), sts4.classpath.LFNsbgXU=Send Classpath Notifications(17681), sts4.classpath.jzGgPIwW=Send Classpath Notifications(17107), sts4.classpath.YjiDGFqd=Send Classpath Notifications(17044), sts4.classpath.OSMpAQSB=Send Classpath Notifications(17194), sts4.classpath.RyoCByHA=Send Classpath Notifications(13862), sts4.classpath.wwlSjycn=Send Classpath Notifications(17726), sts4.classpath.URkPSkOh=Send Classpath Notifications(13835), sts4.classpath.lcrwZwys=Send Classpath Notifications(17239), sts4.classpath.SoOKSjnn=Send Classpath Notifications(17383), sts4.classpath.CAWdfDdq=Send Classpath Notifications(14493), sts4.classpath.JGaEGTIU=Send Classpath Notifications(17594), sts4.classpath.hfQPHBYg=Send Classpath Notifications(17723), sts4.classpath.WzxPgyaV=Send Classpath Notifications(14093), sts4.classpath.QNAeEJlx=Send Classpath Notifications(16824), sts4.classpath.qfQSiCKh=Send Classpath Notifications(17140), sts4.classpath.UjvyqErf=Send Classpath Notifications(17212), sts4.classpath.HfCfDCXc=Send Classpath Notifications(17717), sts4.classpath.cFrsasHl=Send Classpath Notifications(16680), sts4.classpath.XMSdzNZk=Send Classpath Notifications(16881), sts4.classpath.FXjORCDg=Send Classpath Notifications(17155), sts4.classpath.AtNhrlti=Send Classpath Notifications(13787), sts4.classpath.aRkIRjNu=Send Classpath Notifications(13781), sts4.classpath.gOmeilLA=Send Classpath Notifications(17329), sts4.classpath.jzzfsAda=Send Classpath Notifications(17738)}
-
-!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-27 17:50:39.263
-!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.sqfTlhbL => OK
-
-!ENTRY org.eclipse.ui.ide 4 4 2025-06-27 17:50:39.683
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:30:10.887
 !MESSAGE Not properly disposed SWT resource
 !STACK 0
 java.lang.Error: SWT Resource was not properly disposed
@@ -769,62 +344,76 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:104)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
-	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
-	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
-	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:660)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:624)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:786)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:400)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1260)
-	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3195)
-	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3100)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3068)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3059)
-	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:569)
-	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:524)
-	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:367)
-	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:172)
-	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:283)
-	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:249)
-	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
-	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
-	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:366)
-	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$3.open(PackageExplorerPart.java:545)
-	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
-	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:802)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
-	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:799)
-	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1118)
-	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:275)
-	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:270)
-	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:310)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
 	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
@@ -846,7 +435,7 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
 
-!ENTRY org.eclipse.ui.ide 4 4 2025-06-27 17:50:39.684
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:30:10.891
 !MESSAGE Not properly disposed SWT resource
 !STACK 0
 java.lang.Error: SWT Resource was not properly disposed
@@ -883,61 +472,243 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.lambda$0(PartServiceImpl.java:104)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.lambda$0(UIEventHandler.java:38)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:236)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:133)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4742)
-	at org.eclipse.e4.ui.workbench.swt.DisplayUISynchronize.syncExec(DisplayUISynchronize.java:34)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:205)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:203)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:234)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:151)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:133)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:75)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:44)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:55)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:63)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:424)
-	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElementGen(ElementContainerImpl.java:170)
-	at org.eclipse.e4.ui.model.application.ui.impl.ElementContainerImpl.setSelectedElement(ElementContainerImpl.java:188)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.showElementInWindow(ModelServiceImpl.java:660)
-	at org.eclipse.e4.ui.internal.workbench.ModelServiceImpl.bringToTop(ModelServiceImpl.java:624)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.delegateBringToTop(PartServiceImpl.java:786)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.bringToTop(PartServiceImpl.java:400)
-	at org.eclipse.e4.ui.internal.workbench.PartServiceImpl.showPart(PartServiceImpl.java:1260)
-	at org.eclipse.ui.internal.WorkbenchPage.busyOpenEditor(WorkbenchPage.java:3195)
-	at org.eclipse.ui.internal.WorkbenchPage.lambda$9(WorkbenchPage.java:3100)
-	at org.eclipse.swt.custom.BusyIndicator.showWhile(BusyIndicator.java:74)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3098)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3068)
-	at org.eclipse.ui.internal.WorkbenchPage.openEditor(WorkbenchPage.java:3059)
-	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:569)
-	at org.eclipse.ui.ide.IDE.openEditor(IDE.java:524)
-	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:367)
-	at org.eclipse.jdt.internal.ui.javaeditor.EditorUtility.openInEditor(EditorUtility.java:172)
-	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:283)
-	at org.eclipse.jdt.ui.actions.OpenAction.run(OpenAction.java:249)
-	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.dispatchRun(SelectionDispatchAction.java:274)
-	at org.eclipse.jdt.ui.actions.SelectionDispatchAction.run(SelectionDispatchAction.java:252)
-	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerActionGroup.handleOpen(PackageExplorerActionGroup.java:366)
-	at org.eclipse.jdt.internal.ui.packageview.PackageExplorerPart$3.open(PackageExplorerPart.java:545)
-	at org.eclipse.ui.OpenAndLinkWithEditorHelper$InternalListener.open(OpenAndLinkWithEditorHelper.java:48)
-	at org.eclipse.jface.viewers.StructuredViewer$2.run(StructuredViewer.java:802)
+	at org.eclipse.e4.ui.workbench.renderers.swt.StackRenderer.showTab(StackRenderer.java:1209)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
 	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
-	at org.eclipse.jface.util.SafeRunnable.run(SafeRunnable.java:174)
-	at org.eclipse.jface.viewers.StructuredViewer.fireOpen(StructuredViewer.java:799)
-	at org.eclipse.jface.viewers.StructuredViewer.handleOpen(StructuredViewer.java:1118)
-	at org.eclipse.jface.util.OpenStrategy.fireOpenEvent(OpenStrategy.java:275)
-	at org.eclipse.jface.util.OpenStrategy.access$2(OpenStrategy.java:270)
-	at org.eclipse.jface.util.OpenStrategy$1.handleEvent(OpenStrategy.java:310)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:89)
-	at org.eclipse.swt.widgets.Display.sendEvent(Display.java:4209)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1043)
-	at org.eclipse.swt.widgets.Display.runDeferredEvents(Display.java:4026)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3626)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$1.run(PartRenderingEngine.java:544)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:528)
+	at org.eclipse.e4.ui.workbench.renderers.swt.ElementReferenceRenderer.createWidget(ElementReferenceRenderer.java:73)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createWidget(PartRenderingEngine.java:999)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:659)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveRenderer.processContents(PerspectiveRenderer.java:51)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.showTab(PerspectiveStackRenderer.java:82)
+	at org.eclipse.e4.ui.workbench.renderers.swt.LazyStackRenderer.postProcess(LazyStackRenderer.java:114)
+	at org.eclipse.e4.ui.workbench.renderers.swt.PerspectiveStackRenderer.postProcess(PerspectiveStackRenderer.java:64)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:677)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SashRenderer.processContents(SashRenderer.java:150)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.workbench.renderers.swt.SWTPartRenderer.processContents(SWTPartRenderer.java:71)
+	at org.eclipse.e4.ui.workbench.renderers.swt.WBWRenderer.processContents(WBWRenderer.java:666)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:673)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.safeCreateGui(PartRenderingEngine.java:765)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$2.run(PartRenderingEngine.java:730)
+	at org.eclipse.core.runtime.SafeRunner.run(SafeRunner.java:45)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.createGui(PartRenderingEngine.java:714)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1083)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+!SESSION 2025-06-30 17:31:36.478 -----------------------------------------------
+eclipse.buildId=4.19.0.I20210303-1800
+java.version=11.0.27
+java.vendor=Azul Systems, Inc.
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=ko_KR
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2025-06-30 17:31:40.330
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:31:40.330
+!MESSAGE A conflict occurred for CTRL+SHIFT+T:
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.navigate.open.type,Open Type,
+		Open a type in a Java editor,
+		Category(org.eclipse.ui.category.navigate,Navigate,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@da2303c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+T,
+	ParameterizedCommand(Command(org.eclipse.lsp4e.symbolinworkspace,Go to Symbol in Workspace,
+		,
+		Category(org.eclipse.lsp4e.category,Language Servers,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@72b60be8,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:31:40.330
+!MESSAGE A conflict occurred for ALT+CTRL+T:
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.tm.terminal.connector.local.command.launch,Open Local Terminal on Selection,
+		,
+		Category(org.eclipse.tm.terminal.view.ui.commands.category,Terminal Commands,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6f254d79,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+CTRL+T,
+	ParameterizedCommand(Command(org.eclipse.team.svn.ui.command.EditPropertiesCommand,Show Properties,
+		,
+		Category(org.eclipse.team.svn.ui.command.category,SVN,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@589cc8eb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2025-06-30 17:31:40.330
+!MESSAGE A conflict occurred for ALT+SHIFT+R:
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.rename.element,Rename - Refactoring ,
+		Rename the selected element,
+		Category(org.eclipse.jdt.ui.category.refactoring,Refactor - Java,Java Refactoring Actions,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@44233014,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+R,
+	ParameterizedCommand(Command(org.eclipse.ui.edit.rename,Rename,
+		Rename the selected item,
+		Category(org.eclipse.ui.category.file,File,null,true),
+		org.eclipse.ui.internal.WorkbenchHandlerServiceHandler@6888a33,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:44.364
+!MESSAGE Entering DelegatingStreamConnectionProvider()
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:44.365
+!MESSAGE DelegatingStreamConnectionProvider classloader = org.eclipse.osgi.internal.loader.EquinoxClassLoader@2c3bb3a[org.springframework.tooling.boot.ls:1.28.0.202109130547(id=1001)]
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:44.367
+!MESSAGE SpringBootLanguageServer exists!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:44.392
+!MESSAGE Instantiating ReusableClasspathListenerHandler
+
+!ENTRY org.eclipse.ui.navigator 2 0 2025-06-30 17:31:45.810
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.ui.navigator 2 0 2025-06-30 17:31:45.811
+!MESSAGE Can't find Navigator Content Descriptor with id: org.eclipse.jst.servlet.ui.EnhancedJavaRendering
+
+!ENTRY org.eclipse.egit.ui 2 0 2025-06-30 17:31:45.924
+!MESSAGE Warning: The environment variable HOME is not set. The following directory will be used to store the Git
+user global configuration and to define the default location to store repositories: 'C:\Users\user'. If this is
+not correct please set the HOME environment variable and restart Eclipse. Otherwise Git for Windows and
+EGit might behave differently since they see different configuration options.
+This warning can be switched off on the Team > Git > Confirmations and Warnings preference page.
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.075
+!MESSAGE Boot LS startup time from start to initialized: 1698ms
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.566
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UIVdQBmpisBatched = true
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.574
+!MESSAGE Setting up ClasspathListenerManager
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.583
+!MESSAGE Scheduling initial event for all projects ...
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.586
+!MESSAGE Scheduling initial event for all projects DONE
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.587
+!MESSAGE exists = true open = true => deleted = false
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.588
+!MESSAGE ClasspathListenerHandler addClasspathListener sts4.classpath.UIVdQBmp => OK
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.609
+!MESSAGE classpath=88 entries
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.612
+!MESSAGE buffering callback sts4.classpath.UIVdQBmp MapperExam false 88
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:46.620
+!MESSAGE executing callback sts4.classpath.UIVdQBmp 1 batched events
+
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:31:46.796
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
 	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
 	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
@@ -959,3 +730,91 @@ java.lang.Error: SWT Resource was not properly disposed
 	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
 	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.eclipse.ui.ide 4 4 2025-06-30 17:31:46.799
+!MESSAGE Not properly disposed SWT resource
+!STACK 0
+java.lang.Error: SWT Resource was not properly disposed
+	at org.eclipse.swt.graphics.Resource.initNonDisposeTracking(Resource.java:172)
+	at org.eclipse.swt.graphics.Resource.<init>(Resource.java:120)
+	at org.eclipse.swt.graphics.Image.<init>(Image.java:165)
+	at org.eclipse.swt.graphics.Image.win32_new(Image.java:2163)
+	at org.eclipse.swt.widgets.TaskBar.createShellLink(TaskBar.java:168)
+	at org.eclipse.swt.widgets.TaskBar.createShellLinkArray(TaskBar.java:208)
+	at org.eclipse.swt.widgets.TaskBar.setMenu(TaskBar.java:382)
+	at org.eclipse.swt.widgets.TaskItem.setMenu(TaskItem.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.setMenuOnTaskItem(TaskBarManager.java:121)
+	at org.eclipse.mylyn.commons.workbench.TaskBarManager$TaskBarMenuManager.update(TaskBarManager.java:112)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:673)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.addSystemTaskBarActions(TasksUiPlugin.java:479)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin.access$7(TasksUiPlugin.java:458)
+	at org.eclipse.mylyn.internal.tasks.ui.TasksUiPlugin$TasksUiInitializationJob.runInUIThread(TasksUiPlugin.java:394)
+	at org.eclipse.ui.progress.UIJob.lambda$0(UIJob.java:95)
+	at org.eclipse.swt.widgets.RunnableLock.run(RunnableLock.java:40)
+	at org.eclipse.swt.widgets.Synchronizer.runAsyncMessages(Synchronizer.java:185)
+	at org.eclipse.swt.widgets.Display.runAsyncMessages(Display.java:4001)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3629)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$5.run(PartRenderingEngine.java:1157)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:1046)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:155)
+	at org.eclipse.ui.internal.Workbench.lambda$3(Workbench.java:644)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:338)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:551)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:156)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:152)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:203)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:134)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:104)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:401)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:255)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
+	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:566)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:653)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:590)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1461)
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:31:47.013
+!MESSAGE executing callback sts4.classpath.UIVdQBmp SUCCESS [done]
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:38:37.011
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:38:37.025
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:38:38.311
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:38:38.314
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:40:51.080
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:40:51.084
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:41:13.396
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.eclipse.m2e.logback.appender 2 0 2025-06-30 17:41:13.398
+!MESSAGE Using platform encoding (UTF-8 actually) to copy filtered resources, i.e. build is platform dependent!
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:41:20.474
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UIVdQBmp
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:41:20.474
+!MESSAGE unsubscribing from classpath changes: sts4.classpath.UIVdQBmp
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:41:20.475
+!MESSAGE subsribers = {}
+
+!ENTRY org.springframework.tooling.ls.eclipse.commons 1 0 2025-06-30 17:41:20.475
+!MESSAGE ClasspathListenerHandler removeClasspathListener sts4.classpath.UIVdQBmp => OK

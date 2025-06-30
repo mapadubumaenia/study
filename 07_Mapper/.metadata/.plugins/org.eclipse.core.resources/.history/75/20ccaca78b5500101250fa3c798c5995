@@ -1,0 +1,16 @@
+package egovframework.example.faq.web;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Controller;
+
+import egovframework.example.dept.service.DeptService;
+
+@Controller
+public class FaqController {
+
+	@Autowired
+	private FaqService faqService;
+	
+	
+	
+}

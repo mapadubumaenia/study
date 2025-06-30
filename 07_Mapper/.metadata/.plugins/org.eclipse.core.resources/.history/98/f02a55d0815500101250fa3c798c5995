@@ -1,0 +1,5 @@
+package egovframework.example.job.service;
+
+public class PublicApiJob {
+
+}
