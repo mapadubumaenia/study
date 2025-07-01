@@ -13,7 +13,7 @@
 </head>
 <body>
 <!-- 머리말 -->
-<jsp:include page="/common/header.jsp" />
+<jsp:include page="/common/header.jsp"></jsp:include>
 
 
         <div class="page mt5">
