@@ -8,6 +8,12 @@ import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 
+//TODO: JPA는 참조키 걸리면 (연관관계가 작성되면)
+//   1) 사원컬럼만 조회하면 : 사원select됨
+//   2 부서 칼럼도 포함해서 조회하면: 사원+부서 select2번 이상 조회됨
+//    해결방법: 1) DTO에서 순수하게 사원 컬럼(필드)만 포함 (부서의 기본키는 넣어도됨. 다른키 넣으면 2번조회되버림)
+//      2)실제 개발자가 직접 조인 쿼리 작성
+//     3) 어노테이션을 이용한 조인방법
 @Entity
 @Table(name="TB_EMP")
 @SequenceGenerator(

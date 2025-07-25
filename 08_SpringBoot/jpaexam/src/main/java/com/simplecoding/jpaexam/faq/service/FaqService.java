@@ -13,8 +13,9 @@ public class FaqService {
 
     private final FaqRepository faqRepository;
 
-    public Faq findById(Long fno) {
 
+    //TODO: 상세조회
+    public Faq findById(Long fno) {
         Faq faq = faqRepository.findById(fno).get();
         return faq;
     }
