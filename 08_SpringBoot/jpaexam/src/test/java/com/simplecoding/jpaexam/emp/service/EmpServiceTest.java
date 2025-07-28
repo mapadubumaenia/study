@@ -1,6 +1,7 @@
 package com.simplecoding.jpaexam.emp.service;
 
 import com.simplecoding.jpaexam.emp.dto.EmpDto;
+import com.simplecoding.jpaexam.emp.dto.EmpStatsDto;
 import jakarta.transaction.Transactional;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -84,6 +85,58 @@ class EmpServiceTest {
     }
 
 
+    @Test
+    void updateFromDto() {
+        EmpDto empDto=new EmpDto();
+        empDto.setEno((long)8020);
+        empDto.setEname("Shin");
+        empDto.setJob("student");
+        empDto.setManager((long)8000);
+        empDto.setHiredate(LocalDate.now());
+        empDto.setSalary((long)8800);
+        empDto.setCommission((long)1200);
+        empDto.setDno((long)10);
+        // 실행
+        empService.updateFromDto(empDto);
+
+
+
+    }
+
+    @Test
+    void deleteById() {
+        empService.deleteById(8020);
+    }
+
+    @Test
+    void selectByCommissionAndSalary() {
+        //  1  테스트 준비
+        Long commission = null;
+        Long salary     = 1000L;
+        Pageable pageable= PageRequest.of(0, 3);
+
+        // 2 실행
+        Page<EmpDto> page=empService.selectByCommissionAndSalary(commission,salary,pageable);
+        // 3 결과확인
+        log.info(page);
+        log.info(page.getContent());
+    }
+
+    @Test
+    @Transactional
+    void selectAll() {
+        String searchkeyword = "J";
+        Pageable pageable= PageRequest.of(0, 3);
+        Page<EmpDto> page=empService.selectAll(searchkeyword,pageable);
+        log.info(page);
+        log.info(page.getContent());
+    }
+
+    @Test
+    void selectGroup() {
+        EmpStatsDto  empStatsDto=empService.selectGroup();
+        log.info(empStatsDto);
+    }
 
 
 }

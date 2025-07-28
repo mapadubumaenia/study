@@ -1,6 +1,7 @@
 package com.simplecoding.jpaexam.dept.service;
 
 import com.simplecoding.jpaexam.dept.dto.DeptDto;
+import com.simplecoding.jpaexam.dept.dto.DeptStatsDto;
 import com.simplecoding.jpaexam.dept.entity.Dept;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -82,8 +83,55 @@ class DeptServiceTest {
 
     }
 
+    // 더티체킹 수정
+    @Test
+    void updateFromDto() {
+        DeptDto deptDto=new DeptDto();
+        deptDto.setDno((long)10);
+        deptDto.setDname("개발팀팀");
+        deptDto.setLoc("브리스본");
+        //실행: 더티체킹 함수
+        deptService.updateFromDto(deptDto);
+    }
 
+    // 삭제
+    @Test
+    void deleteById() {
+        deptService.deleteById((long)240);
+    }
 
+    @Test
+    void selectByDnameAndLoc() {
+       // 1) 테스트 준비
+        String dname="RESEARCH";
+        String loc="DALLAS";
+        Pageable pageable= PageRequest.of(0, 3); // 테스트 용
 
+        //        2) 테스트 실행
+        Page<DeptDto> page=deptService.selectByDnameAndLoc(dname, loc, pageable);
+        //결과확인
+        log.info(page);
+        log.info(page.getContent());
+    }
 
+    @Test
+    void sellectAll() {
+        // 1) 테스트 준비
+        String searchkeyword ="R";
+        Pageable pageable= PageRequest.of(0, 3);
+
+        //        2) 테스트 실행
+
+        Page<DeptDto> page=deptService.sellectAll(searchkeyword,pageable);
+        //결과확인
+        log.info(page);
+        log.info(page.getContent());
+    }
+
+    @Test
+    void selectGroup() {
+        DeptStatsDto deptStatsDto=deptService.selectGroup();
+        log.info(deptStatsDto);
+
+    }
 }

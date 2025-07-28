@@ -24,6 +24,7 @@ public class EmpDto {
     //TODO: 참조키(dno):
     private Long dno;
 //    만약 dname, loc 추가 하면 -> 부서 select 추가 실행됨
+    private String dname;
 //    private Long dname;
 }
 
