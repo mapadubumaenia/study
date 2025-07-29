@@ -29,6 +29,11 @@ public interface FaqRepository extends JpaRepository<Faq,Long> {
     Page<Faq> findByTitleAndContent(@Param("title") String title, @Param("content") String content , Pageable pageable);
 
 
+    //like 검색
+    @Query(value = "select f from Faq f\n" +
+            "where f.title like %:searchkeyword%")
+    Page<Faq> selectAll(@Param("searchkeyword") String searchkeyword, Pageable pageable);
+
 
 
 }

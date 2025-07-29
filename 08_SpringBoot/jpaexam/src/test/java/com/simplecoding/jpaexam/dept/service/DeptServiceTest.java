@@ -2,7 +2,6 @@ package com.simplecoding.jpaexam.dept.service;
 
 import com.simplecoding.jpaexam.dept.dto.DeptDto;
 import com.simplecoding.jpaexam.dept.dto.DeptStatsDto;
-import com.simplecoding.jpaexam.dept.entity.Dept;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -122,7 +121,7 @@ class DeptServiceTest {
 
         //        2) 테스트 실행
 
-        Page<DeptDto> page=deptService.sellectAll(searchkeyword,pageable);
+        Page<DeptDto> page=deptService.selectAll(searchkeyword,pageable);
         //결과확인
         log.info(page);
         log.info(page.getContent());
@@ -132,6 +131,47 @@ class DeptServiceTest {
     void selectGroup() {
         DeptStatsDto deptStatsDto=deptService.selectGroup();
         log.info(deptStatsDto);
+
+    }
+
+    @Test
+    void bulkDelete() {
+        deptService.bulkDelete((long)230);
+    }
+
+
+    @Test
+    void queryByDnameAndLoc() {
+        // 1) 테스트 준비
+        String dname="RESEARCH";
+        String loc="DALLAS";
+        Pageable pageable= PageRequest.of(0, 3); // 테스트 용
+
+        //        2) 테스트 실행
+        Page<DeptDto> page=deptService.queryByDnameAndLoc(dname, loc, pageable);
+        //결과확인
+        log.info(page);
+        log.info(page.getContent());
+
+    }
+
+    @Test
+    void queryGroup() {
+        DeptStatsDto deptStatsDto=deptService.queryGroup();
+        log.info(deptStatsDto);
+    }
+
+    @Test
+    void queryByDnameOrLoc() {
+        String dname="SALES";
+        String loc="";
+        Pageable pageable= PageRequest.of(0, 3); // 테스트 용
+
+        //        2) 테스트 실행
+        Page<DeptDto> page=deptService.queryByDnameOrLoc(dname, loc, pageable);
+        //결과확인
+        log.info(page);
+        log.info(page.getContent());
 
     }
 }

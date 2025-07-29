@@ -139,4 +139,8 @@ class EmpServiceTest {
     }
 
 
+    @Test
+    void bulkDelete() {
+        empService.bulkDelete((long)8013);
+    }
 }

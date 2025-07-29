@@ -90,4 +90,9 @@ public class EmpService {
         return empRepository.selectGroup();
     }
 
+    // 예제4번 bulkdelete
+    public void bulkDelete(long eno){
+        empRepository.deleteById(eno);
+    }
+
 }

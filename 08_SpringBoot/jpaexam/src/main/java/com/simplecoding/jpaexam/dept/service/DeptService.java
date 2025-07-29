@@ -5,6 +5,7 @@ import com.simplecoding.jpaexam.dept.dto.DeptDto;
 import com.simplecoding.jpaexam.dept.dto.DeptStatsDto;
 import com.simplecoding.jpaexam.dept.entity.Dept;
 import com.simplecoding.jpaexam.dept.repository.DeptRepository;
+import com.simplecoding.jpaexam.dept.repository.DeptRepositoryDsl;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -16,7 +17,7 @@ import java.util.List;
 // JPA 라이브러리 기본 메소드: 1) 조회(전체, 상세) 2) 저장 3) 수정 4) 삭제 제공
 //                          ( sql 코딩 필요 없음 )
 // 게시판 만들기: 1) 조회(전체, 상세) 2) 저장 3) 수정 4) 삭제
-
+//TODO: 복잡한 SQL은 직접 작성 기능을 제공합니다.: @Query 이용(DeptRepository 코딩)
 
 
 @Service
@@ -25,9 +26,12 @@ public class DeptService {
     //    TODO: 레포지토리 DI(클래스 가져오기) 방법
 //      1) @Autowired 를 필드위에 붙이기
 //      2) 생성자를 이용해서 하기(숙련자용, 추천)
-    private final DeptRepository deptRepository;
+    private final DeptRepository deptRepository;            //JPA 사용
     //    mapStruct DI
     private final MapStruct mapStruct;
+
+    private final DeptRepositoryDsl deptRepositoryDsl;       //querydsl 사용
+
 
     //    상세조회 -> DTO 사용 상세조회
 //    Optional 래퍼 클래스: null 을 다루는 편리한 메소드가 있음
@@ -113,7 +117,7 @@ public class DeptService {
 
 
        // 2) like 검색 DTO 사용
-    public Page<DeptDto> sellectAll(String searchkeyword,Pageable pageable) {
+    public Page<DeptDto> selectAll(String searchkeyword,Pageable pageable) {
         Page<Dept> page=deptRepository.selectAll(searchkeyword,pageable);
         return page.map(data -> mapStruct.toDto(data));
     }
@@ -121,6 +125,29 @@ public class DeptService {
     // 3)
     public DeptStatsDto selectGroup(){
         return deptRepository.selectGroup();
+    }
+
+    // 4) 직접 delete 작성하기: 장점)  원래는 1)select 2)delete 해야하지만
+    //                           =>   바로 딜리트 가능(성능업)
+     public void bulkDelete(long dno){
+        deptRepository.deleteById(dno);
+     }
+
+     //TODO:(참고) querydsl 실습 1
+    public Page<DeptDto> queryByDnameAndLoc(String dname, String loc,Pageable pageable) {
+        Page<Dept> page=deptRepositoryDsl.queryByDnameAndLoc(dname, loc,pageable);
+        return page.map(data -> mapStruct.toDto(data));
+    }
+
+    //    querydsl 실습2 부서테이블의 부서번호를 sum, avg, max, min 값을 화면에 표시
+    public DeptStatsDto queryGroup(){
+        return deptRepositoryDsl.queryGroup();
+    }
+
+    //    동적 sql 실습 3
+    public Page<DeptDto> queryByDnameOrLoc(String dname, String loc,Pageable pageable) {
+        Page<Dept> page=deptRepositoryDsl.queryByDnameOrLoc(dname, loc,pageable);
+        return page.map(data -> mapStruct.toDto(data));
     }
 
 }

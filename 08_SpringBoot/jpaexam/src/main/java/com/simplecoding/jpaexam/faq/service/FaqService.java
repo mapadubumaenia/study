@@ -83,11 +83,14 @@ public class FaqService {
         return page.map(data -> mapStruct.toDto(data));
     }
 
-
     // 2) like 검색 DTO 사용
+    public Page<FaqDto> selectAll(String searchkeyword , Pageable pageable) {
+        Page<Faq> page=faqRepository.selectAll(searchkeyword,pageable);
+        return page.map(data -> mapStruct.toDto(data));
+    }
 
 
-    // 3) DTO 새로 만들어서 평균값, 최대값 내기
+    // 3) DTO 새로 만들어서 평균값, 최대값 내기  faq 사이트엔 딱히 평균값 낼게 없다.
 
 
 

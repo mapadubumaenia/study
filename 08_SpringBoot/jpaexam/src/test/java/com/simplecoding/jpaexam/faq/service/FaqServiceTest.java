@@ -99,9 +99,20 @@ class FaqServiceTest {
         log.info(page.getContent());
     }
 
-
     // 2) like 검색 DTO 사용
+    @Test
+    void selectAll() {
+        // 1) 테스트 준비
+        String searchkeyword ="제";
+        Pageable pageable= PageRequest.of(0, 3);
 
+        //        2) 테스트 실행
+
+        Page<FaqDto> page=faqService.selectAll(searchkeyword,pageable);
+        //결과확인
+        log.info(page);
+        log.info(page.getContent());
+    }
 
     // 3) DTO 새로 만들어서 평균값, 최대값 내기
 

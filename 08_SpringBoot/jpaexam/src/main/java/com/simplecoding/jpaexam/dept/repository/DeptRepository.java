@@ -5,9 +5,11 @@ import com.simplecoding.jpaexam.dept.entity.Dept;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Modifying;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.query.Param;
 import org.springframework.stereotype.Repository;
+import org.springframework.transaction.annotation.Transactional;
 
 //TODO: IOC =>스프링부트를 실행하면 해당 클래스/인터페이스 생성함(빈으로 등록됨)
 //예) @Service, @Component, @Mapper @Repository 등
@@ -46,6 +48,22 @@ public interface DeptRepository extends JpaRepository<Dept,Long> {
     @Query(value = "select new com.simplecoding.jpaexam.dept.dto.DeptStatsDto(sum(d.dno), avg(d.dno), max(d.dno),min(d.dno))\n" +
             "from Dept d")
     DeptStatsDto selectGroup();
+
+
+    // 예제 4) 직접 delete 작성 : CUD 작업(DML 작업)
+    //    어노테이션 추가 필요: @Modifying   @Transactional 붙이기
+    //     -> sql -> jpql로 변경
+    //    TODO: SQL 직접 작성하기(JPQL)
+//    예제 1) 부서 테이블에서 부서명(dname), 위치(loc)를 매개변수로 받아 조회
+    // TODO: 달라지는점(SQl->jpql) : (1)     *   -> 엔티티 별명              * => d
+    //                              (2) 테이블명 -> 엔티티 클래스명(대소문자 구분)   tb_dept  =>Dept
+    //                              (3) 컬럼명 -> 엔티티 필드명      ex)d.dname   d.loc
+    //                              (4) 기타 select,from 등은 동일하게 코딩
+    //                              (5) sql 함수 ==jpql 함수명과 거의 비슷
+    @Modifying
+    @Transactional
+    @Query(value = "delete Dept d where d.dno=:dno")
+    void bulkDelete(@Param("dno")long dno);
 
 
 }
