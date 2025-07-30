@@ -1,0 +1,18 @@
+package com.simplecoding.simpledms.faq.repository;
+
+
+import com.simplecoding.simpledms.faq.entity.Faq;
+import org.springframework.data.domain.Page;
+import org.springframework.data.domain.Pageable;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+import org.springframework.stereotype.Repository;
+
+@Repository
+public interface FaqRepository extends JpaRepository<Faq, Long> {
+
+    @Query(value = "select f from Faq f\n" +
+            "where f.title like %:searchkeyword%")
+    Page<Faq> selectFaqList(@Param("searchkeyword")String searchkeyword, Pageable pageable);
+}

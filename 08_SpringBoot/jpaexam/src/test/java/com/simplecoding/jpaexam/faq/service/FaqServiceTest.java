@@ -103,7 +103,7 @@ class FaqServiceTest {
     @Test
     void selectAll() {
         // 1) 테스트 준비
-        String searchkeyword ="제";
+        String searchkeyword ="2";
         Pageable pageable= PageRequest.of(0, 3);
 
         //        2) 테스트 실행

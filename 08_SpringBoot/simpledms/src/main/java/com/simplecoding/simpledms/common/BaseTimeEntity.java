@@ -19,6 +19,6 @@ public abstract class BaseTimeEntity {
     private LocalDateTime insertTime;     //생성일시
     @LastModifiedDate                     //update시 수정일시 자동생성
     private LocalDateTime  updateTime;    // 수정일시
-    //like 안바뀐것 같은뎨??
+
 }
 
