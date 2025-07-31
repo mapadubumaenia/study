@@ -1,10 +1,9 @@
-package com.simplecoding.simpledms.faq.controller;
+package com.simplecoding.simpledms.emp.controller;
 
 
 import com.simplecoding.simpledms.dept.dto.DeptDto;
-import com.simplecoding.simpledms.dept.service.DeptService;
-import com.simplecoding.simpledms.faq.dto.FaqDto;
-import com.simplecoding.simpledms.faq.service.FaqService;
+import com.simplecoding.simpledms.emp.dto.EmpDto;
+import com.simplecoding.simpledms.emp.service.EmpService;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.log4j.Log4j2;
 import org.springframework.data.domain.Page;
@@ -20,47 +19,45 @@ import org.springframework.web.bind.annotation.RequestParam;
 @RequiredArgsConstructor
 @Controller
 @Log4j2
-public class FaqController {
+public class EmpController {
     //생성자 DI: 서비스
-    private final FaqService faqService;
-
-    //전체조회:(페이징:매개변수 (Pageable),결과(Page))
+    private final EmpService empService;
     //TODO: 현재페이지 번호(page), 화면에 보일 개수(size)
     //  @PageableDegault(page=0,size=3): jsp에서 값을 보내지 않을경우 기본값 설정하는 어노테이션
     // 쿼리스트링: @RequestParam()
 
-    @GetMapping("/faq")
-    public String selectFaqList(@RequestParam(defaultValue = "")String searchKeyword,
-                                @PageableDefault(page = 0,size = 3) Pageable pageable,
+    @GetMapping("/emp")
+    public String selectEmpList(@RequestParam(defaultValue = "")String searchKeyword,
+                               @PageableDefault (page = 0,size = 7) Pageable pageable,
                                 Model model){
-        //전체조회
-        Page<FaqDto> pages=faqService.selectFaqList(searchKeyword,pageable);
-        //로깅
+        //  1)전체조회
+        Page<EmpDto> pages=empService.selectEmpList(searchKeyword,pageable);
+        // 로깅
         log.info(pages.getContent());
-
-        //jsp로 전달
-        model.addAttribute("faqs",pages.getContent());
+        //  2)jsp로 전달: model 사용
+        model.addAttribute("emps",pages.getContent());   //부서 배열
         model.addAttribute("pages",pages);
 
-        return "faq/faq_all";
+        return "emp/emp_all";
 
     }
+
     //  추가 페이지 열기
-    @GetMapping("/faq/addition")
-    public String createFaqView(){
-        return "faq/add_faq";
+    @GetMapping("/emp/addition")
+    public String createEmpView(){
+        return "emp/add_emp";
     }
+
 
     // 저장 버튼 클릭시 insert
-    @PostMapping("/faq/add")
-    public String insert(@ModelAttribute FaqDto faqDto){
+    @PostMapping("/emp/add")
+    public String insert(@ModelAttribute EmpDto empDto){
         // 서비스 insert
-        faqService.save(faqDto);
-        return "redirect:/faq";
+        empService.save(empDto);
+        return "redirect:/emp";
 
 
     }
-
 
 
 

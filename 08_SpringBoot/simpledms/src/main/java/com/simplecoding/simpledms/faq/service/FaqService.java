@@ -2,6 +2,8 @@ package com.simplecoding.simpledms.faq.service;
 
 
 import com.simplecoding.simpledms.common.MapStruct;
+import com.simplecoding.simpledms.dept.dto.DeptDto;
+import com.simplecoding.simpledms.dept.entity.Dept;
 import com.simplecoding.simpledms.faq.dto.FaqDto;
 import com.simplecoding.simpledms.faq.entity.Faq;
 import com.simplecoding.simpledms.faq.repository.FaqRepository;
@@ -34,6 +36,15 @@ public class FaqService {
     public Page<FaqDto> selectFaqList(String searchkeyword, Pageable pageable){
         Page<Faq> page=faqRepository.selectFaqList(searchkeyword,pageable);
         return page.map(data->mapStruct.toDto(data));
+    }
+
+
+    //추가: save(): 기본메소드(sql 코딩 필요없음)
+    // 조회에서는 DB결과 ->엔티티저장 ->DTO복사 ->화면표시
+    // 추가는  :화면입력 ->DTO저장 ->엔티티복사 ->DB저장
+    public void save(FaqDto faqDto){
+        Faq faq=mapStruct.toEntity(faqDto);
+        faqRepository.save(faq);
     }
 
 

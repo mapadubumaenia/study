@@ -2,6 +2,8 @@ package com.simplecoding.simpledms.emp.service;
 
 
 import com.simplecoding.simpledms.common.MapStruct;
+import com.simplecoding.simpledms.dept.dto.DeptDto;
+import com.simplecoding.simpledms.dept.entity.Dept;
 import com.simplecoding.simpledms.emp.dto.EmpDto;
 import com.simplecoding.simpledms.emp.entity.Emp;
 import com.simplecoding.simpledms.emp.repository.EmpRepository;
@@ -33,6 +35,14 @@ public class EmpService {
 
     }
 
+
+    //추가: save(): 기본메소드(sql 코딩 필요없음)
+    // 조회에서는 DB결과 ->엔티티저장 ->DTO복사 ->화면표시
+    // 추가는  :화면입력 ->DTO저장 ->엔티티복사 ->DB저장
+    public void save(EmpDto empDto){
+        Emp emp=mapStruct.toEntity(empDto);
+        empRepository.save(emp);
+    }
 
 
 

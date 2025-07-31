@@ -12,6 +12,8 @@ import org.springframework.data.domain.PageRequest;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
+import java.time.LocalDate;
+
 import static org.junit.jupiter.api.Assertions.*;
 
 @Log4j2
@@ -35,5 +37,22 @@ class EmpServiceTest {
         log.info(page.getContent());  //결과배열확인
 
 
+    }
+
+    @Test
+    void save() {
+        EmpDto empDto=new EmpDto();
+        empDto.setEname("MAFA");
+        empDto.setJob("Cook");
+        empDto.setManager((long)8000);
+        empDto.setHiredate(LocalDate.now());
+        empDto.setSalary((long)8800);
+        empDto.setCommission((long)800);
+        empDto.setDno((long)10);
+
+        //실행
+        empService.save(empDto);
+        //검사
+        log.info(empDto);
     }
 }

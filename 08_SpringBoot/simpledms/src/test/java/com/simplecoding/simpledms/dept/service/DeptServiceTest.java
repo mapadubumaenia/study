@@ -31,8 +31,17 @@ class DeptServiceTest {
             Page<DeptDto> page=deptService.selectDeptList(searchkeyword,pageable);
             // 3)결과확인
             log.info(page.getContent());  //결과배열확인
+    }
 
-
-
+    @Test
+    void save() {
+        //  1)테스트조건
+           DeptDto deptDto=new DeptDto();
+           deptDto.setDname("개발부2");
+           deptDto.setLoc("서울");
+        //  2)실행
+           deptService.save(deptDto);
+        //  3)검증
+        log.info(deptDto);
     }
 }

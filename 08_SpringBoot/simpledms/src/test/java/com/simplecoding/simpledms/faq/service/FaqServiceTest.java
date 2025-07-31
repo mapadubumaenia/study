@@ -1,6 +1,5 @@
 package com.simplecoding.simpledms.faq.service;
 
-import com.simplecoding.simpledms.dept.dto.DeptDto;
 import com.simplecoding.simpledms.faq.dto.FaqDto;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
@@ -35,4 +34,6 @@ class FaqServiceTest {
 
 
     }
+
+
 }

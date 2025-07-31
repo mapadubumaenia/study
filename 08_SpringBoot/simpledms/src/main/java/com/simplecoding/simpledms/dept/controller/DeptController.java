@@ -12,6 +12,8 @@ import org.springframework.data.web.PageableDefault;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.ModelAttribute;
+import org.springframework.web.bind.annotation.PostMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import java.util.List;
@@ -41,4 +43,22 @@ public class DeptController {
 
         return "dept/dept_all";
     }
+
+    //  추가 페이지 열기
+    @GetMapping("/dept/addition")
+    public String createDeptView(){
+        return "dept/add_dept";
+    }
+
+    // 저장 버튼 클릭시 insert
+    @PostMapping("/dept/add")
+    public String insert(@ModelAttribute DeptDto deptDto){
+        // 서비스 insert
+        deptService.save(deptDto);
+        return "redirect:/dept";
+
+
+    }
+
+
 }

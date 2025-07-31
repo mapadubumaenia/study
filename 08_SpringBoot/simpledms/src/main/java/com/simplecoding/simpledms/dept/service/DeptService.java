@@ -40,6 +40,14 @@ public class DeptService {
     }
 
 
+    //추가: save(): 기본메소드(sql 코딩 필요없음)
+    // 조회에서는 DB결과 ->엔티티저장 ->DTO복사 ->화면표시
+    // 추가는  :화면입력 ->DTO저장 ->엔티티복사 ->DB저장
+    public void save(DeptDto deptDto){
+        Dept dept=mapStruct.toEntity(deptDto);
+        deptRepository.save(dept);
+    }
+
 
 
 
