@@ -60,6 +60,16 @@ public class EmpController {
     }
 
 
+    //수정페이지 열기
+    @GetMapping("/emp/edition")
+    public String updateEmpView(@RequestParam long eno, Model model
+    ){
+        // 서비스의 상세조회 실행
+        EmpDto empDto=empService.findById(eno);
+        model.addAttribute("emp",empDto);
+        return "emp/update_emp";
+    }
+
 
 
 }

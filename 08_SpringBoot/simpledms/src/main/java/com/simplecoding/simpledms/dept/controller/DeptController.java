@@ -56,9 +56,18 @@ public class DeptController {
         // 서비스 insert
         deptService.save(deptDto);
         return "redirect:/dept";
-
-
     }
 
+
+
+    //수정페이지 열기
+    @GetMapping("/dept/edition")
+    public String updateDeptView(@RequestParam long dno, Model model
+    ){
+        // 서비스의 상세조회 실행
+        DeptDto deptDto=deptService.findById(dno);
+        model.addAttribute("dept",deptDto);
+        return "dept/update_dept";
+    }
 
 }

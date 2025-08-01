@@ -55,4 +55,17 @@ class EmpServiceTest {
         //검사
         log.info(empDto);
     }
+
+    @Test
+    void findById() {
+
+        //테스트조건
+        long eno=8000;
+        // 실행
+        EmpDto empDto=empService.findById(eno);
+        //3 검증
+        log.info(empDto);
+
+
+    }
 }

@@ -1,6 +1,7 @@
 package com.simplecoding.simpledms.emp.service;
 
 
+import com.simplecoding.simpledms.common.ErrorMsg;
 import com.simplecoding.simpledms.common.MapStruct;
 import com.simplecoding.simpledms.dept.dto.DeptDto;
 import com.simplecoding.simpledms.dept.entity.Dept;
@@ -20,6 +21,7 @@ public class EmpService {
     private final EmpRepository empRepository;
 
     private final MapStruct mapStruct;
+    private final ErrorMsg errorMsg;
 
     // 전체조회(페이징처리): like검색
 //  spring 매개변수(criteria), 결과(PagenationInfo)
@@ -42,6 +44,17 @@ public class EmpService {
     public void save(EmpDto empDto){
         Emp emp=mapStruct.toEntity(empDto);
         empRepository.save(emp);
+    }
+
+
+    //상세조회  JPA 기본메소드 (SQL 작성 없음)
+    public EmpDto findById(Long eno){
+        //optional 레퍼클래스: NUll을 다루는 편리한 메소드를 가지고 있는 클래스
+        //  의미: findById(상세조회) 햿는데 결과가 null이면 정보없음 이라고 화면에 표시
+        //   아니면 dept 변수에 결과가 저장됨
+        Emp emp=empRepository.findById(eno)
+                .orElseThrow(() -> new RuntimeException(errorMsg.getMessage("errors.not.found")));
+        return mapStruct.toDto(emp);
     }
 
 

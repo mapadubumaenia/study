@@ -1,6 +1,7 @@
 package com.simplecoding.simpledms.dept.service;
 
 
+import com.simplecoding.simpledms.common.ErrorMsg;
 import com.simplecoding.simpledms.common.MapStruct;
 import com.simplecoding.simpledms.dept.dto.DeptDto;
 import com.simplecoding.simpledms.dept.entity.Dept;
@@ -9,6 +10,8 @@ import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
+
+import java.util.Optional;
 
 
 //목적: 업무로직(기능)을 작성하는 곳
@@ -26,6 +29,7 @@ public class DeptService {
    private  final DeptRepository deptRepository;
 
    private final MapStruct mapStruct;
+   private final ErrorMsg errorMsg;
 // 전체조회(페이징처리): like검색
 //  spring 매개변수(criteria), 결과(PagenationInfo)
 //   JPA: 매개변수(Pageable),  결과(Page)
@@ -48,6 +52,15 @@ public class DeptService {
         deptRepository.save(dept);
     }
 
+    //상세조회  JPA 기본메소드 (SQL 작성 없음)
+    public DeptDto findById(Long dno){
+        //optional 레퍼클래스: NUll을 다루는 편리한 메소드를 가지고 있는 클래스
+        //  의미: findById(상세조회) 햿는데 결과가 null이면 정보없음 이라고 화면에 표시
+        //   아니면 dept 변수에 결과가 저장됨
+    Dept dept=deptRepository.findById(dno)
+            .orElseThrow(() -> new RuntimeException(errorMsg.getMessage("errors.not.found")));
+        return mapStruct.toDto(dept);
+}
 
 
 

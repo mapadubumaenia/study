@@ -44,4 +44,14 @@ class DeptServiceTest {
         //  3)검증
         log.info(deptDto);
     }
+
+    @Test
+    void findById() {
+            //테스트조건
+        long dno=30;
+        // 실행
+        DeptDto deptDto=deptService.findById(dno);
+        //3 검증
+        log.info(deptDto);
+    }
 }

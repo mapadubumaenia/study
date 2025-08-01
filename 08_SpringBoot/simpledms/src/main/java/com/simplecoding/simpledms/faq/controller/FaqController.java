@@ -58,10 +58,9 @@ public class FaqController {
         faqService.save(faqDto);
         return "redirect:/faq";
 
-
     }
 
-
+    
 
 
 

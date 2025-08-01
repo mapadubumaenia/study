@@ -28,6 +28,7 @@ ${pages.size}       : 화면에 보일개수 <br>
                    name="searchKeyword"
                    class="form-control"
                    placeholder="부서명입력"
+                   value="${param.searchKeyword}"
             >
             <button class="btn btn-primary"
                     type="button"
@@ -49,8 +50,8 @@ ${pages.size}       : 화면에 보일개수 <br>
             <!-- 반복문 -->
             <c:forEach var="data" items="${depts}">
                 <tr>
-                    <td>
-                        <c:out value="${data.dno}"></c:out>
+                    <td><a href="/dept/edition?dno=${data.dno}">
+                        <c:out value="${data.dno}"></c:out></a>
                     </td>
                     <td>  <c:out value="${data.dname}"></c:out></td>
                     <td>  <c:out value="${data.loc}"></c:out></td>
@@ -97,6 +98,7 @@ ${pages.size}       : 화면에 보일개수 <br>
         }
     });
 </script>
+
 <jsp:include page="/common/footer.jsp"></jsp:include>
 </body>
 </html>

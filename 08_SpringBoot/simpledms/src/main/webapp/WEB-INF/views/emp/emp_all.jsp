@@ -26,6 +26,7 @@ ${pages.size}       :  화면에 보일 개수
                    id="searchKeyword"
                    name="searchKeyword"
                    placeholder="사원명입력"
+                   value="${param.searchKeyword}"
             >
             <button class="btn btn-primary"
                     type="button"
@@ -53,7 +54,7 @@ ${pages.size}       :  화면에 보일 개수
 <c:forEach var="data" items="${emps}">
             <tr>
                 <td>
-                    <c:out value="${data.eno}"></c:out>
+                    <a href="/emp/edition?eno=${data.eno}"> <c:out value="${data.eno}"></c:out></a>
                 </td>
                 <td>  <c:out value="${data.ename}"></c:out></td>
                 <td>  <c:out value="${data.job}"></c:out></td>
