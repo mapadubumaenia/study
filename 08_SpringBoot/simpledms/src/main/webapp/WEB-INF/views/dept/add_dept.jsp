@@ -5,9 +5,9 @@
 <head>
     <title>Title</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!--    부트스트랩 css  -->
+    <!-- 	부트스트랩 css  -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-    <!--    개발자 css -->
+    <!-- 	개발자 css -->
     <link rel="stylesheet" href="/css/style.css">
 
 </head>
@@ -46,17 +46,42 @@
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 <!-- 유효성체크 플러그인 -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
-<%--유효성 규칙 파일 끼워넣기--%>
+<%-- 유효성 규칙 파일 끼워넣기 --%>
 <script src="/js/dept/dept-validation-config.js"></script>
-
 
 <script>
     function fn_save() {
-        /*의미: addForm 태그를 선택해서 속성 action의 값을 /dept/add 변경 */
+        /* 의미: addForm 태그를 선택해서 속성 action 의 값을 /dept/add 변경 */
         $("#addForm").attr("action","/dept/add")
-            .submit();                          // 실제 컨트롤러로 전송
+            .submit();                      // 실제 컨트롤러로 전송
     }
 </script>
 <jsp:include page="/common/footer.jsp"/>
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

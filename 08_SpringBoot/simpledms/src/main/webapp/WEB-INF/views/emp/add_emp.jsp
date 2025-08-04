@@ -42,6 +42,7 @@
         </div>
         <div class="mb3">
             <label for="hiredate" class="form-label">hiredate</label>
+<%--         type="date" : html 달력이 뜹니다.   --%>
             <input type="date"
                    class="form-control"
                    id="hiredate"
@@ -73,7 +74,8 @@
                    placeholder="dno" />
         </div>
         <div class="mb3">
-            <button type="button" class="btn btn-primary"
+            <button type="button"
+                    class="btn btn-primary"
                     onclick="fn_save()"
             >저장</button>
         </div>
@@ -83,16 +85,19 @@
 <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 <!-- 부트스트랩 js -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<%-- 여기 --%>
 <!-- 유효성체크 플러그인 -->
 <script src="https://cdn.jsdelivr.net/npm/jquery-validation@1.21.0/dist/jquery.validate.min.js"></script>
-<%--유효성 규칙 파일 끼워넣기--%>
+<%-- 유효성 규칙 파일 끼워넣기 --%>
 <script src="/js/emp/emp-validation-config.js"></script>
+
 <script>
     function fn_save() {
         $("#addForm").attr("action","/emp/add")
-            .submit();
+            .submit();                      // 실제 컨트롤러로 전송
     }
 </script>
+
 <jsp:include page="/common/footer.jsp"/>
 </body>
 </html>

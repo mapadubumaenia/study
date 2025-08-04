@@ -12,46 +12,73 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 
 import static org.junit.jupiter.api.Assertions.*;
 
-
-@Log4j2              //결과확인용 어노테이션
-@SpringBootTest       // 스프링부트용 Junit 테스트 어노테이션
-@EnableJpaAuditing     //생성일시 수정일시에 값 넣어주는 어노테이션
+@Log4j2                 // 결과 확인용 어노테이션
+@SpringBootTest         // 스프링부트용 Junit 테스트 어노테이션
+@EnableJpaAuditing      // 생성일시,수정일시에 값 넣어주는 어노테이션
 class DeptServiceTest {
-      //  테스트 시 필드 DI
-      @Autowired
-      DeptService deptService;
 
-        @Test
-        void selectDeptList() {
-            // 1)테스트 준비
-            String searchkeyword ="R";
-            // 사용법:  PageRequest.of(현재페이지번호, 화면에보이는개수);
-            Pageable pageable= PageRequest.of(0, 3);
-            // 2)실행
-            Page<DeptDto> page=deptService.selectDeptList(searchkeyword,pageable);
-            // 3)결과확인
-            log.info(page.getContent());  //결과배열확인
+//    테스트 시 필드 DI
+    @Autowired
+    DeptService deptService;
+
+    @Test
+    void selectDeptList() {
+//        1) 테스트 준비
+        String searchKeyword = "";
+//      사용법: PageRequest.of(현재페이지번호, 화면에보이는개수)
+        Pageable pageable = PageRequest.of(0, 3);
+//        2) 실행
+        Page<DeptDto> page=deptService.selectDeptList(searchKeyword, pageable);
+//        3) 결과 확인
+        log.info(page.getContent()); // 결과 배열 확인
     }
 
     @Test
     void save() {
-        //  1)테스트조건
-           DeptDto deptDto=new DeptDto();
-           deptDto.setDname("개발부2");
-           deptDto.setLoc("서울");
-        //  2)실행
-           deptService.save(deptDto);
-        //  3)검증
-        log.info(deptDto);
+//        1) 테스트 조건
+        DeptDto deptDto=new DeptDto();
+        deptDto.setDname("개발부2");
+        deptDto.setLoc("서울");
+//        2) 실행
+        deptService.save(deptDto);
+//        3) 검증: DB확인
+
     }
 
     @Test
     void findById() {
-            //테스트조건
+//        1) 테스트 조건(준비):
         long dno=30;
-        // 실행
+//        2) 실행
         DeptDto deptDto=deptService.findById(dno);
-        //3 검증
+//        3) 검증
         log.info(deptDto);
     }
+
+    @Test
+    void updateFromDto() {
+//        1) 테스트 준비(조건)
+        DeptDto deptDto=new DeptDto();
+        deptDto.setDno((long)30);
+        deptDto.setDname("개발부3");
+        deptDto.setLoc("부산");
+
+//        2) 실행
+        deptService.updateFromDto(deptDto);
+//        3) 검증: db, assert함수 등
+    }
+
+    @Test
+    void deleteById() {
+        long dno=30;
+        deptService.deleteById(dno);
+    }
 }
+
+
+
+
+
+
+
+

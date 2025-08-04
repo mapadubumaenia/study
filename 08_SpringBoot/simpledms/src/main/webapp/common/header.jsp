@@ -3,11 +3,11 @@
 <nav class="navbar navbar-expand-lg bg-light">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">
-      <%--   TODO: <c:url value='이미지경로'/> : http://localhost:8080/sk (기본주소변경이 가능)
-                위의 태그를 사용하면 기본주소가 변경되도 상관없이 사용 가능합니다.
-    --%>
-      <img src="<c:url value='/images/simple-coding.png'/>" width="20" height="20" />
-      simple-coding
+<%--   TODO: <c:url value='이미지경로'/> : http://localhost:8080/sk (기본주소변경이 가능)
+              위의 태그를 사용하면 기본주소가 변경되도 상관없이 사용 가능합니다.
+  --%>
+		<img src="<c:url value='/images/simple-coding.png'/>" width="20" height="20" />
+    	simple-coding 
     </a>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>

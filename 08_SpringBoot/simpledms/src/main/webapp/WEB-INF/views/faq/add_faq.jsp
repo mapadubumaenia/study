@@ -32,7 +32,9 @@
                    placeholder="content" />
         </div>
         <div class="mb3">
-            <button type="button" class="btn btn-primary" onclick="fn_save()">저장</button>
+            <button type="button"
+                    class="btn btn-primary"
+                    onclick="fn_save()">저장</button>
         </div>
     </form>
 </div>
@@ -43,12 +45,11 @@
 
 <script>
     function fn_save() {
-        /*의미: addForm 태그를 선택해서 속성 action의 값을 /dept/add 변경 */
+        // 의미: addForm 태그를 선택해서 action 속성의 값을 /faq/add 변경합니다.
         $("#addForm").attr("action","/faq/add")
-            .submit();                          // 실제 컨트롤러로 전송
+            .submit();
     }
 </script>
-
 <jsp:include page="/common/footer.jsp"/>
 </body>
 </html>
