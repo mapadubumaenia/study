@@ -6,10 +6,12 @@ import com.simplecoding.simpledms.emp.dto.EmpDto;
 import com.simplecoding.simpledms.emp.entity.Emp;
 import com.simplecoding.simpledms.faq.dto.FaqDto;
 import com.simplecoding.simpledms.faq.entity.Faq;
-import com.simplecoding.simpledms.fileDb.dto.FileDbDto;
-import com.simplecoding.simpledms.fileDb.entity.FileDb;
+import com.simplecoding.simpledms.filedb.dto.FileDbDto;
+import com.simplecoding.simpledms.filedb.entity.FileDb;
 import com.simplecoding.simpledms.gallery.dto.GalleryDto;
 import com.simplecoding.simpledms.gallery.entity.Gallery;
+import com.simplecoding.simpledms.qna.dto.QnaDto;
+import com.simplecoding.simpledms.qna.entity.Qna;
 import org.mapstruct.Mapper;
 import org.mapstruct.Mapping;
 import org.mapstruct.MappingTarget;
@@ -54,4 +56,6 @@ public interface MapStruct {
     @Mapping(target = "galleryData",ignore = true)   // galleryData 필드는 복사 무시하세요 라는 뜻
     Gallery toEntity(GalleryDto galleryDto);
 
+    QnaDto toDto(Qna qna);
+    Qna toEntity(QnaDto qnaDto);
 }

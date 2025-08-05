@@ -1,6 +1,7 @@
 package com.simplecoding.simpledms.gallery.service;
 
 import com.simplecoding.simpledms.gallery.dto.GalleryDto;
+import com.simplecoding.simpledms.gallery.entity.Gallery;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -36,4 +37,23 @@ class GalleryServiceTest {
     }
 
 
+    @Test
+    void findById() {
+//        1) 테스트 조건:
+        String uuid="12345671";
+//        2) 실행
+        Gallery gallery=galleryService.findById(uuid);
+//        3) 검증: log
+        log.info(gallery);
     }
+
+    @Test
+    void deleteById() {
+        // 1)테스트 조건 (given)
+        String uuid="12345671";
+        // 2) 실행  (when)
+      galleryService.deleteById(uuid);
+        // 3) 검증: log  (then)
+
+    }
+}

@@ -1,7 +1,7 @@
-package com.simplecoding.simpledms.fileDb.repository;
+package com.simplecoding.simpledms.filedb.repository;
 
 
-import com.simplecoding.simpledms.fileDb.entity.FileDb;
+import com.simplecoding.simpledms.filedb.entity.FileDb;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
 import org.springframework.data.jpa.repository.JpaRepository;

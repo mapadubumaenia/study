@@ -1,4 +1,4 @@
-package com.simplecoding.simpledms.fileDb.dto;
+package com.simplecoding.simpledms.filedb.dto;
 
 
 import lombok.*;

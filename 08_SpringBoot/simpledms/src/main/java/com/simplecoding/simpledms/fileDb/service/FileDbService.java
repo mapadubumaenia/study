@@ -1,11 +1,11 @@
-package com.simplecoding.simpledms.fileDb.service;
+package com.simplecoding.simpledms.filedb.service;
 
 
 import com.simplecoding.simpledms.common.ErrorMsg;
 import com.simplecoding.simpledms.common.MapStruct;
-import com.simplecoding.simpledms.fileDb.dto.FileDbDto;
-import com.simplecoding.simpledms.fileDb.entity.FileDb;
-import com.simplecoding.simpledms.fileDb.repository.FileDbRepository;
+import com.simplecoding.simpledms.filedb.dto.FileDbDto;
+import com.simplecoding.simpledms.filedb.entity.FileDb;
+import com.simplecoding.simpledms.filedb.repository.FileDbRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.data.domain.Page;
 import org.springframework.data.domain.Pageable;
@@ -59,6 +59,17 @@ public class FileDbService {
                 .query("uuid="+uuid)          // 쿼리스트링: ?uuid=uuid값
                 .toUriString();               // 위에꺼조합:
         // http://localhost:8080/fileDb/download?uuid=uuid값
+    }
+
+    //    상세조회: 기본키로 조회
+    public FileDb findById(String uuid) {
+        return fileDbRepository.findById(uuid)
+                .orElseThrow(() -> new RuntimeException(errorMsg.getMessage("errors.not.found")));
+    }
+
+    //    삭제
+    public void deleteById(String uuid) {
+        fileDbRepository.deleteById(uuid);
     }
 
 

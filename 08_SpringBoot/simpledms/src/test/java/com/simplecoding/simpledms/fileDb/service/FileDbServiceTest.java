@@ -1,6 +1,7 @@
-package com.simplecoding.simpledms.fileDb.service;
+package com.simplecoding.simpledms.filedb.service;
 
-import com.simplecoding.simpledms.fileDb.dto.FileDbDto;
+import com.simplecoding.simpledms.filedb.dto.FileDbDto;
+import com.simplecoding.simpledms.filedb.entity.FileDb;
 import lombok.extern.log4j.Log4j2;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -17,7 +18,7 @@ import org.springframework.data.jpa.repository.config.EnableJpaAuditing;
 class FileDbServiceTest {
 
     @Autowired
-    FileDbService fileDbService;
+   FileDbService fileDbService;
 
 
     @Test
@@ -35,5 +36,22 @@ class FileDbServiceTest {
     }
 
 
+    @Test
+    void findById() {
+//        1) 테스트 조건:
+        String uuid="12345671";
+//        2) 실행
+        FileDb fileDb=fileDbService.findById(uuid);
+//        3) 검증: log
+        log.info(fileDb);
+    }
 
+    @Test
+    void deleteById() {
+        // 1)테스트 조건 (given0
+        String uuid="12345671";
+        // 2) 실행  (when)
+        fileDbService.deleteById(uuid);
+        // 3) 검증: log  (then)
+    }
 }

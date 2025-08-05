@@ -18,6 +18,8 @@ ${pages.totalPages} : 총페이지수 <br>
 ${pages.number} : 현재페이지번호 <br>
 ${pages.size} : 화면에 보일개수 <br>
 <form class="page mt3" id="listForm" name="listForm" method="get">
+    <%--TODO: uuid는 백엔드로 전송--%>
+    <input type="hidden" id="uuid" name="uuid" >
     <%--     TODO: 컨트롤러로 page(현재페이지번호) 값 전송    --%>
     <input type="hidden" id="page" name="page" value="0">
     <div class="input-group mb3 mt3">
@@ -41,7 +43,7 @@ ${pages.size} : 화면에 보일개수 <br>
                  alt="이미지">
             <div class="card-body">
                 <h5 class="card-title"><c:out value="${data.galleryTitle}"/></h5>
-                <a href="#" class="btn btn-danger"
+                <a href="#" class="btn btn-danger" onclick="fn_delete('${data.uuid}')"
                 >삭제</a>
             </div>
         </div>
@@ -68,6 +70,13 @@ ${pages.size} : 화면에 보일개수 <br>
         // 의미: listForm 태그를 선택해서 속성 action 값을 /dept 변경
         $("#listForm").attr("action", "/gallery")
             .submit();               // 이 때 컨트롤로로 값이 전송됨
+    }
+    //삭제 스크립트
+    function fn_delete(uuid) {
+        $("#uuid").val(uuid);         //input 태그에 uuid값 넣어서 백엔드로 보내기
+        $("#listForm").attr("action", "/gallery/delete")
+            .attr("method","post")    //method 변경 :post로
+            .submit();
     }
 </script>
 <!-- 페이징 라이브러리 -->

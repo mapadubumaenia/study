@@ -1,4 +1,4 @@
-package com.simplecoding.simpledms.fileDb.entity;
+package com.simplecoding.simpledms.filedb.entity;
 
 import com.simplecoding.simpledms.common.BaseTimeEntity;
 import jakarta.persistence.Entity;
