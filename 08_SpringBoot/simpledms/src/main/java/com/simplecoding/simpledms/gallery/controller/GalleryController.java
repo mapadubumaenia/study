@@ -38,10 +38,10 @@ public class GalleryController {
 //    쿼리스트링: @RequestParam()
     @GetMapping("/gallery")
     public String selectGalleryList(@RequestParam(defaultValue = "") String searchKeyword,
-                                   @PageableDefault(page = 0, size = 3) Pageable pageable,
-                                   Model model) {
+                                    @PageableDefault(page = 0, size = 3) Pageable pageable,
+                                    Model model) {
 //        1) 전체 조회
-        Page<GalleryDto> pages=galleryService.selectGalleryList(searchKeyword, pageable);
+        Page<GalleryDto> pages = galleryService.selectGalleryList(searchKeyword, pageable);
 //        로깅
         log.info(pages.getContent()); // 배열 결과 확인
 //        2) jsp 로 전달: Model 사용
@@ -50,21 +50,22 @@ public class GalleryController {
 
         return "gallery/gallery_all";
     }
+
     // 추가페이지 열기
     @GetMapping("/gallery/addition")
-    public String createGalleryView(){
+    public String createGalleryView() {
         return "gallery/add_gallery";
     }
 
-// 저장
+    // 저장
     @PostMapping("/gallery/add")
     public String insert(@RequestParam(defaultValue = "") String galleryTitle,
-                         @RequestParam(required = false) MultipartFile image)throws Exception{
+                         @RequestParam(required = false) MultipartFile image) throws Exception {
         //  1)   Gallery 생성자에 값넣기
-        GalleryDto galleryDto=new   GalleryDto(galleryTitle);
+        GalleryDto galleryDto = new GalleryDto(galleryTitle);
         //  2)서비스의 저장함수 실행
         galleryService.save(galleryDto, image.getBytes());
-        return  "redirect:/gallery";
+        return "redirect:/gallery";
 
     }
 
@@ -77,14 +78,14 @@ public class GalleryController {
     //     DB 컬럼(gallery): ~/gallery/download/uuid값 을 이미지 태그에 넣으면 이 함수가 실행됩니다.
     @GetMapping("/gallery/download")
     @ResponseBody
-    public ResponseEntity<byte[]> fileDownload(@RequestParam(defaultValue = "") String uuid){
+    public ResponseEntity<byte[]> fileDownload(@RequestParam(defaultValue = "") String uuid) {
         //   1)상세조회? 이미지를 가져오기 위해
         Gallery gallery = galleryService.findById(uuid);
         //  2)이미지(택배): 헤더에 이미지 보낸다고 알리고 보내기
         HttpHeaders headers = new HttpHeaders();
         //  3)첨부파일 보낸다 의미 넣기
         //  사용법: 변수.setContentDispositionFormData("attachment","파일명"());  attachment=첨부파일
-        headers.setContentDispositionFormData("attachment",gallery.getUuid());
+        headers.setContentDispositionFormData("attachment", gallery.getUuid());
         //  4)첨부파일 문서형식(이진파일) 의미 넣기
         headers.setContentType(MediaType.APPLICATION_OCTET_STREAM);
 
@@ -97,7 +98,7 @@ public class GalleryController {
 
     //삭제
     @PostMapping("/gallery/delete")
-    public String deleteById(@RequestParam(defaultValue = "") String uuid){
+    public String deleteById(@RequestParam(defaultValue = "") String uuid) {
         galleryService.deleteById(uuid);
         return "redirect:/gallery";
     }
