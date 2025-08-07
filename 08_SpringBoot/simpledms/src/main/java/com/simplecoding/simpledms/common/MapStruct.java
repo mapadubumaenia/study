@@ -1,5 +1,7 @@
 package com.simplecoding.simpledms.common;
 
+import com.simplecoding.simpledms.auth.dto.MemberDto;
+import com.simplecoding.simpledms.auth.entity.Member;
 import com.simplecoding.simpledms.dept.dto.DeptDto;
 import com.simplecoding.simpledms.dept.entity.Dept;
 import com.simplecoding.simpledms.emp.dto.EmpDto;
@@ -54,5 +56,9 @@ public interface MapStruct {
     @Mapping(target = "galleryData",ignore = true)   // galleryData 필드는 복사 무시하세요 라는 뜻
     Gallery toEntity(GalleryDto galleryDto);
 
+
+    //TODO: 6) Member: Member <-> MemberDto (서로복사)
+    MemberDto toDto(Member member);
+    Member toEntity(MemberDto memberDto);
 
 }

@@ -34,7 +34,7 @@ public class SecurityConfig {
         http.authorizeHttpRequests(auth -> auth
                         .dispatcherTypeMatchers(DispatcherType.FORWARD).permitAll()   //jsp 태그중에 redirect 태그 허용
                         .dispatcherTypeMatchers(DispatcherType.INCLUDE).permitAll()   // jsp 태그중에 jap:include 허용    => 둘다 jsp를쓰면 넣어야 하는 것들 리액트쓰면 필요 x
-                        .requestMatchers("auth/**", "/", "/errors", "/css/**", "/images/**", "/js/**").permitAll()  // url 허용 주소(로그인 없어도 가능)
+                        .requestMatchers("/auth/**", "/", "/errors", "/css/**", "/images/**", "/js/**").permitAll()  // url 허용 주소(로그인 없어도 가능)
                         .requestMatchers("/admin/**").hasAnyAuthority("ROLE_ADMIN") //admin 메뉴는 ROLE_ADMIN 권한 있는 사람만 볼수 있음
                         .anyRequest().authenticated()
                 )
