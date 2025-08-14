@@ -1,13 +1,19 @@
 
 
+a=list(map(int,input().split()))
+b=list(map(int,input().split()))
 
-while True:
-    a=input().lower()
-    if a=="#":
-        break
-    print(a.count("a") + a.count("e") + a.count("i") + a.count("o") + a.count("u"))
+def sum_array(a):
+    return sum(a)
 
 
+if sum_array(a) > sum_array(b):
+    print(sum(a))
+
+elif sum_array(a) < sum_array(b):
+    print(sum(b))
+else:
+    print(sum(a))
 
 
 
