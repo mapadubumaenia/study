@@ -40,8 +40,23 @@ def get():
 def insert():
     data=request.json
     app.logger.info(data)    #디버깅 로깅
-    return "추가",200
+    return "추가",200  #=> 신호는 어디서 볼려고 추가한거지?
 
+#TODO 수정:update,put 방식을 사용
+@app.route("/books/edit", methods=["PUT"])
+def update():
+    # 쿼리스트링으로 받기:url?변수=값
+    id=request.args.get("id", type=int)
+    data=request.json          #json 데이터 받기
+    app.logger.info(data)    #디버깅, 화면표시
+    return "수정",200
+
+# TODO 삭제: delete, 방식:delete
+@app.route("/books/delete", methods=["DELETE"])
+def delete():
+    id=request.args.get("id", type=int)
+    app.logger.info(id)
+    return "삭제",200
 
 
 if __name__ == '__main__':
