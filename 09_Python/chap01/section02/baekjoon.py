@@ -1,6 +1,3 @@
 
-
-
-
-a=input()
-print(len(list(filter(lambda x: x in "aeiou", a))))
+a=int(input())
+print(2**a)
