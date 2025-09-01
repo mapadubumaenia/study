@@ -1,0 +1,281 @@
+
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>쉐프그램 — 피드 와이어프레임</title>
+  <style>
+    :root{
+      --bg:#f7f7f9; --card:#ffffff; --border:#e9e9ee; --text:#222;
+      --muted:#6b7280; --brand:#111827; --tag:#eef2f7;
+      --radius:16px; --shadow:0 2px 10px rgba(0,0,0,.05);
+      --maxw:820px;
+    }
+    *{box-sizing:border-box}
+    body{margin:0;background:var(--bg);color:var(--text);font:16px/1.45 system-ui,-apple-system,"Segoe UI",Roboto,"Noto Sans KR",sans-serif}
+    .wrap{max-width:var(--maxw);margin:0 auto;padding:12px 12px 64px}
+    header{
+      position:sticky;top:0;z-index:10;background:rgba(247,247,249,.85);
+      backdrop-filter:saturate(180%) blur(8px);
+      border-bottom:1px solid var(--border);
+    }
+    .topbar{display:flex;gap:10px;align-items:center;max-width:var(--maxw);margin:0 auto;padding:10px 12px}
+    .brand{font-weight:800;font-size:18px;letter-spacing:.2px}
+    .search{flex:1;background:#fff;border:1px solid var(--border);border-radius:999px;padding:10px 14px;outline:none}
+    .tabs{display:flex;gap:8px;padding:8px 12px;max-width:var(--maxw);margin:0 auto}
+    .tab{padding:8px 12px;border:1px solid var(--border);border-radius:999px;background:#fff;font-size:14px}
+    .tab.is-active{border-color:#cfd5e2;background:#f0f4ff}
+    /* feed */
+    .feed{display:grid;gap:12px;margin-top:10px}
+    .card{
+      background:var(--card);border:1px solid var(--border);border-radius:var(--radius);
+      box-shadow:var(--shadow);overflow:hidden;padding: 0.5rem;
+    }
+    .media{background:#000;position:relative;border-radius:var(--radius)}
+    /* 16:9 비율 */
+    .ratio{aspect-ratio:16/9;width:100%;}
+    .media iframe,.media img, .media video{width:100%;height:100%;display:block;border:0;object-fit:cover; border-radius:var(--radius)}
+    .meta{padding:12px}
+    .title{font-weight:700;margin:2px 0 6px;font-size:16px}
+    .row{display:flex;align-items:center;gap:8px;flex-wrap:wrap}
+    .author{display:flex;align-items:center;gap:8px;color:var(--muted);font-size:14px}
+    .avatar{width:28px;height:28px;border-radius:999px;background:#ddd;border:1px solid var(--border)}
+    .tags{display:flex;gap:6px;flex-wrap:wrap;margin:6px 0}
+    .tag{padding:4px 8px;background:var(--tag);border:1px solid var(--border);border-radius:999px;font-size:12px;color:#364152}
+    .actions{display:flex;gap:12px;color:var(--muted);font-size:14px;margin-top:6px}
+    .actions button{all:unset;cursor:pointer;padding:6px 8px;border-radius:8px}
+    .actions button:hover{background:#f2f4f7}
+    /* 텍스트 토글 (레시피/재료)(댓글) */
+    details{margin-top:8px;border-top:1px dashed var(--border);padding-top:8px}
+    details>summary{cursor:pointer;list-style:none;color:#334155;font-weight:600}
+    details>summary::marker{display:none}
+    details .body{color:#475569;font-size:14px;margin-top:6px}
+
+    /* 광고 카드 */
+    .ad{display:grid;grid-template-columns:100px 1fr;gap:12px;align-items:center;padding:12px}
+    .ad .badge{font-size:12px;color:#7a869a;border:1px solid var(--border);padding:2px 6px;border-radius:999px}
+    .ad img{width:100%;height:100%;object-fit:cover;border-radius:12px;border:1px solid var(--border)}
+    /* 텍스트 스타일 */
+    li {list-style: none;}
+    /* 슬라이드 */
+    .slider { position: relative; overflow: hidden; border-radius: var(--radius); }
+    .slides {
+                display: flex; transition: transform 0.4s ease-in-out;
+                width: 100%; height: 100%;
+            }
+    .slides img, .slides iframe {
+        width: 100%; flex-shrink: 0; object-fit: cover;
+    }
+    .slider button {
+        position: absolute; top: 50%; transform: translateY(-50%);
+        background: rgba(0,0,0,.4); color: #fff; border: 0; 
+        border-radius: 50%; width: 32px; height: 32px; cursor: pointer;
+    }
+    .slider .prev { left: 8px; }
+    .slider .next { right: 8px; }
+    /* 큰 화면에서 여백/2열 옵션(필요시 주석 해제) */
+    @media (min-width:1024px){
+      .feed{gap:16px}
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="topbar">
+      <div class="brand">쉐프그램</div>
+      <input class="search" type="search" placeholder="재료·요리·해시태그 검색" />
+    </div>
+    <nav class="tabs">
+      <button class="tab is-active">추천</button>
+      <button class="tab">최신</button>
+      <button class="tab">팔로우</button>
+      <button class="tab">방구석요리</button>
+    </nav>
+  </header>
+
+  <div class="wrap">
+    <main class="feed">
+      <!-- 피드 카드 1 : YouTube 임베드 -->
+      <article class="card">
+        <div class="media ratio slider">
+            <div class="slides">
+              <img src="https://picsum.photos/1200/675?random=11" alt="슬라이드1" />
+              <img src="https://picsum.photos/1200/675?random=12" alt="슬라이드2" />
+
+              <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                      title="YouTube video" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                      allowfullscreen></iframe>
+             </div>
+                <button class="prev">‹</button>
+                <button class="next">›</button>         
+        </div>
+        <div class="meta">
+          <div class="row author">
+            <div class="avatar"></div>
+            <span>@sous_chef</span> · <span>10분 전</span>
+          </div>
+          <h3 class="title">🧄 10분 완성 크림파스타 (프라이팬 하나)</h3>
+          <div class="content">
+            <p>자취 요리</p>
+          </div>
+          <div class="tags">
+            <span class="tag">#파스타</span>
+            <span class="tag">#저당</span>
+            <span class="tag">#10분</span>
+          </div>
+          <details>
+            <summary>레시피·재료 보기</summary>
+            <div class="body">
+              <strong>재료</strong> 크림 200ml, 마늘 3쪽, 베이컨, 파스타면 120g<br/>
+              <strong>순서</strong> 면 삶기 → 마늘향 내기 → 소스 합치기 → 면 투입 → 마무리
+            </div>
+          </details>
+          <div class="actions">
+            <button>♥ 123</button>
+
+            <button>🔖 저장</button>
+            <button>↗ 공유</button>
+          </div>
+          <details>
+            <summary>💬 8</summary>
+            <div class="body">
+              <ul>
+                <li> ㄴ @anyway ㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋㅋ 방금전</li>
+                <li> ㄴ @sous_chef 초간단 방금전</li>
+                <li> ㄴ @zzzrud 면 삶기 → 마늘향 내기 방금전</li>
+                <li> ㄴ @homecook 두부·애호박·버섯 듬뿍. 방금전</li>
+                <li> ㄴ @Sponsored 저당 파스타면 · 에어프라이어 전용 팬! 방금전</li>
+                <li> ㄴ @greensonly 🥗 LCHF 닭가슴살 샐러드 방금전</li>
+                <li> ㄴ @anyway 아니 8개 어떻게 채워 방금전</li>
+                <li> ㄴ @anyway #샐러드 #저탄고지 #두부호박전 방금전</li>
+              </ul>
+            </div>
+          </details>
+        </div>
+      </article>
+
+      <!-- 피드 카드 2 : 이미지 카드 -->
+      <article class="card">
+        <div class="media ratio">
+          <img src="https://picsum.photos/1200/675?random=13" alt="된장찌개" />
+        </div>
+        <div class="meta">
+          <div class="row author">
+            <div class="avatar"></div>
+            <span>@homecook</span> · <span>어제</span>
+          </div>
+          <h3 class="title">🥘 자취 감성 된장찌개</h3>
+          <div class="tags">
+            <span class="tag">#한식</span><span class="tag">#집밥</span><span class="tag">#국탕</span>
+          </div>
+          <details>
+            <summary>레시피·재료 보기</summary>
+            <div class="body">
+              두부·애호박·버섯 듬뿍. 팁: 멸치육수 티백으로 5분 단축!
+            </div>
+          </details>
+          <div class="actions">
+            <button>♥ 54</button><button>💬 2</button><button>🔖 저장</button>
+          </div>
+        </div>
+      </article>
+
+      <!-- 광고 슬롯 (피드 3개마다 한 번) -->
+      <section class="card ad">
+        <img src="https://picsum.photos/200/200?random=30" alt="광고 썸네일" />
+        <div>
+          <div class="row" style="justify-content:space-between">
+            <span class="badge">Sponsored</span>
+            <span style="color:var(--muted);font-size:12px">쿠팡 제휴 가능</span>
+          </div>
+          <h4 style="margin:6px 0 4px">저당 파스타면 · 에어프라이어 전용 팬</h4>
+          <p style="margin:0;color:#4b5563;font-size:14px">이 레시피와 함께 쓰면 편해요</p>
+        </div>
+      </section>
+
+      <!-- 피드 카드 3 -->
+      <article class="card">
+        <div class="media ratio">
+          <img src="https://picsum.photos/1200/675?random=21" alt="샐러드" />
+        </div>
+        <div class="meta">
+          <div class="row author"><div class="avatar"></div><span>@greensonly</span> · <span>3일 전</span></div>
+          <h3 class="title">🥗 LCHF 닭가슴살 샐러드</h3>
+          <div class="tags"><span class="tag">#저탄고지</span><span class="tag">#샐러드</span></div>
+          <div class="actions"><button>♥ 201</button><button>💬 27</button><button>🔖 저장</button></div>
+        </div>
+      </article>
+
+    </main>
+  </div>
+
+  <!-- (옵션) 하단 고정 업로드 버튼 -->
+  <button style="
+    position:fixed;right:16px;bottom:16px;z-index:20;
+    background:#111827;color:#fff;border:0;border-radius:999px;
+    padding:14px 18px;box-shadow:var(--shadow);font-weight:700;">
+    + 업로드
+  </button>
+
+<script>
+document.querySelectorAll('.slider').forEach(slider=>{
+  const slides = slider.querySelector('.slides');
+  const slideCount = slides.children.length;
+  let index = 0;
+
+  const update = () => {
+    slides.style.transform = `translateX(-${index * 100}%)`;
+  };
+
+  // 버튼 이벤트
+  slider.querySelector('.next').onclick = () => { index = (index+1)%slideCount; update(); };
+  slider.querySelector('.prev').onclick = () => { index = (index-1+slideCount)%slideCount; update(); };
+
+  // 스와이프 이벤트
+  let startX = 0, currentX = 0, isDown = false;
+
+  const start = (x) => { isDown = true; startX = x; };
+  const move = (x) => {
+    if(!isDown) return;
+    currentX = x - startX;
+    slides.style.transform = `translateX(${currentX - index*slides.clientWidth}px)`;
+  };
+  const end = () => {
+    if(!isDown) return;
+    isDown = false;
+    if(currentX < -50) index = (index+1)%slideCount;
+    if(currentX > 50) index = (index-1+slideCount)%slideCount;
+    update();
+    currentX = 0;
+  };
+
+  // 마우스
+  slides.addEventListener('mousedown', e => start(e.pageX));
+  slides.addEventListener('mousemove', e => move(e.pageX));
+  slides.addEventListener('mouseup', end);
+  slides.addEventListener('mouseleave', end);
+
+  // 터치
+  slides.addEventListener('touchstart', e => start(e.touches[0].pageX));
+  slides.addEventListener('touchmove', e => move(e.touches[0].pageX));
+  slides.addEventListener('touchend', end);
+});
+</script>
+  <!-- JSP 이식용 힌트 -->
+  <!--
+  <c:forEach var="item" items="${feedList}" varStatus="st">
+    <jsp:include page="/components/FeedCard.jsp">
+      <jsp:param name="title" value="${item.title}"/>
+      <jsp:param name="videoUrl" value="${item.videoUrl}"/>
+      <jsp:param name="imageUrl" value="${item.imageUrl}"/>
+      <jsp:param name="tags" value="${item.tags}"/>
+    </jsp:include>
+
+    <c:if test="${st.index % 3 == 2}">
+      <jsp:include page="/components/AdCard.jsp"/>
+    </c:if>
+  </c:forEach>
+  -->
+</body>
+</html>
