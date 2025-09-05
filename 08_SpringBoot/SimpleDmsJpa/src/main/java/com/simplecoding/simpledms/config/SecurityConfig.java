@@ -43,7 +43,7 @@ public class SecurityConfig {
                         .loginPage("/auth/login")                  //이쁜 로그인 페이지
                         .loginProcessingUrl("/auth/loginProcess")  // 로그인 버튼 눌렀을때 실행될 TRL(자동,컨트롤러 메소드 불필요)
                         .usernameParameter("email")                //jsp에서 input태그의 name 속성을 email 한다는 의미(아이디)
-                        .defaultSuccessUrl("/", true) // 성공했을때 이동할 페이지 지정,(옵션) 그 페이지로 무조건 이동해라
+                        .defaultSuccessUrl("/mypage", true) // 성공했을때 이동할 페이지 지정,(옵션) 그 페이지로 무조건 이동해라
                         .failureUrl("/errors")            // 실패했을때 이동할 페이지 지정
                         .permitAll()
                 )

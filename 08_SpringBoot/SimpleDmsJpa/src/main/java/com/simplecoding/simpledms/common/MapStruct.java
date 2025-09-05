@@ -1,5 +1,9 @@
 package com.simplecoding.simpledms.common;
 
+import com.simplecoding.simpledms.es.filedbsuggested.dto.FileDbSuggestedDto;
+import com.simplecoding.simpledms.es.filedbsuggested.entity.FileDbSuggested;
+import com.simplecoding.simpledms.es.gallerysuggested.dto.GallerySuggestedDto;
+import com.simplecoding.simpledms.es.gallerysuggested.entity.GallerySuggested;
 import com.simplecoding.simpledms.es.lookup.dto.LookupAllDto;
 import com.simplecoding.simpledms.es.lookup.entity.LookupALL;
 import com.simplecoding.simpledms.es.search.dto.SearchAllDto;
@@ -99,8 +103,13 @@ public interface MapStruct {
     LookupAllDto toDto(LookupALL lookupAll);
     LookupALL toEntity(LookupAllDto lookupAllDto);
 
+    //    TODO: 9) FileDbSuggested <-> FileDbSuggestedDto
+    FileDbSuggestedDto toDto(FileDbSuggested fileDbSuggested);
+    FileDbSuggested toEntity(FileDbSuggestedDto fileDbSuggestedDto);
 
-
-
+    //TODO : 엘라스틱 서치용
+    //TODO: 10 gallerySuggested <->gallerySuggestedDto
+    GallerySuggestedDto toDto(GallerySuggested gallerySuggested);
+    GallerySuggested toEntity(GallerySuggestedDto gallerySuggestedDto);
 
 }
